@@ -29,7 +29,7 @@ ENV PATH /src/.local/bin:$PATH
 RUN git clone --depth 1 --branch 9.2.0-rc0 https://github.com/apache/trafficserver
 WORKDIR /src/trafficserver
 RUN autoreconf -if
-RUN ./configure --prefix=/usr --enable-experimental-plugins 2>&1 | tee /src/configure.log
+RUN ./configure --enable-experimental-plugins --enable-example-plugins --prefix=/usr --enable-werror --enable-debug --enable-wccp --enable-luajit --enable-ccache 2>&1 | tee /src/configure.log
 RUN CXX=g++-12 CC=gcc-12 make -j 2>&1 | tee /src/make.log
 
 USER root
