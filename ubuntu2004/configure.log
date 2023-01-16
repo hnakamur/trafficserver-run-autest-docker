@@ -1,3 +1,4 @@
+configure: WARNING: unrecognized options: --enable-luajit
 checking for a BSD-compatible install... /usr/bin/install -c
 checking whether build environment is sane... yes
 checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
@@ -5,20 +6,20 @@ checking for gawk... no
 checking for mawk... mawk
 checking whether make sets $(MAKE)... yes
 checking whether make supports nested variables... yes
-checking whether UID '1000' is supported by ustar format... yes
-checking whether GID '1000' is supported by ustar format... yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
 checking how to create a ustar tar archive... gnutar
 checking whether to enable maintainer-specific portions of Makefiles... yes
 checking whether make supports nested variables... (cached) yes
 checking for chosen layout... TrafficServer
 checking build system type... x86_64-pc-linux-gnu
 checking host system type... x86_64-pc-linux-gnu
-checking whether to enable debugging... no
+checking whether to enable debugging... yes
 checking whether to enable mime sanity check... no
 checking whether to enable all asserts, a cheaper debug... no
 checking whether to enable event tracker... no
 checking whether to code coverage... no
-checking whether to enable -Werror... no
+checking whether to enable -Werror... yes
 checking whether to enable asan... no
 checking whether to enable lsan... no
 checking whether to enable tsan... no
@@ -34,12 +35,12 @@ checking whether to enable expensive unit tests... no
 checking for java... java
 Checking whether to build documentation:
 Will build documentation: no
-checking whether to enable WCCP v2 support... no
+checking whether to enable WCCP v2 support... yes
 checking whether to enable profiler... no
 checking whether to enable eventfd()... yes
 checking whether to use POSIX capabilities... auto
 checking whether to use hwloc library... yes
-checking whether to enable ccache... no
+checking whether to enable ccache... yes
 checking whether to enable hardening of the executables... no
 checking whether to enable TPROXY based transparency... auto
 checking whether to enable experimental plugins... yes
@@ -47,7 +48,7 @@ checking for pkg-config... /usr/bin/pkg-config
 checking pkg-config is at least version 0.9.0... yes
 checking for LIBMAGICKCPP... no
 checking for LIBMAGICKCPP... no
-checking whether to install example plugins... no
+checking whether to install example plugins... yes
 checking whether to install testing tools... no
 checking whether to allow 32-bit builds... no
 checking for cc... cc
@@ -154,6 +155,7 @@ checking for perl module ExtUtils::MakeMaker... ok
 checking whether to auto-set compiler optimization flags... yes -O3
 checking size of void*... 8
 configure: Build for host OS: linux-gnu, arch: x86_64, optimization: linux
+checking for ccache... no
 checking for library containing socket... none required
 checking for library containing gethostbyname... none required
 checking for library containing clock_gettime... none required
@@ -590,6 +592,7 @@ config.status: creating tests/Makefile
 config.status: creating include/ink_autoconf.h
 config.status: executing depfiles commands
 config.status: executing libtool commands
+configure: WARNING: unrecognized options: --enable-luajit
 configure: Build option summary:
     CC:                 cc
     CXX:                c++
@@ -598,9 +601,9 @@ configure: Build option summary:
     CXXFLAGS:           
     CPPFLAGS:           -D_GNU_SOURCE -DOPENSSL_NO_SSL_INTERN
     LDFLAGS:            
-    AM_CFLAGS:      -std=gnu99 -g -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -O3 -feliminate-unused-debug-symbols -fno-strict-aliasing -mcx16
-    AM_CXXFLAGS:    -std=c++17 -g -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -O3 -feliminate-unused-debug-symbols -fno-strict-aliasing -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16
-    AM_CPPFLAGS:    -Dlinux -D_LARGEFILE64_SOURCE=1 -D_COMPILE64BIT_SOURCE=1 -D_REENTRANT -D__STDC_LIMIT_MACROS=1 -D__STDC_FORMAT_MACROS=1
+    AM_CFLAGS:      -std=gnu99 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -mcx16
+    AM_CXXFLAGS:    -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16
+    AM_CPPFLAGS:    -Dlinux -DDEBUG -D_DEBUG -D_LARGEFILE64_SOURCE=1 -D_COMPILE64BIT_SOURCE=1 -D_REENTRANT -D__STDC_LIMIT_MACROS=1 -D__STDC_FORMAT_MACROS=1
     AM_LDFLAGS:     -rdynamic -Wl,--as-needed
     TS_INCLUDES:        
     OPENSSL_LDFLAGS:    
