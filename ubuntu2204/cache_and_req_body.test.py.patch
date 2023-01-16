@@ -1,0 +1,30 @@
+diff --git a/tests/gold_tests/headers/cache_and_req_body.test.py b/tests/gold_tests/headers/cache_and_req_body.test.py
+index b2ab6d046..6bad099f1 100644
+--- a/tests/gold_tests/headers/cache_and_req_body.test.py
++++ b/tests/gold_tests/headers/cache_and_req_body.test.py
+@@ -41,6 +41,7 @@ ts.Disk.plugin_config.AddLine('xdebug.so')
+ ts.Disk.records_config.update({
+     'proxy.config.diags.debug.enabled': 1,
+     'proxy.config.diags.debug.tags': 'http',
++    'proxy.config.http.keep_alive_enabled_in': 0,
+     'proxy.config.http.response_via_str': 3,
+ })
+ 
+@@ -49,7 +50,7 @@ ts.Disk.remap_config.AddLine(
+ )
+ 
+ cache_and_req_body_miss = {
+-    'Connection': 'keep-alive',
++    'Connection': 'close',
+     'Via': {'equal_re': None},
+     'Server': {'equal_re': '.*'},
+     'X-Cache-Key': {'equal_re': 'http://127.0.0.1.*'},
+@@ -67,7 +68,7 @@ cache_and_req_body_hit = {
+     'Content-Length': '3',
+     'Date': {'equal_re': '.*'},
+     'Age': {'equal_re': '.*'},
+-    'Connection': 'keep-alive',
++    'Connection': 'close',
+     'Via': {'equal_re': '.*'},
+     'Server': {'equal_re': '.*'},
+     'X-Cache': 'hit-fresh',

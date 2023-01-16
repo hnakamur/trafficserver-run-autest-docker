@@ -31,11 +31,11 @@ make[2]: Entering directory '/src/trafficserver/lib'
 make -C yamlcpp
 make[3]: Entering directory '/src/trafficserver/lib/yamlcpp'
   CXX      src/binary.lo
-  CXX      src/depthguard.lo
   CXX      src/convert.lo
-  CXX      src/emit.lo
+  CXX      src/depthguard.lo
   CXX      src/directives.lo
   CXX      src/emitfromevents.lo
+  CXX      src/emit.lo
   CXX      src/emitter.lo
   CXX      src/emitterstate.lo
   CXX      src/emitterutils.lo
@@ -43,41 +43,41 @@ make[3]: Entering directory '/src/trafficserver/lib/yamlcpp'
   CXX      src/exp.lo
   CXX      src/memory.lo
   CXX      src/node.lo
+  CXX      src/nodebuilder.lo
   CXX      src/node_data.lo
   CXX      src/nodeevents.lo
   CXX      src/null.lo
-  CXX      src/nodebuilder.lo
   CXX      src/ostream_wrapper.lo
   CXX      src/parse.lo
   CXX      src/parser.lo
   CXX      src/regex_yaml.lo
   CXX      src/scanner.lo
   CXX      src/scanscalar.lo
-  CXX      src/scantag.lo
   CXX      src/scantoken.lo
-  CXX      src/singledocparser.lo
-  CXX      src/stream.lo
+  CXX      src/scantag.lo
   CXX      src/simplekey.lo
+  CXX      src/singledocparser.lo
   CXX      src/tag.lo
+  CXX      src/stream.lo
   CXXLD    libyamlcpp.la
 make[3]: Leaving directory '/src/trafficserver/lib/yamlcpp'
 make[2]: Leaving directory '/src/trafficserver/lib'
 Making all in records
 make[2]: Entering directory '/src/trafficserver/lib/records'
+  CXX      RecConfigParse.o
   CXX      P_RecCore.o
   CXX      RecCore.o
-  CXX      RecConfigParse.o
   CXX      RecDebug.o
   CXX      RecFile.o
   CXX      RecHttp.o
   CXX      RecMessage.o
   CXX      RecMutex.o
   CXX      RecRawStats.o
-  CXX      RecUtils.o
   CXX      RecLocal.o
+  CXX      RecUtils.o
   CXX      RecProcess.o
-  AR       librecords_p.a
   AR       librecords_lm.a
+  AR       librecords_p.a
 ar: `u' modifier ignored since `D' is the default (see `U')
 ar: `u' modifier ignored since `D' is the default (see `U')
 make[2]: Leaving directory '/src/trafficserver/lib/records'
@@ -96,10 +96,10 @@ Writing Makefile-pl for Apache::TS
 Writing MYMETA.yml and MYMETA.json
 make -f Makefile-pl INSTALLDIRS=perl PREFIX=/usr DESTDIR=
 make[3]: Entering directory '/src/trafficserver/lib/perl'
-cp lib/Apache/TS.pm blib/lib/Apache/TS.pm
-cp lib/Apache/TS/AdminClient.pm blib/lib/Apache/TS/AdminClient.pm
 cp lib/Apache/TS/Config/Records.pm blib/lib/Apache/TS/Config/Records.pm
+cp lib/Apache/TS.pm blib/lib/Apache/TS.pm
 cp lib/Apache/TS/Config.pm blib/lib/Apache/TS/Config.pm
+cp lib/Apache/TS/AdminClient.pm blib/lib/Apache/TS/AdminClient.pm
 Manifying 3 pod documents
 make[3]: Leaving directory '/src/trafficserver/lib/perl'
 make[2]: Leaving directory '/src/trafficserver/lib/perl'
@@ -109,48 +109,48 @@ make[1]: Entering directory '/src/trafficserver/src/tscore'
 Makefile:2614: warning: overriding recipe for target 'CompileParseRules'
 Makefile:1188: warning: ignoring old recipe for target 'CompileParseRules'
   CXX      CompileParseRules.o
-c++ -std=c++17 -g -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -O3 -feliminate-unused-debug-symbols -fno-strict-aliasing -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -D_GNU_SOURCE -DOPENSSL_NO_SSL_INTERN -DOPENSSL_API_COMPAT=10002 -DOPENSSL_IS_OPENSSL3 -I../../include -I/src/trafficserver/include -o CompileParseRules /src/trafficserver/src/tscore/CompileParseRules.cc
+c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -D_GNU_SOURCE -DOPENSSL_NO_SSL_INTERN -DOPENSSL_API_COMPAT=10002 -DOPENSSL_IS_OPENSSL3 -I../../include -I/src/trafficserver/include -o CompileParseRules /src/trafficserver/src/tscore/CompileParseRules.cc
 LSAN_OPTIONS='detect_leaks=0' ./CompileParseRules
 make  all-am
 make[2]: Entering directory '/src/trafficserver/src/tscore'
 Makefile:2614: warning: overriding recipe for target 'CompileParseRules'
 Makefile:1188: warning: ignoring old recipe for target 'CompileParseRules'
-  CXX      Arena.lo
   CXX      AcidPtr.lo
-  CXX      BaseLogFile.lo
+  CXX      Arena.lo
   CXX      ArgParser.lo
-  CXX      BufferWriterFormat.lo
+  CXX      BaseLogFile.lo
   CXX      ConsistentHash.lo
-  CXX      ContFlags.lo
+  CXX      BufferWriterFormat.lo
   CXX      CryptoHash.lo
+  CXX      ContFlags.lo
   CXX      Diags.lo
   CXX      Errata.lo
   CXX      EventNotify.lo
   CXX      Extendible.lo
-  CXX      HashFNV.lo
   CXX      Hash.lo
+  CXX      HashFNV.lo
   CXX      HashMD5.lo
   CXX      HashSip.lo
-  CXX      HostLookup.lo
   CXX      hugepages.lo
   CXX      ink_args.lo
+  CXX      HostLookup.lo
+  CXX      ink_assert.lo
   CXX      ink_base64.lo
   CXX      ink_cap.lo
-  CXX      ink_assert.lo
   CXX      ink_code.lo
   CXX      ink_defs.lo
-  CXX      ink_error.lo
   CXX      InkErrno.lo
+  CXX      ink_error.lo
   CXX      ink_file.lo
   CXX      ink_hrtime.lo
-  CXX      ink_inet.lo
   CXX      ink_hw.lo
+  CXX      ink_inet.lo
   CXX      ink_memory.lo
-  CXX      ink_queue.lo
   CXX      ink_mutex.lo
+  CXX      ink_queue.lo
   CXX      ink_queue_utils.lo
-  CXX      ink_res_init.lo
   CXX      ink_rand.lo
+  CXX      ink_res_init.lo
   CXX      ink_res_mkquery.lo
   CXX      ink_resource.lo
   CXX      ink_rwlock.lo
@@ -198,13 +198,13 @@ Making all in iocore
 make[1]: Entering directory '/src/trafficserver/iocore'
 Making all in eventsystem
 make[2]: Entering directory '/src/trafficserver/iocore/eventsystem'
-  CXX      IOBuffer.o
   CXX      EventSystem.o
+  CXX      IOBuffer.o
   CXX      Inline.o
   CXX      MIOBufferWriter.o
   CXX      Lock.o
-  CXX      PQ-List.o
   CXX      Processor.o
+  CXX      PQ-List.o
   CXX      ProtectedQueue.o
   CXX      SocketManager.o
   CXX      ProxyAllocator.o
@@ -220,15 +220,15 @@ Making all in net
 make[2]: Entering directory '/src/trafficserver/iocore/net'
 make[3]: Entering directory '/src/trafficserver/iocore/net'
   CXX      ALPNSupport.o
-  CXX      BoringSSLUtils.o
   CXX      BIO_fastopen.o
+  CXX      BoringSSLUtils.o
   CXX      Connection.o
-  CXX      YamlSNIConfig.o
   CXX      Inline.o
+  CXX      YamlSNIConfig.o
   CXX      Net.o
+  CXX      ProxyProtocol.o
   CXX      NetVConnection.o
   CXX      Socks.o
-  CXX      ProxyProtocol.o
   CXX      SSLCertLookup.o
   CXX      SSLClientCoordinator.o
   CXX      SSLClientUtils.o
@@ -238,14 +238,14 @@ make[3]: Entering directory '/src/trafficserver/iocore/net'
   CXX      SSLInternal.o
   CXX      SSLNetAccept.o
   CXX      SSLNetProcessor.o
-  CXX      SSLNextProtocolAccept.o
   CXX      SSLNetVConnection.o
+  CXX      SSLNextProtocolAccept.o
   CXX      SSLNextProtocolSet.o
   CXX      SSLSNIConfig.o
   CXX      SSLStats.o
   CXX      SSLSessionCache.o
-  CXX      SSLUtils.o
   CXX      SSLSessionTicket.o
+  CXX      SSLUtils.o
   CXX      OCSPStapling.o
   CXX      TLSBasicSupport.o
   CXX      TLSKeyLogger.o
@@ -275,9 +275,9 @@ ar: `u' modifier ignored since `D' is the default (see `U')
 make[2]: Leaving directory '/src/trafficserver/iocore/aio'
 Making all in dns
 make[2]: Entering directory '/src/trafficserver/iocore/dns'
+  CXX      DNSConnection.o
   CXX      DNS.o
   CXX      Inline.o
-  CXX      DNSConnection.o
   CXX      SplitDNS.o
   AR       libinkdns.a
 ar: `u' modifier ignored since `D' is the default (see `U')
@@ -292,8 +292,8 @@ ar: `u' modifier ignored since `D' is the default (see `U')
 make[2]: Leaving directory '/src/trafficserver/iocore/hostdb'
 Making all in utils
 make[2]: Entering directory '/src/trafficserver/iocore/utils'
-  CXX      Machine.o
   CXX      OneWayMultiTunnel.o
+  CXX      Machine.o
   CXX      OneWayTunnel.o
   AR       libinkutils.a
 ar: `u' modifier ignored since `D' is the default (see `U')
@@ -301,19 +301,19 @@ make[2]: Leaving directory '/src/trafficserver/iocore/utils'
 Making all in cache
 make[2]: Entering directory '/src/trafficserver/iocore/cache'
   CXX      Cache.o
-  CXX      CacheDisk.o
   CXX      CacheDir.o
+  CXX      CacheDisk.o
   CXX      CacheHosting.o
+  CXX      CacheLink.o
   CXX      CacheHttp.o
   CXX      CachePages.o
-  CXX      CacheLink.o
   CXX      CachePagesInternal.o
   CXX      CacheRead.o
   CXX      CacheVol.o
   CXX      CacheWrite.o
   CXX      Inline.o
-  CXX      RamCacheLRU.o
   CXX      RamCacheCLFUS.o
+  CXX      RamCacheLRU.o
   CXX      Store.o
   CXX      CacheTest.o
   AR       libinkcache.a
@@ -327,14 +327,14 @@ Making all in proxy
 make[1]: Entering directory '/src/trafficserver/proxy'
 Making all in hdrs
 make[2]: Entering directory '/src/trafficserver/proxy/hdrs'
-  CXX      HdrHeap.o
   CXX      HTTP.o
+  CXX      HdrHeap.o
   CXX      HdrTSOnly.o
   CXX      HdrUtils.o
   CXX      HdrToken.o
   CXX      HttpCompat.o
-  CXX      URL.o
   CXX      MIME.o
+  CXX      URL.o
   CXX      HuffmanCodec.o
   CXX      XPACK.o
   AR       libhdrs.a
@@ -353,16 +353,16 @@ Making all in http
 make[2]: Entering directory '/src/trafficserver/proxy/http'
 Making all in remap
 make[3]: Entering directory '/src/trafficserver/proxy/http/remap'
-  CXX      NextHopSelectionStrategy.o
   CXX      AclFiltering.o
   CXX      NextHopConsistentHash.o
   CXX      NextHopHealthStatus.o
+  CXX      NextHopSelectionStrategy.o
   CXX      NextHopRoundRobin.o
   CXX      NextHopStrategyFactory.o
-  CXX      RemapConfig.o
   CXX      RemapHitCount.o
-  CXX      PluginDso.o
+  CXX      RemapConfig.o
   CXX      RemapPluginInfo.o
+  CXX      PluginDso.o
   CXX      PluginFactory.o
   CXX      RemapPlugins.o
   CXX      RemapProcessor.o
@@ -380,36 +380,36 @@ make[3]: Entering directory '/src/trafficserver/proxy/http/remap'
   CXX      unit-tests/plugin_missing_newinstance_la-plugin_missing_newinstance.lo
   CXX      unit-tests/plugin_testing_calls_la-plugin_testing_calls.lo
   CXX      unit-tests/plugin_testing_calls_la-plugin_testing_common.lo
-  CXXLD    unit-tests/plugin_required_cb.la
+  CXXLD    unit-tests/plugin_missing_init.la
   CXXLD    unit-tests/plugin_missing_deleteinstance.la
   CXXLD    unit-tests/plugin_missing_doremap.la
-  CXXLD    unit-tests/plugin_missing_init.la
   CXXLD    unit-tests/plugin_missing_newinstance.la
-  CXXLD    unit-tests/plugin_v2.la
+  CXXLD    unit-tests/plugin_required_cb.la
   CXXLD    unit-tests/plugin_init_fail.la
-  CXXLD    unit-tests/plugin_testing_calls.la
-  CXXLD    unit-tests/plugin_v1.la
   CXXLD    unit-tests/plugin_instinit_fail.la
+  CXXLD    unit-tests/plugin_v1.la
+  CXXLD    unit-tests/plugin_v2.la
+  CXXLD    unit-tests/plugin_testing_calls.la
   AR       libhttp_remap.a
 ar: `u' modifier ignored since `D' is the default (see `U')
 make[3]: Leaving directory '/src/trafficserver/proxy/http/remap'
 make[3]: Entering directory '/src/trafficserver/proxy/http'
   CXX      HttpSessionAccept.o
   CXX      HttpBodyFactory.o
-  CXX      HttpCacheSM.o
   CXX      Http1ClientSession.o
-  CXX      Http1ServerTransaction.o
+  CXX      HttpCacheSM.o
   CXX      Http1ClientTransaction.o
+  CXX      Http1ServerTransaction.o
   CXX      HttpConfig.o
   CXX      HttpConnectionCount.o
   CXX      HttpDebugNames.o
   CXX      HttpPages.o
-  CXX      HttpProxyServerMain.o
   CXX      HttpSM.o
   CXX      Http1ServerSession.o
-  CXX      HttpTransact.o
+  CXX      HttpProxyServerMain.o
   CXX      HttpSessionManager.o
   CXX      HttpTransactCache.o
+  CXX      HttpTransact.o
   CXX      HttpTransactHeaders.o
   CXX      HttpTunnel.o
   CXX      ForwardedConfig.o
@@ -424,12 +424,12 @@ Making all in http2
 make[2]: Entering directory '/src/trafficserver/proxy/http2'
   CXX      HPACK.o
   CXX      HTTP2.o
-  CXX      Http2Frame.o
   CXX      Http2ClientSession.o
+  CXX      Http2Frame.o
   CXX      Http2CommonSession.o
   CXX      Http2ConnectionState.o
-  CXX      Http2DebugNames.o
   CXX      Http2FrequencyCounter.o
+  CXX      Http2DebugNames.o
   CXX      Http2Stream.o
   CXX      Http2SessionAccept.o
   AR       libhttp2.a
@@ -438,16 +438,16 @@ make[2]: Leaving directory '/src/trafficserver/proxy/http2'
 Making all in logging
 make[2]: Entering directory '/src/trafficserver/proxy/logging'
   CXX      Log.o
-  CXX      LogAccess.o
   CXX      LogBuffer.o
+  CXX      LogAccess.o
   CXX      LogConfig.o
   CXX      LogField.o
   CXX      LogFieldAliasMap.o
   CXX      LogFile.o
   CXX      LogFilter.o
   CXX      LogFormat.o
-  CXX      LogUtils.o
   CXX      LogObject.o
+  CXX      LogUtils.o
   CXX      RolledLogDeleter.o
   CXX      YamlLogConfig.o
   CXX      YamlLogConfigDecoders.o
@@ -458,16 +458,16 @@ make[2]: Entering directory '/src/trafficserver/proxy'
   CXX      CacheControl.o
   CXX      ControlBase.o
   CXX      ControlMatcher.o
-  CXX      ParentConsistentHash.o
   CXX      IPAllow.o
+  CXX      ParentConsistentHash.o
   CXX      ParentRoundRobin.o
   CXX      ParentSelectionStrategy.o
   CXX      ParentSelection.o
   CXX      Plugin.o
   CXX      PluginVC.o
   CXX      ProtocolProbeSessionAccept.o
-  CXX      ProxySession.o
   CXX      ProxyTransaction.o
+  CXX      ProxySession.o
   CXX      ReverseProxy.o
   CXX      StatPages.o
   CXX      Transform.o
@@ -500,8 +500,8 @@ make[3]: Entering directory '/src/trafficserver/mgmt/api'
   CXX      APITestCliRemote.o
   CXX      CoreAPIRemote.lo
   CXX      NetworkUtilsRemote.lo
-  CXX      EventCallback.lo
   CXX      CoreAPIShared.lo
+  CXX      EventCallback.lo
   CXX      INKMgmtAPI.lo
   CXX      NetworkMessage.lo
   CXX      CoreAPI.lo
@@ -510,19 +510,19 @@ make[3]: Entering directory '/src/trafficserver/mgmt/api'
   CXX      TSControlMain.lo
   CXXLD    libmgmtapi.la
   CXXLD    libtsmgmt.la
-  CXXLD    traffic_api_cli_remote
   CXXLD    libmgmtapilocal.la
+  CXXLD    traffic_api_cli_remote
 make[3]: Leaving directory '/src/trafficserver/mgmt/api'
 make[2]: Leaving directory '/src/trafficserver/mgmt/api'
 make[2]: Entering directory '/src/trafficserver/mgmt'
   CXX      RecordsConfig.lo
   CXX      BaseManager.lo
   CXX      RecordsConfigUtils.lo
-  CXX      ProcessManager.lo
   CXX      ProxyConfig.lo
+  CXX      ProcessManager.lo
   CXX      YamlCfg.lo
-  CXX      DerivativeMetrics.lo
   CXX      Alarms.lo
+  CXX      DerivativeMetrics.lo
   CXX      FileManager.lo
   CXX      LocalManager.lo
   CXX      ConfigManager.lo
@@ -537,12 +537,12 @@ make[1]: Entering directory '/src/trafficserver/src'
 Making all in tscpp/api
 make[2]: Entering directory '/src/trafficserver/src/tscpp/api'
   CXX      libtscppapi_la-AsyncHttpFetch.lo
-  CXX      libtscppapi_la-CaseInsensitiveStringComparator.lo
   CXX      libtscppapi_la-AsyncTimer.lo
+  CXX      libtscppapi_la-CaseInsensitiveStringComparator.lo
   CXX      libtscppapi_la-ClientRequest.lo
-  CXX      libtscppapi_la-Continuation.lo
   CXX      libtscppapi_la-GlobalPlugin.lo
   CXX      libtscppapi_la-GzipDeflateTransformation.lo
+  CXX      libtscppapi_la-Continuation.lo
   CXX      libtscppapi_la-GzipInflateTransformation.lo
   CXX      libtscppapi_la-Headers.lo
   CXX      libtscppapi_la-HttpMethod.lo
@@ -551,31 +551,41 @@ make[2]: Entering directory '/src/trafficserver/src/tscpp/api'
   CXX      libtscppapi_la-Logger.lo
   CXX      libtscppapi_la-Plugin.lo
   CXX      libtscppapi_la-RemapPlugin.lo
-  CXX      libtscppapi_la-Response.lo
   CXX      libtscppapi_la-Request.lo
+  CXX      libtscppapi_la-Response.lo
   CXX      libtscppapi_la-Stat.lo
   CXX      libtscppapi_la-Transaction.lo
   CXX      libtscppapi_la-TransactionPlugin.lo
-  CXX      libtscppapi_la-TransformationPlugin.lo
   CXX      libtscppapi_la-Url.lo
+  CXX      libtscppapi_la-TransformationPlugin.lo
   CXX      libtscppapi_la-utils.lo
   CXX      libtscppapi_la-utils_internal.lo
   CXXLD    libtscppapi.la
 make[2]: Leaving directory '/src/trafficserver/src/tscpp/api'
+Making all in wccp
+make[2]: Entering directory '/src/trafficserver/src/wccp'
+  CXX      WccpConfig.o
+  CXX      WccpEndPoint.o
+  CXX      WccpMsg.o
+  CXX      WccpStatic.o
+  AR       libwccp.a
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/src/trafficserver/src/wccp'
 make[2]: Entering directory '/src/trafficserver/src'
   CXX      shared/traffic_ctl_traffic_ctl-overridable_txn_vars.o
+  CXX      traffic_wccp/traffic_wccp-wccp_client.o
   CXX      traffic_cache_tool/traffic_cache_tool-CacheDefs.o
   CXX      traffic_cache_tool/traffic_cache_tool-CacheTool.o
   CXX      traffic_cache_tool/traffic_cache_tool-CacheScan.o
-  CXX      traffic_top/traffic_top-traffic_top.o
   CXX      traffic_via/traffic_via-traffic_via.o
   CXX      traffic_manager/traffic_manager-AddConfigFilesHere.o
+  CXX      traffic_top/traffic_top-traffic_top.o
   CXX      traffic_manager/traffic_manager-traffic_manager.o
   CXX      traffic_server/traffic_server-Crash.o
   CXX      traffic_server/traffic_server-EventName.o
   CXX      traffic_server/traffic_server-FetchSM.o
-  CXX      traffic_server/traffic_server-HostStatus.o
   CXX      traffic_server/traffic_server-InkAPI.o
+  CXX      traffic_server/traffic_server-HostStatus.o
   CXX      traffic_server/traffic_server-InkIOCoreAPI.o
   CXX      traffic_server/traffic_server-SocksProxy.o
   CXX      shared/traffic_server_traffic_server-overridable_txn_vars.o
@@ -591,21 +601,22 @@ make[2]: Entering directory '/src/trafficserver/src'
   CXX      traffic_ctl/traffic_ctl-server.o
   CXX      traffic_ctl/traffic_ctl-storage.o
   CXX      traffic_ctl/traffic_ctl-host.o
-  CXX      traffic_ctl/traffic_ctl-traffic_ctl.o
   CXX      traffic_layout/traffic_layout-traffic_layout.o
+  CXX      traffic_ctl/traffic_ctl-traffic_ctl.o
   CXX      traffic_layout/traffic_layout-file_system.o
   CXX      traffic_layout/traffic_layout-engine.o
   CXX      traffic_layout/traffic_layout-info.o
   CXX      traffic_logcat/traffic_logcat-logcat.o
   CXXLD    traffic_via/traffic_via
+  CXXLD    traffic_wccp/traffic_wccp
   CXXLD    traffic_crashlog/traffic_crashlog
+  CXXLD    traffic_top/traffic_top
   CXXLD    traffic_logcat/traffic_logcat
   CXXLD    traffic_manager/traffic_manager
-  CXXLD    traffic_layout/traffic_layout
-  CXXLD    traffic_logstats/traffic_logstats
   CXXLD    traffic_ctl/traffic_ctl
+  CXXLD    traffic_layout/traffic_layout
   CXXLD    traffic_cache_tool/traffic_cache_tool
-  CXXLD    traffic_top/traffic_top
+  CXXLD    traffic_logstats/traffic_logstats
   CXXLD    traffic_server/traffic_server
 make[2]: Leaving directory '/src/trafficserver/src'
 make[1]: Leaving directory '/src/trafficserver/src'
@@ -632,21 +643,21 @@ make[2]: Entering directory '/src/trafficserver/plugins'
   CXX      experimental/sslheaders/sslheaders_la-sslheaders.lo
   CXX      esi/lib/libesicore_la-DocNode.lo
   CXX      esi/lib/libesicore_la-EsiGunzip.lo
+  CXX      esi/lib/libesicore_la-EsiParser.lo
   CXX      esi/lib/libesicore_la-EsiGzip.lo
   CXX      esi/lib/libesicore_la-EsiProcessor.lo
-  CXX      esi/lib/libesicore_la-EsiParser.lo
   CXX      esi/lib/libesicore_la-Expression.lo
   CXX      esi/lib/libesicore_la-Stats.lo
   CXX      esi/lib/libesicore_la-Utils.lo
   CXX      esi/lib/libesicore_la-Variables.lo
   CXX      esi/lib/libesicore_la-gzip.lo
+  CXX      esi/test/libtest_la-print_funcs.lo
   CXX      esi/test/libtest_la-HandlerMap.lo
-  CXX      esi/test/libtest_la-StubIncludeHandler.lo
   CXX      esi/test/libtest_la-TestHandlerManager.lo
+  CXX      esi/test/libtest_la-StubIncludeHandler.lo
   CXX      header_rewrite/parser.lo
   CXX      experimental/sslheaders/libsslhdr_la-expand.lo
   CXX      experimental/sslheaders/libsslhdr_la-util.lo
-  CXX      esi/test/libtest_la-print_funcs.lo
   CXX      authproxy/authproxy.lo
   CXX      authproxy/utils.lo
   CXX      background_fetch/background_fetch.lo
@@ -670,9 +681,9 @@ make[2]: Entering directory '/src/trafficserver/plugins'
   CXX      esi/esi_la-esi.lo
   CXX      esi/fetcher/esi_la-HttpDataFetcherImpl.lo
   CXX      esi/esi_la-serverIntercept.lo
+  CXX      esi/combo_handler_la-combo_handler.lo
   CXX      esi/fetcher/combo_handler_la-HttpDataFetcherImpl.lo
   CXX      generator/generator.lo
-  CXX      esi/combo_handler_la-combo_handler.lo
   CXX      compress/compress_la-compress.lo
   CXX      compress/compress_la-configuration.lo
   CXX      compress/compress_la-misc.lo
@@ -749,8 +760,8 @@ make[2]: Entering directory '/src/trafficserver/plugins'
   CXX      experimental/cookie_remap/strip.lo
   CXX      experimental/cookie_remap/cookiejar.lo
   CXX      experimental/custom_redirect/custom_redirect.lo
-  CC       experimental/fq_pacing/fq_pacing.lo
   CXX      experimental/geoip_acl/acl.lo
+  CC       experimental/fq_pacing/fq_pacing.lo
   CXX      experimental/geoip_acl/geoip_acl.lo
   CXX      experimental/header_freq/header_freq.lo
   CXX      experimental/parent_select/strategy.lo
@@ -831,83 +842,83 @@ make[2]: Entering directory '/src/trafficserver/plugins'
   CXX      experimental/mysql_remap/mysql_remap.lo
   CC       experimental/mysql_remap/lib/dictionary.lo
   CC       experimental/mysql_remap/lib/iniparser.lo
+  CXXLD    header_rewrite/parser.la
   CXXLD    experimental/sslheaders/libsslhdr.la
   CXXLD    authproxy/authproxy.la
+  CXXLD    background_fetch/background_fetch.la
+  CXXLD    cache_range_requests/cache_range_requests.la
   CXXLD    conf_remap/conf_remap.la
+  CXXLD    generator/generator.la
+  CXXLD    compress/compress.la
   CCLD     healthchecks/healthchecks.la
   CCLD     libloader/libloader.la
   CCLD     lua/tslua.la
+  CXXLD    regex_remap/regex_remap.la
   CCLD     regex_revalidate/regex_revalidate.la
   CCLD     remap_purge/remap_purge.la
+  CCLD     stats_over_http/stats_over_http.la
   CCLD     experimental/acme/acme.la
+  CXXLD    experimental/custom_redirect/custom_redirect.la
   CCLD     experimental/fq_pacing/fq_pacing.la
   CXXLD    experimental/hook-trace/hook-trace.la
   CXXLD    experimental/memory_profile/memory_profile.la
-  CXXLD    cache_range_requests/cache_range_requests.la
-  CXXLD    generator/generator.la
-  CCLD     stats_over_http/stats_over_http.la
   CXXLD    experimental/metalink/metalink.la
-  CXXLD    tcpinfo/tcpinfo.la
-  CXXLD    experimental/collapsed_forwarding/collapsed_forwarding.la
-  CCLD     experimental/system_stats/system_stats.la
-  CCLD     experimental/cache_key_genid/cache_key_genid.la
-  CXXLD    experimental/sslheaders/sslheaders.la
-  CXXLD    escalate/escalate.la
-  CXXLD    background_fetch/background_fetch.la
-  CXXLD    experimental/custom_redirect/custom_redirect.la
-  CXXLD    experimental/mysql_remap/mysql_remap.la
-  CCLD     experimental/uri_signing/uri_signing.la
-  CXXLD    cache_promote/cache_promote.la
-  CCLD     experimental/url_sig/url_sig.la
-  CXXLD    experimental/stream_editor/stream_editor.la
-  CXXLD    experimental/redo_cache_lookup/redo_cache_lookup.la
-  CXXLD    experimental/header_freq/header_freq.la
-  CXXLD    experimental/http_stats/http_stats.la
-  CXXLD    experimental/cache_fill/cache_fill.la
-  CXXLD    header_rewrite/parser.la
-  CXXLD    experimental/geoip_acl/geoip_acl.la
-  CXXLD    experimental/cert_reporting_tool/cert_reporting_tool.la
-  CXXLD    multiplexer/multiplexer.la
-  CXXLD    experimental/slice/slice.la
-  CXXLD    experimental/remap_stats/remap_stats.la
   CXXLD    experimental/mp4/mp4.la
-  CXXLD    experimental/tls_bridge/tls_bridge.la
-  CXXLD    experimental/money_trace/money_trace.la
-  CXXLD    compress/compress.la
+  CCLD     experimental/system_stats/system_stats.la
+  CCLD     experimental/url_sig/url_sig.la
+  CXXLD    escalate/escalate.la
+  CCLD     experimental/uri_signing/uri_signing.la
   CXXLD    experimental/statichit/statichit.la
-  CXXLD    regex_remap/regex_remap.la
-  CXXLD    experimental/rate_limit/rate_limit.la
-  CXXLD    experimental/ja3_fingerprint/ja3_fingerprint.la
-  CXXLD    experimental/access_control/access_control.la
-  CXXLD    xdebug/xdebug.la
-  CXXLD    prefetch/prefetch.la
+  CXXLD    experimental/stream_editor/stream_editor.la
+  CXXLD    experimental/mysql_remap/mysql_remap.la
+  CXXLD    experimental/sslheaders/sslheaders.la
   CXXLD    header_rewrite/header_rewrite.la
-  CXXLD    certifier/certifier.la
+  CCLD     experimental/cache_key_genid/cache_key_genid.la
+  CXXLD    experimental/collapsed_forwarding/collapsed_forwarding.la
+  CXXLD    tcpinfo/tcpinfo.la
+  CXXLD    experimental/tls_bridge/tls_bridge.la
+  CXXLD    experimental/remap_stats/remap_stats.la
+  CXXLD    experimental/geoip_acl/geoip_acl.la
+  CXXLD    experimental/http_stats/http_stats.la
+  CXXLD    xdebug/xdebug.la
   CXXLD    cachekey/cachekey.la
+  CXXLD    cache_promote/cache_promote.la
+  CXXLD    experimental/slice/slice.la
+  CXXLD    experimental/header_freq/header_freq.la
   CXXLD    esi/libesicore.la
-  CXXLD    experimental/memcache/tsmemcache.la
-  CXXLD    experimental/ssl_session_reuse/ssl_session_reuse.la
-  CXXLD    experimental/traffic_dump/traffic_dump.la
+  CXXLD    experimental/redo_cache_lookup/redo_cache_lookup.la
+  CXXLD    experimental/cache_fill/cache_fill.la
+  CXXLD    prefetch/prefetch.la
+  CXXLD    experimental/cookie_remap/cookie_remap.la
+  CXXLD    multiplexer/multiplexer.la
   CXXLD    esi/libtest.la
   CXXLD    esi/esi.la
-  CXXLD    esi/combo_handler.la
+  CXXLD    experimental/cert_reporting_tool/cert_reporting_tool.la
+  CXXLD    experimental/ja3_fingerprint/ja3_fingerprint.la
+  CXXLD    experimental/money_trace/money_trace.la
   CXXLD    s3_auth/s3_auth.la
   CXXLD    experimental/inliner/inliner.la
-  CXXLD    experimental/cookie_remap/cookie_remap.la
+  CXXLD    experimental/access_control/access_control.la
+  CXXLD    esi/combo_handler.la
+  CXXLD    experimental/traffic_dump/traffic_dump.la
+  CXXLD    certifier/certifier.la
+  CXXLD    experimental/rate_limit/rate_limit.la
+  CXXLD    experimental/ssl_session_reuse/ssl_session_reuse.la
+  CXXLD    experimental/memcache/tsmemcache.la
+  CXXLD    experimental/icap/icap.la
   CXXLD    experimental/maxmind_acl/maxmind_acl.la
   CXXLD    experimental/parent_select/parent_select.la
-  CXXLD    experimental/icap/icap.la
   CXXLD    server_push_preload/server_push_preload.la
 make[2]: Leaving directory '/src/trafficserver/plugins'
 make[1]: Leaving directory '/src/trafficserver/plugins'
 Making all in tools
 make[1]: Entering directory '/src/trafficserver/tools'
   CXX      jtest/jtest.o
-  CC       http_load/http_load.o
   CC       http_load/timers.o
+  CC       http_load/http_load.o
   CXX      escape_mapper/escape_mapper.o
-  CXXLD    escape_mapper/escape_mapper
   CCLD     http_load/http_load
+  CXXLD    escape_mapper/escape_mapper
   CXXLD    jtest/jtest
 make[1]: Leaving directory '/src/trafficserver/tools'
 Making all in example
@@ -916,11 +927,140 @@ Making all in plugins
 make[2]: Entering directory '/src/trafficserver/example/plugins'
 Making all in c-api
 make[3]: Entering directory '/src/trafficserver/example/plugins/c-api'
-make[3]: Nothing to be done for 'all'.
+  CC       add_header/add_header.lo
+  CC       append_transform/append_transform.lo
+  CC       basic_auth/basic_auth.lo
+  CC       bnull_transform/bnull_transform.lo
+  CXX      cert_update/cert_update.lo
+  CC       request_buffer/request_buffer.lo
+  CXX      cache_scan/cache_scan.lo
+  CXX      client_context_dump/client_context_dump.lo
+  CC       denylist_0/denylist_0.lo
+  CC       denylist_1/denylist_1.lo
+  CC       file_1/file_1.lo
+  CC       hello/hello.lo
+  CXX      intercept/intercept.lo
+  CC       lifecycle_plugin/lifecycle_plugin.lo
+  CC       null_transform/null_transform.lo
+  CC       output_header/output_header.lo
+  CC       protocol/Protocol.lo
+  CC       protocol/TxnSM.lo
+  CXX      protocol_stack/protocol_stack.lo
+  CXX      passthru/passthru.lo
+  CC       thread_pool/thread.lo
+  CC       thread_pool/psi.lo
+  CC       query_remap/query_remap.lo
+  CXX      remap/remap.lo
+  CXX      remap_header_add/remap_header_add.lo
+  CC       replace_header/replace_header.lo
+  CC       response_header_1/response_header_1.lo
+  CC       secure_link/secure_link.lo
+  CC       server_push/server_push.lo
+  CC       redirect_1/redirect_1.lo
+  CC       server_transform/server_transform.lo
+  CC       session_hooks/session_hooks.lo
+  CXX      ssl_preaccept/ssl_preaccept.lo
+  CXX      ssl_sni_allowlist/ssl_sni_allowlist.lo
+  CXX      ssl_sni/ssl_sni.lo
+  CC       thread_1/thread_1.lo
+  CXX      statistic/statistic.lo
+  CXX      txn_data_sink/txn_data_sink.lo
+  CC       version/version.lo
+  CXX      disable_http2/disable_http2.lo
+  CXX      verify_cert/verify_cert.lo
+  CXX      vconn_args/vconn_args.lo
+  CCLD     request_buffer.la
+  CCLD     query_remap.la
+  CCLD     hello.la
+  CCLD     basic_auth.la
+  CCLD     bnull_transform.la
+  CCLD     denylist_0.la
+  CCLD     append_transform.la
+  CCLD     lifecycle_plugin.la
+  CCLD     add_header.la
+  CCLD     psi.la
+  CCLD     null_transform.la
+  CCLD     replace_header.la
+  CCLD     file_1.la
+  CCLD     output_header.la
+  CCLD     denylist_1.la
+  CXXLD    protocol_stack.la
+  CCLD     server_transform.la
+  CXXLD    cache_scan.la
+  CCLD     protocol.la
+  CCLD     redirect_1.la
+  CXXLD    remap_header_add.la
+  CCLD     server_push.la
+  CCLD     session_hooks.la
+  CXXLD    statistic.la
+  CCLD     thread_1.la
+  CCLD     version.la
+  CXXLD    intercept.la
+  CXXLD    passthru.la
+  CXXLD    remap.la
+  CCLD     response_header_1.la
+  CCLD     secure_link.la
+  CXXLD    ssl_sni_allowlist.la
+  CXXLD    vconn_args.la
+  CXXLD    ssl_sni.la
+  CXXLD    verify_cert.la
+  CXXLD    cert_update.la
+  CXXLD    txn_data_sink.la
+  CXXLD    client_context_dump.la
+  CXXLD    disable_http2.la
+  CXXLD    ssl_preaccept.la
 make[3]: Leaving directory '/src/trafficserver/example/plugins/c-api'
 Making all in cpp-api
 make[3]: Entering directory '/src/trafficserver/example/plugins/cpp-api'
-make[3]: Nothing to be done for 'all'.
+  CXX      async_http_fetch/AsyncHttpFetch.lo
+  CXX      async_http_fetch_streaming/AsyncHttpFetchStreaming.lo
+  CXX      async_timer/AsyncTimer.lo
+  CXX      clientredirect/ClientRedirect.lo
+  CXX      clientrequest/ClientRequest.lo
+  CXX      custom_error_remap_plugin/CustomErrorRemapPlugin.lo
+  CXX      customresponse/CustomResponse.lo
+  CXX      globalhook/GlobalHookPlugin.lo
+  CXX      delay_transformation_plugin/DelayTransformationPlugin.lo
+  CXX      gzip_transformation/GzipTransformationPlugin.lo
+  CXX      helloworld/HelloWorldPlugin.lo
+  CXX      internal_transaction_handling/InternalTransactionHandling.lo
+  CXX      multiple_transaction_hooks/MultipleTransactionHookPlugins.lo
+  CXX      logger_example/LoggerExample.lo
+  CXX      null_transformation_plugin/NullTransformationPlugin.lo
+  CXX      remap_plugin/RemapPlugin.lo
+  CXX      post_buffer/PostBuffer.lo
+  CXX      serverresponse/ServerResponse.lo
+  CXX      stat_example/StatExample.lo
+  CXX      timeout_example/TimeoutExamplePlugin.lo
+  CXX      websocket/WebSocket.lo
+  CXX      transactionhook/TransactionHookPlugin.lo
+  CXX      websocket/WSBuffer.lo
+  CXX      intercept/intercept.lo
+  CXX      boom/boom.lo
+  CXXLD    ServerResponse.la
+  CXXLD    LoggerExample.la
+  CXXLD    StatExample.la
+  CXXLD    WebSocket.la
+  CXXLD    GlobalHookPlugin.la
+  CXXLD    CustomResponse.la
+  CXXLD    NullTransformationPlugin.la
+  CXXLD    TimeoutExamplePlugin.la
+  CXXLD    ClientRedirect.la
+  CXXLD    HelloWorldPlugin.la
+  CXXLD    CustomErrorRemapPlugin.la
+  CXXLD    ClientRequest.la
+  CXXLD    AsyncTimer.la
+  CXXLD    GzipTransformationPlugin.la
+  CXXLD    DelayTransformationPlugin.la
+  CXXLD    RemapPlugin.la
+  CXXLD    AsyncHttpFetchStreaming.la
+  CXXLD    TransactionHookPlugin.la
+  CXXLD    InternalTransactionHandling.la
+  CXXLD    intercept.la
+  CXXLD    PostBuffer.la
+  CXXLD    MultipleTransactionHookPlugins.la
+  CXXLD    boom.la
+  CXXLD    AsyncHttpFetch.la
 make[3]: Leaving directory '/src/trafficserver/example/plugins/cpp-api'
 make[3]: Entering directory '/src/trafficserver/example/plugins'
 make[3]: Nothing to be done for 'all-am'.
@@ -954,60 +1094,60 @@ Making all in tests
 make[1]: Entering directory '/src/trafficserver/tests'
 make[2]: Entering directory '/src/trafficserver/tests'
   CC       gold_tests/bigobj/check_ramp.o
-  CC       gold_tests/bigobj/push_request.o
   CC       gold_tests/chunked_encoding/smuggle-client.o
+  CC       gold_tests/bigobj/push_request.o
   CXX      gold_tests/timeout/ssl-delay-server.o
-  CXX      gold_tests/continuations/plugins/session_id_verify.lo
   CC       gold_tests/tls/ssl-post.o
+  CXX      gold_tests/continuations/plugins/session_id_verify.lo
   CXX      gold_tests/pluginTest/tsapi/test_tsapi.lo
   CXX      tools/plugins/cert_update.lo
   CXX      tools/plugins/conf_remap_stripped.lo
   CXX      tools/plugins/continuations_verify.lo
-  CXX      tools/plugins/cont_schedule.lo
   CXX      tools/plugins/custom204plugin.lo
-  CXX      tools/plugins/fatal_shutdown.lo
+  CXX      tools/plugins/cont_schedule.lo
   CXX      tools/plugins/emergency_shutdown.lo
+  CXX      tools/plugins/fatal_shutdown.lo
   CXX      tools/plugins/hook_add_plugin.lo
-  CXX      tools/plugins/missing_mangled_definition_cpp.lo
   CC       tools/plugins/missing_mangled_definition_c.lo
-  CXX      tools/plugins/ssl_client_verify_test.lo
+  CXX      tools/plugins/missing_mangled_definition_cpp.lo
   CXX      tools/plugins/missing_ts_plugin_init.lo
+  CXX      tools/plugins/ssl_client_verify_test.lo
   CXX      tools/plugins/ssl_hook_test.lo
   CXX      tools/plugins/ssl_secret_load_test.lo
   CXX      tools/plugins/ssl_verify_test.lo
-  CXX      tools/plugins/ssntxnorder_verify.lo
   CXX      tools/plugins/test_cppapi.lo
-  CXX      tools/plugins/test_hooks.lo
+  CXX      tools/plugins/ssntxnorder_verify.lo
   CXX      tools/plugins/test_log_interface.lo
+  CXX      tools/plugins/test_hooks.lo
   CXX      tools/plugins/user_args.lo
   CC       tools/plugins/async_engine.lo
   CCLD     gold_tests/bigobj/check_ramp
   CCLD     gold_tests/bigobj/push_request
+  CXXLD    tools/plugins/missing_ts_plugin_init.la
+  CXXLD    tools/plugins/conf_remap_stripped.la
+  CXXLD    tools/plugins/emergency_shutdown.la
+  CXXLD    tools/plugins/hook_add_plugin.la
+  CXXLD    tools/plugins/cont_schedule.la
+  CCLD     gold_tests/tls/ssl-post
+  CXXLD    tools/plugins/custom204plugin.la
   CXXLD    tools/plugins/missing_mangled_definition.la
   CXXLD    tools/plugins/continuations_verify.la
-  CXXLD    tools/plugins/emergency_shutdown.la
   CCLD     gold_tests/chunked_encoding/smuggle-client
-  CXXLD    tools/plugins/fatal_shutdown.la
-  CXXLD    tools/plugins/hook_add_plugin.la
-  CXXLD    tools/plugins/missing_ts_plugin_init.la
-  CXXLD    tools/plugins/custom204plugin.la
-  CXXLD    tools/plugins/cont_schedule.la
-  CXXLD    tools/plugins/conf_remap_stripped.la
-  CCLD     gold_tests/tls/ssl-post
   CXXLD    gold_tests/timeout/ssl-delay-server
+  CXXLD    tools/plugins/fatal_shutdown.la
   CXXLD    tools/plugins/user_args.la
-  CXXLD    tools/plugins/async_engine.la
   CXXLD    tools/plugins/ssl_hook_test.la
+  CXXLD    tools/plugins/async_engine.la
   CXXLD    tools/plugins/test_log_interface.la
-  CXXLD    gold_tests/continuations/plugins/session_id_verify.la
-  CXXLD    tools/plugins/cert_update.la
   CXXLD    tools/plugins/test_hooks.la
+  CXXLD    gold_tests/continuations/plugins/session_id_verify.la
+  CXXLD    gold_tests/pluginTest/tsapi/test_tsapi.la
+  CXXLD    tools/plugins/cert_update.la
   CXXLD    tools/plugins/ssl_client_verify_test.la
   CXXLD    tools/plugins/ssl_verify_test.la
-  CXXLD    gold_tests/pluginTest/tsapi/test_tsapi.la
   CXXLD    tools/plugins/test_cppapi.la
-  CXXLD    tools/plugins/ssl_secret_load_test.la
   CXXLD    tools/plugins/ssntxnorder_verify.la
+  CXXLD    tools/plugins/ssl_secret_load_test.la
 make[2]: Leaving directory '/src/trafficserver/tests'
 make[1]: Leaving directory '/src/trafficserver/tests'
 make[1]: Entering directory '/src/trafficserver'

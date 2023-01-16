@@ -100,12 +100,12 @@ make -f Makefile-pl INSTALLMAN3DIR=/usr/share/man/man3 INSTALLDIRS=perl PREFIX=/
 make[4]: Entering directory '/src/trafficserver/lib/perl'
 Manifying 3 pod documents
 Installing /usr/lib/perl5/Apache/TS.pm
-Installing /usr/lib/perl5/Apache/TS/Config.pm
 Installing /usr/lib/perl5/Apache/TS/AdminClient.pm
+Installing /usr/lib/perl5/Apache/TS/Config.pm
 Installing /usr/lib/perl5/Apache/TS/Config/Records.pm
 Installing /usr/share/man/man3/Apache::TS::AdminClient.3pm
-Installing /usr/share/man/man3/Apache::TS::Config::Records.3pm
 Installing /usr/share/man/man3/Apache::TS.3pm
+Installing /usr/share/man/man3/Apache::TS::Config::Records.3pm
 make[4]: Leaving directory '/src/trafficserver/lib/perl'
 make[3]: Nothing to be done for 'install-data-am'.
 make[3]: Leaving directory '/src/trafficserver/lib/perl'
@@ -125,7 +125,7 @@ Makefile:1188: warning: ignoring old recipe for target 'CompileParseRules'
  /usr/bin/mkdir -p '/usr/lib'
  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   libtscore.la '/usr/lib'
 libtool: warning: relinking 'libtscore.la'
-libtool: install: (cd /src/trafficserver/src/tscore; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -g -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -O3 -feliminate-unused-debug-symbols -fno-strict-aliasing -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -no-undefined -version-info 11:0:2 -L/src/trafficserver/lib/yamlcpp -o libtscore.la -rpath /usr/lib AcidPtr.lo Arena.lo ArgParser.lo BaseLogFile.lo BufferWriterFormat.lo ConsistentHash.lo ContFlags.lo CryptoHash.lo Diags.lo Errata.lo EventNotify.lo Extendible.lo Hash.lo HashFNV.lo HashMD5.lo HashSip.lo HostLookup.lo hugepages.lo ink_args.lo ink_assert.lo ink_base64.lo ink_cap.lo ink_code.lo ink_defs.lo InkErrno.lo ink_error.lo ink_file.lo ink_hrtime.lo ink_hw.lo ink_inet.lo ink_memory.lo ink_mutex.lo ink_queue.lo ink_queue_utils.lo ink_rand.lo ink_res_init.lo ink_res_mkquery.lo ink_resource.lo ink_rwlock.lo ink_sock.lo ink_sprintf.lo ink_stack_trace.lo ink_string.lo ink_string++.lo ink_sys_control.lo ink_syslog.lo ink_thread.lo ink_time.lo ink_uuid.lo IpMap.lo IpMapConf.lo JeAllocator.lo Layout.lo llqueue.lo lockfile.lo MatcherUtils.lo MemArena.lo MMH.lo ParseRules.lo Random.lo RbTree.lo Regex.lo Regression.lo runroot.lo signals.lo SourceLocation.lo TextBuffer.lo LogMessage.lo Throttler.lo Tokenizer.lo ts_file.lo Version.lo X509HostnameValidator.lo HKDF_openssl3.lo ../../src/tscpp/util/libtscpputil.la -lhwloc -lpcre -lssl -lcrypto -lresolv -lcap -lyamlcpp -lc )
+libtool: install: (cd /src/trafficserver/src/tscore; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -no-undefined -version-info 11:0:2 -L/src/trafficserver/lib/yamlcpp -o libtscore.la -rpath /usr/lib AcidPtr.lo Arena.lo ArgParser.lo BaseLogFile.lo BufferWriterFormat.lo ConsistentHash.lo ContFlags.lo CryptoHash.lo Diags.lo Errata.lo EventNotify.lo Extendible.lo Hash.lo HashFNV.lo HashMD5.lo HashSip.lo HostLookup.lo hugepages.lo ink_args.lo ink_assert.lo ink_base64.lo ink_cap.lo ink_code.lo ink_defs.lo InkErrno.lo ink_error.lo ink_file.lo ink_hrtime.lo ink_hw.lo ink_inet.lo ink_memory.lo ink_mutex.lo ink_queue.lo ink_queue_utils.lo ink_rand.lo ink_res_init.lo ink_res_mkquery.lo ink_resource.lo ink_rwlock.lo ink_sock.lo ink_sprintf.lo ink_stack_trace.lo ink_string.lo ink_string++.lo ink_sys_control.lo ink_syslog.lo ink_thread.lo ink_time.lo ink_uuid.lo IpMap.lo IpMapConf.lo JeAllocator.lo Layout.lo llqueue.lo lockfile.lo MatcherUtils.lo MemArena.lo MMH.lo ParseRules.lo Random.lo RbTree.lo Regex.lo Regression.lo runroot.lo signals.lo SourceLocation.lo TextBuffer.lo LogMessage.lo Throttler.lo Tokenizer.lo ts_file.lo Version.lo X509HostnameValidator.lo HKDF_openssl3.lo ../../src/tscpp/util/libtscpputil.la -lhwloc -lpcre -lssl -lcrypto -lresolv -lcap -lyamlcpp -lc )
 libtool: install: /usr/bin/install -c .libs/libtscore.so.9.2.0T /usr/lib/libtscore.so.9.2.0
 libtool: install: (cd /usr/lib && { ln -s -f libtscore.so.9.2.0 libtscore.so.9 || { rm -f libtscore.so.9 && ln -s libtscore.so.9.2.0 libtscore.so.9; }; })
 libtool: install: (cd /usr/lib && { ln -s -f libtscore.so.9.2.0 libtscore.so || { rm -f libtscore.so && ln -s libtscore.so.9.2.0 libtscore.so; }; })
@@ -345,7 +345,7 @@ make[4]: Entering directory '/src/trafficserver/mgmt/api'
  /usr/bin/mkdir -p '/usr/lib'
  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   libtsmgmt.la '/usr/lib'
 libtool: warning: relinking 'libtsmgmt.la'
-libtool: install: (cd /src/trafficserver/mgmt/api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -g -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -O3 -feliminate-unused-debug-symbols -fno-strict-aliasing -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -no-undefined -version-info 11:0:2 -o libtsmgmt.la -rpath /usr/lib CoreAPIRemote.lo NetworkUtilsRemote.lo libmgmtapi.la ../../src/tscore/libtscore.la ../../mgmt/utils/libutils_p.la )
+libtool: install: (cd /src/trafficserver/mgmt/api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -no-undefined -version-info 11:0:2 -o libtsmgmt.la -rpath /usr/lib CoreAPIRemote.lo NetworkUtilsRemote.lo libmgmtapi.la ../../src/tscore/libtscore.la ../../mgmt/utils/libutils_p.la )
 libtool: install: /usr/bin/install -c .libs/libtsmgmt.so.9.2.0T /usr/lib/libtsmgmt.so.9.2.0
 libtool: install: (cd /usr/lib && { ln -s -f libtsmgmt.so.9.2.0 libtsmgmt.so.9 || { rm -f libtsmgmt.so.9 && ln -s libtsmgmt.so.9.2.0 libtsmgmt.so.9; }; })
 libtool: install: (cd /usr/lib && { ln -s -f libtsmgmt.so.9.2.0 libtsmgmt.so || { rm -f libtsmgmt.so && ln -s libtsmgmt.so.9.2.0 libtsmgmt.so; }; })
@@ -413,10 +413,18 @@ more information, such as the ld(1) and ld.so(8) manual pages.
 make[3]: Nothing to be done for 'install-data-am'.
 make[3]: Leaving directory '/src/trafficserver/src/tscpp/api'
 make[2]: Leaving directory '/src/trafficserver/src/tscpp/api'
+Making install in wccp
+make[2]: Entering directory '/src/trafficserver/src/wccp'
+make[3]: Entering directory '/src/trafficserver/src/wccp'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/src/trafficserver/src/wccp'
+make[2]: Leaving directory '/src/trafficserver/src/wccp'
 make[2]: Entering directory '/src/trafficserver/src'
 make[3]: Entering directory '/src/trafficserver/src'
  /usr/bin/mkdir -p '/usr/bin'
-  /bin/bash ../libtool   --mode=install /usr/bin/install -c traffic_cache_tool/traffic_cache_tool traffic_via/traffic_via traffic_top/traffic_top traffic_manager/traffic_manager traffic_server/traffic_server traffic_logstats/traffic_logstats traffic_crashlog/traffic_crashlog traffic_ctl/traffic_ctl traffic_layout/traffic_layout traffic_logcat/traffic_logcat '/usr/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c traffic_wccp/traffic_wccp traffic_cache_tool/traffic_cache_tool traffic_via/traffic_via traffic_top/traffic_top traffic_manager/traffic_manager traffic_server/traffic_server traffic_logstats/traffic_logstats traffic_crashlog/traffic_crashlog traffic_ctl/traffic_ctl traffic_layout/traffic_layout traffic_logcat/traffic_logcat '/usr/bin'
+libtool: install: /usr/bin/install -c traffic_wccp/.libs/traffic_wccp /usr/bin/traffic_wccp
 libtool: install: /usr/bin/install -c traffic_cache_tool/traffic_cache_tool /usr/bin/traffic_cache_tool
 libtool: install: /usr/bin/install -c traffic_via/.libs/traffic_via /usr/bin/traffic_via
 libtool: install: /usr/bin/install -c traffic_top/.libs/traffic_top /usr/bin/traffic_top
@@ -482,7 +490,7 @@ libtool: install: /usr/bin/install -c remap_purge/.libs/remap_purge.lai /usr/lib
 libtool: install: /usr/bin/install -c s3_auth/.libs/s3_auth.so /usr/libexec/trafficserver/s3_auth.so
 libtool: install: /usr/bin/install -c s3_auth/.libs/s3_auth.lai /usr/libexec/trafficserver/s3_auth.la
 libtool: warning: relinking 'server_push_preload/server_push_preload.la'
-libtool: install: (cd /src/trafficserver/plugins; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -g -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -O3 -feliminate-unused-debug-symbols -fno-strict-aliasing -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o server_push_preload/server_push_preload.la -rpath /usr/libexec/trafficserver server_push_preload/server_push_preload.lo ../src/tscpp/api/libtscppapi.la )
+libtool: install: (cd /src/trafficserver/plugins; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o server_push_preload/server_push_preload.la -rpath /usr/libexec/trafficserver server_push_preload/server_push_preload.lo ../src/tscpp/api/libtscppapi.la )
 libtool: install: /usr/bin/install -c server_push_preload/.libs/server_push_preload.soT /usr/libexec/trafficserver/server_push_preload.so
 libtool: install: /usr/bin/install -c server_push_preload/.libs/server_push_preload.lai /usr/libexec/trafficserver/server_push_preload.la
 libtool: install: /usr/bin/install -c stats_over_http/.libs/stats_over_http.so /usr/libexec/trafficserver/stats_over_http.so
@@ -536,7 +544,7 @@ libtool: install: /usr/bin/install -c experimental/mp4/.libs/mp4.lai /usr/libexe
 libtool: install: /usr/bin/install -c experimental/rate_limit/.libs/rate_limit.so /usr/libexec/trafficserver/rate_limit.so
 libtool: install: /usr/bin/install -c experimental/rate_limit/.libs/rate_limit.lai /usr/libexec/trafficserver/rate_limit.la
 libtool: warning: relinking 'experimental/redo_cache_lookup/redo_cache_lookup.la'
-libtool: install: (cd /src/trafficserver/plugins; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -g -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -O3 -feliminate-unused-debug-symbols -fno-strict-aliasing -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o experimental/redo_cache_lookup/redo_cache_lookup.la -rpath /usr/libexec/trafficserver experimental/redo_cache_lookup/redo_cache_lookup.lo ../src/tscpp/api/libtscppapi.la )
+libtool: install: (cd /src/trafficserver/plugins; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o experimental/redo_cache_lookup/redo_cache_lookup.la -rpath /usr/libexec/trafficserver experimental/redo_cache_lookup/redo_cache_lookup.lo ../src/tscpp/api/libtscppapi.la )
 libtool: install: /usr/bin/install -c experimental/redo_cache_lookup/.libs/redo_cache_lookup.soT /usr/libexec/trafficserver/redo_cache_lookup.so
 libtool: install: /usr/bin/install -c experimental/redo_cache_lookup/.libs/redo_cache_lookup.lai /usr/libexec/trafficserver/redo_cache_lookup.la
 libtool: install: /usr/bin/install -c experimental/remap_stats/.libs/remap_stats.so /usr/libexec/trafficserver/remap_stats.so
@@ -606,12 +614,230 @@ make[2]: Entering directory '/src/trafficserver/example/plugins'
 Making install in c-api
 make[3]: Entering directory '/src/trafficserver/example/plugins/c-api'
 make[4]: Entering directory '/src/trafficserver/example/plugins/c-api'
+ /usr/bin/mkdir -p '/usr/libexec/trafficserver'
+ /bin/bash ../../../libtool   --mode=install /usr/bin/install -c   add_header.la append_transform.la basic_auth.la bnull_transform.la cert_update.la request_buffer.la cache_scan.la client_context_dump.la denylist_0.la denylist_1.la file_1.la hello.la intercept.la lifecycle_plugin.la null_transform.la output_header.la passthru.la protocol_stack.la protocol.la psi.la query_remap.la redirect_1.la remap.la remap_header_add.la replace_header.la response_header_1.la secure_link.la server_push.la server_transform.la session_hooks.la ssl_preaccept.la ssl_sni_allowlist.la ssl_sni.la statistic.la thread_1.la txn_data_sink.la version.la disable_http2.la verify_cert.la vconn_args.la '/usr/libexec/trafficserver'
+libtool: install: /usr/bin/install -c .libs/add_header.so /usr/libexec/trafficserver/add_header.so
+libtool: install: /usr/bin/install -c .libs/add_header.lai /usr/libexec/trafficserver/add_header.la
+libtool: install: /usr/bin/install -c .libs/append_transform.so /usr/libexec/trafficserver/append_transform.so
+libtool: install: /usr/bin/install -c .libs/append_transform.lai /usr/libexec/trafficserver/append_transform.la
+libtool: install: /usr/bin/install -c .libs/basic_auth.so /usr/libexec/trafficserver/basic_auth.so
+libtool: install: /usr/bin/install -c .libs/basic_auth.lai /usr/libexec/trafficserver/basic_auth.la
+libtool: install: /usr/bin/install -c .libs/bnull_transform.so /usr/libexec/trafficserver/bnull_transform.so
+libtool: install: /usr/bin/install -c .libs/bnull_transform.lai /usr/libexec/trafficserver/bnull_transform.la
+libtool: install: /usr/bin/install -c .libs/cert_update.so /usr/libexec/trafficserver/cert_update.so
+libtool: install: /usr/bin/install -c .libs/cert_update.lai /usr/libexec/trafficserver/cert_update.la
+libtool: install: /usr/bin/install -c .libs/request_buffer.so /usr/libexec/trafficserver/request_buffer.so
+libtool: install: /usr/bin/install -c .libs/request_buffer.lai /usr/libexec/trafficserver/request_buffer.la
+libtool: install: /usr/bin/install -c .libs/cache_scan.so /usr/libexec/trafficserver/cache_scan.so
+libtool: install: /usr/bin/install -c .libs/cache_scan.lai /usr/libexec/trafficserver/cache_scan.la
+libtool: install: /usr/bin/install -c .libs/client_context_dump.so /usr/libexec/trafficserver/client_context_dump.so
+libtool: install: /usr/bin/install -c .libs/client_context_dump.lai /usr/libexec/trafficserver/client_context_dump.la
+libtool: install: /usr/bin/install -c .libs/denylist_0.so /usr/libexec/trafficserver/denylist_0.so
+libtool: install: /usr/bin/install -c .libs/denylist_0.lai /usr/libexec/trafficserver/denylist_0.la
+libtool: install: /usr/bin/install -c .libs/denylist_1.so /usr/libexec/trafficserver/denylist_1.so
+libtool: install: /usr/bin/install -c .libs/denylist_1.lai /usr/libexec/trafficserver/denylist_1.la
+libtool: install: /usr/bin/install -c .libs/file_1.so /usr/libexec/trafficserver/file_1.so
+libtool: install: /usr/bin/install -c .libs/file_1.lai /usr/libexec/trafficserver/file_1.la
+libtool: install: /usr/bin/install -c .libs/hello.so /usr/libexec/trafficserver/hello.so
+libtool: install: /usr/bin/install -c .libs/hello.lai /usr/libexec/trafficserver/hello.la
+libtool: install: /usr/bin/install -c .libs/intercept.so /usr/libexec/trafficserver/intercept.so
+libtool: install: /usr/bin/install -c .libs/intercept.lai /usr/libexec/trafficserver/intercept.la
+libtool: install: /usr/bin/install -c .libs/lifecycle_plugin.so /usr/libexec/trafficserver/lifecycle_plugin.so
+libtool: install: /usr/bin/install -c .libs/lifecycle_plugin.lai /usr/libexec/trafficserver/lifecycle_plugin.la
+libtool: install: /usr/bin/install -c .libs/null_transform.so /usr/libexec/trafficserver/null_transform.so
+libtool: install: /usr/bin/install -c .libs/null_transform.lai /usr/libexec/trafficserver/null_transform.la
+libtool: install: /usr/bin/install -c .libs/output_header.so /usr/libexec/trafficserver/output_header.so
+libtool: install: /usr/bin/install -c .libs/output_header.lai /usr/libexec/trafficserver/output_header.la
+libtool: install: /usr/bin/install -c .libs/passthru.so /usr/libexec/trafficserver/passthru.so
+libtool: install: /usr/bin/install -c .libs/passthru.lai /usr/libexec/trafficserver/passthru.la
+libtool: install: /usr/bin/install -c .libs/protocol_stack.so /usr/libexec/trafficserver/protocol_stack.so
+libtool: install: /usr/bin/install -c .libs/protocol_stack.lai /usr/libexec/trafficserver/protocol_stack.la
+libtool: install: /usr/bin/install -c .libs/protocol.so /usr/libexec/trafficserver/protocol.so
+libtool: install: /usr/bin/install -c .libs/protocol.lai /usr/libexec/trafficserver/protocol.la
+libtool: install: /usr/bin/install -c .libs/psi.so /usr/libexec/trafficserver/psi.so
+libtool: install: /usr/bin/install -c .libs/psi.lai /usr/libexec/trafficserver/psi.la
+libtool: install: /usr/bin/install -c .libs/query_remap.so /usr/libexec/trafficserver/query_remap.so
+libtool: install: /usr/bin/install -c .libs/query_remap.lai /usr/libexec/trafficserver/query_remap.la
+libtool: install: /usr/bin/install -c .libs/redirect_1.so /usr/libexec/trafficserver/redirect_1.so
+libtool: install: /usr/bin/install -c .libs/redirect_1.lai /usr/libexec/trafficserver/redirect_1.la
+libtool: install: /usr/bin/install -c .libs/remap.so /usr/libexec/trafficserver/remap.so
+libtool: install: /usr/bin/install -c .libs/remap.lai /usr/libexec/trafficserver/remap.la
+libtool: install: /usr/bin/install -c .libs/remap_header_add.so /usr/libexec/trafficserver/remap_header_add.so
+libtool: install: /usr/bin/install -c .libs/remap_header_add.lai /usr/libexec/trafficserver/remap_header_add.la
+libtool: install: /usr/bin/install -c .libs/replace_header.so /usr/libexec/trafficserver/replace_header.so
+libtool: install: /usr/bin/install -c .libs/replace_header.lai /usr/libexec/trafficserver/replace_header.la
+libtool: install: /usr/bin/install -c .libs/response_header_1.so /usr/libexec/trafficserver/response_header_1.so
+libtool: install: /usr/bin/install -c .libs/response_header_1.lai /usr/libexec/trafficserver/response_header_1.la
+libtool: install: /usr/bin/install -c .libs/secure_link.so /usr/libexec/trafficserver/secure_link.so
+libtool: install: /usr/bin/install -c .libs/secure_link.lai /usr/libexec/trafficserver/secure_link.la
+libtool: install: /usr/bin/install -c .libs/server_push.so /usr/libexec/trafficserver/server_push.so
+libtool: install: /usr/bin/install -c .libs/server_push.lai /usr/libexec/trafficserver/server_push.la
+libtool: install: /usr/bin/install -c .libs/server_transform.so /usr/libexec/trafficserver/server_transform.so
+libtool: install: /usr/bin/install -c .libs/server_transform.lai /usr/libexec/trafficserver/server_transform.la
+libtool: install: /usr/bin/install -c .libs/session_hooks.so /usr/libexec/trafficserver/session_hooks.so
+libtool: install: /usr/bin/install -c .libs/session_hooks.lai /usr/libexec/trafficserver/session_hooks.la
+libtool: install: /usr/bin/install -c .libs/ssl_preaccept.so /usr/libexec/trafficserver/ssl_preaccept.so
+libtool: install: /usr/bin/install -c .libs/ssl_preaccept.lai /usr/libexec/trafficserver/ssl_preaccept.la
+libtool: install: /usr/bin/install -c .libs/ssl_sni_allowlist.so /usr/libexec/trafficserver/ssl_sni_allowlist.so
+libtool: install: /usr/bin/install -c .libs/ssl_sni_allowlist.lai /usr/libexec/trafficserver/ssl_sni_allowlist.la
+libtool: install: /usr/bin/install -c .libs/ssl_sni.so /usr/libexec/trafficserver/ssl_sni.so
+libtool: install: /usr/bin/install -c .libs/ssl_sni.lai /usr/libexec/trafficserver/ssl_sni.la
+libtool: install: /usr/bin/install -c .libs/statistic.so /usr/libexec/trafficserver/statistic.so
+libtool: install: /usr/bin/install -c .libs/statistic.lai /usr/libexec/trafficserver/statistic.la
+libtool: install: /usr/bin/install -c .libs/thread_1.so /usr/libexec/trafficserver/thread_1.so
+libtool: install: /usr/bin/install -c .libs/thread_1.lai /usr/libexec/trafficserver/thread_1.la
+libtool: install: /usr/bin/install -c .libs/txn_data_sink.so /usr/libexec/trafficserver/txn_data_sink.so
+libtool: install: /usr/bin/install -c .libs/txn_data_sink.lai /usr/libexec/trafficserver/txn_data_sink.la
+libtool: install: /usr/bin/install -c .libs/version.so /usr/libexec/trafficserver/version.so
+libtool: install: /usr/bin/install -c .libs/version.lai /usr/libexec/trafficserver/version.la
+libtool: install: /usr/bin/install -c .libs/disable_http2.so /usr/libexec/trafficserver/disable_http2.so
+libtool: install: /usr/bin/install -c .libs/disable_http2.lai /usr/libexec/trafficserver/disable_http2.la
+libtool: install: /usr/bin/install -c .libs/verify_cert.so /usr/libexec/trafficserver/verify_cert.so
+libtool: install: /usr/bin/install -c .libs/verify_cert.lai /usr/libexec/trafficserver/verify_cert.la
+libtool: install: /usr/bin/install -c .libs/vconn_args.so /usr/libexec/trafficserver/vconn_args.so
+libtool: install: /usr/bin/install -c .libs/vconn_args.lai /usr/libexec/trafficserver/vconn_args.la
+libtool: finish: PATH="/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/libexec/trafficserver
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/libexec/trafficserver
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
 make[4]: Nothing to be done for 'install-data-am'.
 make[4]: Leaving directory '/src/trafficserver/example/plugins/c-api'
 make[3]: Leaving directory '/src/trafficserver/example/plugins/c-api'
 Making install in cpp-api
 make[3]: Entering directory '/src/trafficserver/example/plugins/cpp-api'
 make[4]: Entering directory '/src/trafficserver/example/plugins/cpp-api'
+ /usr/bin/mkdir -p '/usr/libexec/trafficserver'
+ /bin/bash ../../../libtool   --mode=install /usr/bin/install -c   AsyncHttpFetch.la AsyncHttpFetchStreaming.la AsyncTimer.la ClientRedirect.la ClientRequest.la CustomErrorRemapPlugin.la CustomResponse.la DelayTransformationPlugin.la GlobalHookPlugin.la GzipTransformationPlugin.la HelloWorldPlugin.la InternalTransactionHandling.la LoggerExample.la MultipleTransactionHookPlugins.la NullTransformationPlugin.la PostBuffer.la RemapPlugin.la ServerResponse.la StatExample.la TimeoutExamplePlugin.la TransactionHookPlugin.la WebSocket.la boom.la intercept.la '/usr/libexec/trafficserver'
+libtool: warning: relinking 'AsyncHttpFetch.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o AsyncHttpFetch.la -rpath /usr/libexec/trafficserver async_http_fetch/AsyncHttpFetch.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/AsyncHttpFetch.soT /usr/libexec/trafficserver/AsyncHttpFetch.so
+libtool: install: /usr/bin/install -c .libs/AsyncHttpFetch.lai /usr/libexec/trafficserver/AsyncHttpFetch.la
+libtool: warning: relinking 'AsyncHttpFetchStreaming.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o AsyncHttpFetchStreaming.la -rpath /usr/libexec/trafficserver async_http_fetch_streaming/AsyncHttpFetchStreaming.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/AsyncHttpFetchStreaming.soT /usr/libexec/trafficserver/AsyncHttpFetchStreaming.so
+libtool: install: /usr/bin/install -c .libs/AsyncHttpFetchStreaming.lai /usr/libexec/trafficserver/AsyncHttpFetchStreaming.la
+libtool: warning: relinking 'AsyncTimer.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o AsyncTimer.la -rpath /usr/libexec/trafficserver async_timer/AsyncTimer.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/AsyncTimer.soT /usr/libexec/trafficserver/AsyncTimer.so
+libtool: install: /usr/bin/install -c .libs/AsyncTimer.lai /usr/libexec/trafficserver/AsyncTimer.la
+libtool: warning: relinking 'ClientRedirect.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o ClientRedirect.la -rpath /usr/libexec/trafficserver clientredirect/ClientRedirect.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/ClientRedirect.soT /usr/libexec/trafficserver/ClientRedirect.so
+libtool: install: /usr/bin/install -c .libs/ClientRedirect.lai /usr/libexec/trafficserver/ClientRedirect.la
+libtool: warning: relinking 'ClientRequest.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o ClientRequest.la -rpath /usr/libexec/trafficserver clientrequest/ClientRequest.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/ClientRequest.soT /usr/libexec/trafficserver/ClientRequest.so
+libtool: install: /usr/bin/install -c .libs/ClientRequest.lai /usr/libexec/trafficserver/ClientRequest.la
+libtool: warning: relinking 'CustomErrorRemapPlugin.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o CustomErrorRemapPlugin.la -rpath /usr/libexec/trafficserver custom_error_remap_plugin/CustomErrorRemapPlugin.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/CustomErrorRemapPlugin.soT /usr/libexec/trafficserver/CustomErrorRemapPlugin.so
+libtool: install: /usr/bin/install -c .libs/CustomErrorRemapPlugin.lai /usr/libexec/trafficserver/CustomErrorRemapPlugin.la
+libtool: warning: relinking 'CustomResponse.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o CustomResponse.la -rpath /usr/libexec/trafficserver customresponse/CustomResponse.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/CustomResponse.soT /usr/libexec/trafficserver/CustomResponse.so
+libtool: install: /usr/bin/install -c .libs/CustomResponse.lai /usr/libexec/trafficserver/CustomResponse.la
+libtool: warning: relinking 'DelayTransformationPlugin.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o DelayTransformationPlugin.la -rpath /usr/libexec/trafficserver delay_transformation_plugin/DelayTransformationPlugin.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/DelayTransformationPlugin.soT /usr/libexec/trafficserver/DelayTransformationPlugin.so
+libtool: install: /usr/bin/install -c .libs/DelayTransformationPlugin.lai /usr/libexec/trafficserver/DelayTransformationPlugin.la
+libtool: warning: relinking 'GlobalHookPlugin.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o GlobalHookPlugin.la -rpath /usr/libexec/trafficserver globalhook/GlobalHookPlugin.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/GlobalHookPlugin.soT /usr/libexec/trafficserver/GlobalHookPlugin.so
+libtool: install: /usr/bin/install -c .libs/GlobalHookPlugin.lai /usr/libexec/trafficserver/GlobalHookPlugin.la
+libtool: warning: relinking 'GzipTransformationPlugin.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o GzipTransformationPlugin.la -rpath /usr/libexec/trafficserver gzip_transformation/GzipTransformationPlugin.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/GzipTransformationPlugin.soT /usr/libexec/trafficserver/GzipTransformationPlugin.so
+libtool: install: /usr/bin/install -c .libs/GzipTransformationPlugin.lai /usr/libexec/trafficserver/GzipTransformationPlugin.la
+libtool: warning: relinking 'HelloWorldPlugin.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o HelloWorldPlugin.la -rpath /usr/libexec/trafficserver helloworld/HelloWorldPlugin.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/HelloWorldPlugin.soT /usr/libexec/trafficserver/HelloWorldPlugin.so
+libtool: install: /usr/bin/install -c .libs/HelloWorldPlugin.lai /usr/libexec/trafficserver/HelloWorldPlugin.la
+libtool: warning: relinking 'InternalTransactionHandling.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o InternalTransactionHandling.la -rpath /usr/libexec/trafficserver internal_transaction_handling/InternalTransactionHandling.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/InternalTransactionHandling.soT /usr/libexec/trafficserver/InternalTransactionHandling.so
+libtool: install: /usr/bin/install -c .libs/InternalTransactionHandling.lai /usr/libexec/trafficserver/InternalTransactionHandling.la
+libtool: warning: relinking 'LoggerExample.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o LoggerExample.la -rpath /usr/libexec/trafficserver logger_example/LoggerExample.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/LoggerExample.soT /usr/libexec/trafficserver/LoggerExample.so
+libtool: install: /usr/bin/install -c .libs/LoggerExample.lai /usr/libexec/trafficserver/LoggerExample.la
+libtool: warning: relinking 'MultipleTransactionHookPlugins.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o MultipleTransactionHookPlugins.la -rpath /usr/libexec/trafficserver multiple_transaction_hooks/MultipleTransactionHookPlugins.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/MultipleTransactionHookPlugins.soT /usr/libexec/trafficserver/MultipleTransactionHookPlugins.so
+libtool: install: /usr/bin/install -c .libs/MultipleTransactionHookPlugins.lai /usr/libexec/trafficserver/MultipleTransactionHookPlugins.la
+libtool: warning: relinking 'NullTransformationPlugin.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o NullTransformationPlugin.la -rpath /usr/libexec/trafficserver null_transformation_plugin/NullTransformationPlugin.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/NullTransformationPlugin.soT /usr/libexec/trafficserver/NullTransformationPlugin.so
+libtool: install: /usr/bin/install -c .libs/NullTransformationPlugin.lai /usr/libexec/trafficserver/NullTransformationPlugin.la
+libtool: warning: relinking 'PostBuffer.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o PostBuffer.la -rpath /usr/libexec/trafficserver post_buffer/PostBuffer.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/PostBuffer.soT /usr/libexec/trafficserver/PostBuffer.so
+libtool: install: /usr/bin/install -c .libs/PostBuffer.lai /usr/libexec/trafficserver/PostBuffer.la
+libtool: warning: relinking 'RemapPlugin.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o RemapPlugin.la -rpath /usr/libexec/trafficserver remap_plugin/RemapPlugin.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/RemapPlugin.soT /usr/libexec/trafficserver/RemapPlugin.so
+libtool: install: /usr/bin/install -c .libs/RemapPlugin.lai /usr/libexec/trafficserver/RemapPlugin.la
+libtool: warning: relinking 'ServerResponse.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o ServerResponse.la -rpath /usr/libexec/trafficserver serverresponse/ServerResponse.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/ServerResponse.soT /usr/libexec/trafficserver/ServerResponse.so
+libtool: install: /usr/bin/install -c .libs/ServerResponse.lai /usr/libexec/trafficserver/ServerResponse.la
+libtool: warning: relinking 'StatExample.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o StatExample.la -rpath /usr/libexec/trafficserver stat_example/StatExample.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/StatExample.soT /usr/libexec/trafficserver/StatExample.so
+libtool: install: /usr/bin/install -c .libs/StatExample.lai /usr/libexec/trafficserver/StatExample.la
+libtool: warning: relinking 'TimeoutExamplePlugin.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o TimeoutExamplePlugin.la -rpath /usr/libexec/trafficserver timeout_example/TimeoutExamplePlugin.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/TimeoutExamplePlugin.soT /usr/libexec/trafficserver/TimeoutExamplePlugin.so
+libtool: install: /usr/bin/install -c .libs/TimeoutExamplePlugin.lai /usr/libexec/trafficserver/TimeoutExamplePlugin.la
+libtool: warning: relinking 'TransactionHookPlugin.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o TransactionHookPlugin.la -rpath /usr/libexec/trafficserver transactionhook/TransactionHookPlugin.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/TransactionHookPlugin.soT /usr/libexec/trafficserver/TransactionHookPlugin.so
+libtool: install: /usr/bin/install -c .libs/TransactionHookPlugin.lai /usr/libexec/trafficserver/TransactionHookPlugin.la
+libtool: warning: relinking 'WebSocket.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o WebSocket.la -rpath /usr/libexec/trafficserver websocket/WebSocket.lo websocket/WSBuffer.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/WebSocket.soT /usr/libexec/trafficserver/WebSocket.so
+libtool: install: /usr/bin/install -c .libs/WebSocket.lai /usr/libexec/trafficserver/WebSocket.la
+libtool: warning: relinking 'boom.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o boom.la -rpath /usr/libexec/trafficserver boom/boom.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/boom.soT /usr/libexec/trafficserver/boom.so
+libtool: install: /usr/bin/install -c .libs/boom.lai /usr/libexec/trafficserver/boom.la
+libtool: warning: relinking 'intercept.la'
+libtool: install: (cd /src/trafficserver/example/plugins/cpp-api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -Wno-unused-variable -module -shared -avoid-version -export-symbols-regex "^(TSRemapInit|TSRemapDone|TSRemapDoRemap|TSRemapNewInstance|TSRemapDeleteInstance|TSRemapOSResponse|TSPluginInit|TSRemapPreConfigReload|TSRemapPostConfigReload)\$" -o intercept.la -rpath /usr/libexec/trafficserver intercept/intercept.lo ../../../src/tscpp/api/libtscppapi.la )
+libtool: install: /usr/bin/install -c .libs/intercept.soT /usr/libexec/trafficserver/intercept.so
+libtool: install: /usr/bin/install -c .libs/intercept.lai /usr/libexec/trafficserver/intercept.la
+libtool: finish: PATH="/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/libexec/trafficserver
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/libexec/trafficserver
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
 make[4]: Nothing to be done for 'install-data-am'.
 make[4]: Leaving directory '/src/trafficserver/example/plugins/cpp-api'
 make[3]: Leaving directory '/src/trafficserver/example/plugins/cpp-api'
