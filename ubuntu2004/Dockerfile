@@ -39,4 +39,5 @@ RUN make install 2>&1 | tee /src/make-install.log
 USER trafficserver
 WORKDIR /src/trafficserver/tests
 RUN pipenv install
-RUN pipenv run ./autest.sh --ats-bin /usr/bin 2>&1 | tee /src/autest.log
+RUN mkdir /src/autest-sandbox
+RUN pipenv run ./autest.sh --ats-bin /usr/bin --sandbox /src/autest-sandbox 2>&1 | tee /src/autest.log
