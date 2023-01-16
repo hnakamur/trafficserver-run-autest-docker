@@ -34,11 +34,7 @@ WORKDIR /src/trafficserver/tests
 RUN pipenv install
 RUN mkdir /src/autest-sandbox
 
-RUN apt-get install -y netcat-traditional iproute2 telnet nghttp2 libnghttp2-dev 
+RUN apt-get install -y ncat iproute2 telnet nghttp2 libnghttp2-dev 
 
-COPY cache_and_req_body.test.py.patch /src/
-WORKDIR /src/trafficserver
-RUN patch -p1 < /src/cache_and_req_body.test.py.patch
 WORKDIR /src/trafficserver/tests
-RUN pipenv run ./autest.sh --ats-bin /usr/bin --sandbox /src/autest-sandbox -f cache_and_req_body 2>&1 | tee /src/autest.log
-#RUN pipenv run ./autest.sh --ats-bin /usr/bin --sandbox /src/autest-sandbox 2>&1 | tee /src/autest.log
+RUN pipenv run ./autest.sh --ats-bin /usr/bin --sandbox /src/autest-sandbox 2>&1 | tee /src/autest.log
