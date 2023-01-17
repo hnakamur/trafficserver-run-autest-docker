@@ -21,7 +21,7 @@ test-filter:
 		-v $${HOME}/ccache:/tmp/ccache:rw \
 		-v $${PWD}/data:/data:rw \
 		$(IMAGE) --sandbox /data/sandbox-$(test) -f $(test) 2>&1 \
-		| tee ./data/autest-$(test).log
+		| tee ./log/autest-$(test).log
 
 run:
 	mkdir -p ./log
