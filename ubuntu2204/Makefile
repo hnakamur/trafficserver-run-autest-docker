@@ -10,11 +10,19 @@ getlogs:
 
 test:
 	mkdir -p ./log
-	docker run --rm -it --init --cap-add=SYS_PTRACE -v $${HOME}/ccache:/tmp/ccache:rw -v $${PWD}/log:/test-log:rw $(IMAGE) 2>&1 | tee ./log/autest.log
+	docker run --rm -it --init --cap-add=SYS_PTRACE \
+		-v $${HOME}/ccache:/tmp/ccache:rw \
+		-v $${PWD}/log:/test-log:rw \
+		-v $${PWD}/sandbox:/sandbox:rw \
+		$(IMAGE) 2>&1 | tee ./log/autest.log
 
 run:
 	mkdir -p ./log
-	docker run --rm -it --init --cap-add=SYS_PTRACE -v $${HOME}/ccache:/tmp/ccache:rw -v $${PWD}/log:/test-log:rw --entrypoint bash $(IMAGE) 
+	docker run --rm -it --init --cap-add=SYS_PTRACE \
+		-v $${HOME}/ccache:/tmp/ccache:rw \
+		-v $${PWD}/log:/test-log:rw \
+		-v $${PWD}/sandbox:/sandbox:rw \
+		--entrypoint bash $(IMAGE)
 
 exec:
 	docker exec -it $$(docker ps -lq) bash

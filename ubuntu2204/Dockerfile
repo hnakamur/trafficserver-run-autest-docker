@@ -35,8 +35,8 @@ RUN make install 2>&1 | tee /build-log/make-install.log
 
 WORKDIR /src/trafficserver/tests
 RUN pipenv install
-RUN mkdir /test-log
+RUN mkdir /sandbox
 
 WORKDIR /src/trafficserver/tests
 ENTRYPOINT ["pipenv", "run", "./autest.sh", "--ats-bin", "/usr/bin"]
-CMD ["--sandbox", "/test-log/sandbox"]
+CMD ["--sandbox", "/sandbox"]
