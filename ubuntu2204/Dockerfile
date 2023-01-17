@@ -25,9 +25,15 @@ RUN curl -sSL https://github.com/summerwind/h2spec/releases/download/v2.6.0/h2sp
 RUN pip install pipenv
 ENV PATH /src/.local/bin:$PATH
 
-RUN mkdir /build-log
-RUN git clone --depth 1 --branch adjust_autest_for_ubuntu https://github.com/hnakamur/trafficserver /src/trafficserver
+ENV REPO https://github.com/hnakamur/trafficserver
+ENV COMMIT b1f0947cb7ee9ac71ace5b500d2eb17787d0708b
+
+RUN mkdir -p /build-log /src/trafficserver
 WORKDIR /src/trafficserver
+RUN git init
+RUN git remote add origin ${REPO}
+RUN git fetch --depth 1 origin ${COMMIT}
+RUN git checkout FETCH_HEAD
 RUN autoreconf -if
 RUN ./configure --enable-experimental-plugins --enable-example-plugins --prefix=/usr --enable-werror --enable-debug --enable-wccp --enable-luajit --enable-ccache 2>&1 | tee /build-log/configure.log
 RUN CXX=g++-12 CC=gcc-12 make -j 2>&1 | tee /build-log/make.log
