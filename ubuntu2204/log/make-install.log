@@ -13,7 +13,7 @@ make[2]: Entering directory '/src/trafficserver/include/tscpp/api'
 make[3]: Entering directory '/src/trafficserver/include/tscpp/api'
 make[3]: Nothing to be done for 'install-exec-am'.
  /usr/bin/mkdir -p '/usr/include/tscpp/api'
- /usr/bin/install -c -m 644 Async.h AsyncHttpFetch.h AsyncTimer.h CaseInsensitiveStringComparator.h ClientRequest.h Continuation.h GlobalPlugin.h GzipDeflateTransformation.h GzipInflateTransformation.h Headers.h HttpMethod.h HttpStatus.h HttpVersion.h InterceptPlugin.h Logger.h Plugin.h PluginInit.h RemapPlugin.h Request.h Response.h Stat.h Transaction.h TransactionPlugin.h TransformationPlugin.h Url.h noncopyable.h utils.h '/usr/include/tscpp/api'
+ /usr/bin/install -c -m 644 Async.h AsyncHttpFetch.h AsyncTimer.h CaseInsensitiveStringComparator.h Cleanup.h ClientRequest.h Continuation.h GlobalPlugin.h GzipDeflateTransformation.h GzipInflateTransformation.h Headers.h HttpMethod.h HttpStatus.h HttpVersion.h InterceptPlugin.h Logger.h Plugin.h PluginInit.h RemapPlugin.h Request.h Response.h Stat.h Transaction.h TransactionPlugin.h TransformationPlugin.h Url.h noncopyable.h utils.h '/usr/include/tscpp/api'
 make[3]: Leaving directory '/src/trafficserver/include/tscpp/api'
 make[2]: Leaving directory '/src/trafficserver/include/tscpp/api'
 Making install in tscpp/util
@@ -21,7 +21,7 @@ make[2]: Entering directory '/src/trafficserver/include/tscpp/util'
 make[3]: Entering directory '/src/trafficserver/include/tscpp/util'
 make[3]: Nothing to be done for 'install-exec-am'.
  /usr/bin/mkdir -p '/usr/include/tscpp/util'
- /usr/bin/install -c -m 644 IntrusiveDList.h LocalBuffer.h PostScript.h TextView.h TsSharedMutex.h '/usr/include/tscpp/util'
+ /usr/bin/install -c -m 644 IntrusiveDList.h LocalBuffer.h PostScript.h Strerror.h string_view_util.h TextView.h TsSharedMutex.h '/usr/include/tscpp/util'
 make[3]: Leaving directory '/src/trafficserver/include/tscpp/util'
 make[2]: Leaving directory '/src/trafficserver/include/tscpp/util'
 make[2]: Entering directory '/src/trafficserver/include'
@@ -31,14 +31,60 @@ make[3]: Nothing to be done for 'install-data-am'.
 make[3]: Leaving directory '/src/trafficserver/include'
 make[2]: Leaving directory '/src/trafficserver/include'
 make[1]: Leaving directory '/src/trafficserver/include'
+Making install in lib
+make[1]: Entering directory '/src/trafficserver/lib'
+Making install in .
+make[2]: Entering directory '/src/trafficserver/lib'
+make -C yamlcpp
+make[3]: Entering directory '/src/trafficserver/lib/yamlcpp'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/src/trafficserver/lib/yamlcpp'
+make -C swoc
+make[3]: Entering directory '/src/trafficserver/lib/swoc'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/src/trafficserver/lib/swoc'
+make[3]: Entering directory '/src/trafficserver/lib'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/src/trafficserver/lib'
+make[2]: Leaving directory '/src/trafficserver/lib'
+Making install in fastlz
+make[2]: Entering directory '/src/trafficserver/lib/fastlz'
+make[3]: Entering directory '/src/trafficserver/lib/fastlz'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/src/trafficserver/lib/fastlz'
+make[2]: Leaving directory '/src/trafficserver/lib/fastlz'
+Making install in perl
+make[2]: Entering directory '/src/trafficserver/lib/perl'
+make -f Makefile-pl INSTALLDIRS=perl PREFIX=/usr DESTDIR=
+make[3]: Entering directory '/src/trafficserver/lib/perl'
+Manifying 3 pod documents
+make[3]: Leaving directory '/src/trafficserver/lib/perl'
+make[3]: Entering directory '/src/trafficserver/lib/perl'
+make -f Makefile-pl INSTALLMAN3DIR=/usr/share/man/man3 INSTALLDIRS=perl PREFIX=/usr DESTDIR= install
+make[4]: Entering directory '/src/trafficserver/lib/perl'
+Manifying 3 pod documents
+Installing /usr/lib/perl5/Apache/TS.pm
+Installing /usr/lib/perl5/Apache/TS/Config.pm
+Installing /usr/lib/perl5/Apache/TS/AdminClient.pm
+Installing /usr/lib/perl5/Apache/TS/Config/Records.pm
+Installing /usr/share/man/man3/Apache::TS::Config::Records.3pm
+Installing /usr/share/man/man3/Apache::TS::AdminClient.3pm
+Installing /usr/share/man/man3/Apache::TS.3pm
+make[4]: Leaving directory '/src/trafficserver/lib/perl'
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/src/trafficserver/lib/perl'
+make[2]: Leaving directory '/src/trafficserver/lib/perl'
+make[1]: Leaving directory '/src/trafficserver/lib'
 Making install in src/tscpp/util
 make[1]: Entering directory '/src/trafficserver/src/tscpp/util'
 make[2]: Entering directory '/src/trafficserver/src/tscpp/util'
  /usr/bin/mkdir -p '/usr/lib'
  /bin/bash ../../../libtool   --mode=install /usr/bin/install -c   libtscpputil.la '/usr/lib'
-libtool: install: /usr/bin/install -c .libs/libtscpputil.so.9.2.0 /usr/lib/libtscpputil.so.9.2.0
-libtool: install: (cd /usr/lib && { ln -s -f libtscpputil.so.9.2.0 libtscpputil.so.9 || { rm -f libtscpputil.so.9 && ln -s libtscpputil.so.9.2.0 libtscpputil.so.9; }; })
-libtool: install: (cd /usr/lib && { ln -s -f libtscpputil.so.9.2.0 libtscpputil.so || { rm -f libtscpputil.so && ln -s libtscpputil.so.9.2.0 libtscpputil.so; }; })
+libtool: install: /usr/bin/install -c .libs/libtscpputil.so.10.0.0 /usr/lib/libtscpputil.so.10.0.0
+libtool: install: (cd /usr/lib && { ln -s -f libtscpputil.so.10.0.0 libtscpputil.so.10 || { rm -f libtscpputil.so.10 && ln -s libtscpputil.so.10.0.0 libtscpputil.so.10; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libtscpputil.so.10.0.0 libtscpputil.so || { rm -f libtscpputil.so && ln -s libtscpputil.so.10.0.0 libtscpputil.so; }; })
 libtool: install: /usr/bin/install -c .libs/libtscpputil.lai /usr/lib/libtscpputil.la
 libtool: finish: PATH="/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/lib
 ----------------------------------------------------------------------
@@ -62,73 +108,24 @@ more information, such as the ld(1) and ld.so(8) manual pages.
 make[2]: Nothing to be done for 'install-data-am'.
 make[2]: Leaving directory '/src/trafficserver/src/tscpp/util'
 make[1]: Leaving directory '/src/trafficserver/src/tscpp/util'
-Making install in lib
-make[1]: Entering directory '/src/trafficserver/lib'
-Making install in .
-make[2]: Entering directory '/src/trafficserver/lib'
-make -C yamlcpp
-make[3]: Entering directory '/src/trafficserver/lib/yamlcpp'
-make[3]: Nothing to be done for 'all'.
-make[3]: Leaving directory '/src/trafficserver/lib/yamlcpp'
-make[3]: Entering directory '/src/trafficserver/lib'
-make[3]: Nothing to be done for 'install-exec-am'.
-make[3]: Nothing to be done for 'install-data-am'.
-make[3]: Leaving directory '/src/trafficserver/lib'
-make[2]: Leaving directory '/src/trafficserver/lib'
-Making install in records
-make[2]: Entering directory '/src/trafficserver/lib/records'
-make[3]: Entering directory '/src/trafficserver/lib/records'
-make[3]: Nothing to be done for 'install-exec-am'.
-make[3]: Nothing to be done for 'install-data-am'.
-make[3]: Leaving directory '/src/trafficserver/lib/records'
-make[2]: Leaving directory '/src/trafficserver/lib/records'
-Making install in fastlz
-make[2]: Entering directory '/src/trafficserver/lib/fastlz'
-make[3]: Entering directory '/src/trafficserver/lib/fastlz'
-make[3]: Nothing to be done for 'install-exec-am'.
-make[3]: Nothing to be done for 'install-data-am'.
-make[3]: Leaving directory '/src/trafficserver/lib/fastlz'
-make[2]: Leaving directory '/src/trafficserver/lib/fastlz'
-Making install in perl
-make[2]: Entering directory '/src/trafficserver/lib/perl'
-make -f Makefile-pl INSTALLDIRS=perl PREFIX=/usr DESTDIR=
-make[3]: Entering directory '/src/trafficserver/lib/perl'
-Manifying 3 pod documents
-make[3]: Leaving directory '/src/trafficserver/lib/perl'
-make[3]: Entering directory '/src/trafficserver/lib/perl'
-make -f Makefile-pl INSTALLMAN3DIR=/usr/share/man/man3 INSTALLDIRS=perl PREFIX=/usr DESTDIR= install
-make[4]: Entering directory '/src/trafficserver/lib/perl'
-Manifying 3 pod documents
-Installing /usr/lib/perl5/Apache/TS.pm
-Installing /usr/lib/perl5/Apache/TS/AdminClient.pm
-Installing /usr/lib/perl5/Apache/TS/Config.pm
-Installing /usr/lib/perl5/Apache/TS/Config/Records.pm
-Installing /usr/share/man/man3/Apache::TS::AdminClient.3pm
-Installing /usr/share/man/man3/Apache::TS.3pm
-Installing /usr/share/man/man3/Apache::TS::Config::Records.3pm
-make[4]: Leaving directory '/src/trafficserver/lib/perl'
-make[3]: Nothing to be done for 'install-data-am'.
-make[3]: Leaving directory '/src/trafficserver/lib/perl'
-make[2]: Leaving directory '/src/trafficserver/lib/perl'
-make[1]: Leaving directory '/src/trafficserver/lib'
 Making install in src/tscore
 make[1]: Entering directory '/src/trafficserver/src/tscore'
-Makefile:2614: warning: overriding recipe for target 'CompileParseRules'
-Makefile:1188: warning: ignoring old recipe for target 'CompileParseRules'
+Makefile:2666: warning: overriding recipe for target 'CompileParseRules'
+Makefile:1203: warning: ignoring old recipe for target 'CompileParseRules'
 make  install-am
 make[2]: Entering directory '/src/trafficserver/src/tscore'
-Makefile:2614: warning: overriding recipe for target 'CompileParseRules'
-Makefile:1188: warning: ignoring old recipe for target 'CompileParseRules'
+Makefile:2666: warning: overriding recipe for target 'CompileParseRules'
+Makefile:1203: warning: ignoring old recipe for target 'CompileParseRules'
 make[3]: Entering directory '/src/trafficserver/src/tscore'
-Makefile:2614: warning: overriding recipe for target 'CompileParseRules'
-Makefile:1188: warning: ignoring old recipe for target 'CompileParseRules'
+Makefile:2666: warning: overriding recipe for target 'CompileParseRules'
+Makefile:1203: warning: ignoring old recipe for target 'CompileParseRules'
  /usr/bin/mkdir -p '/usr/lib'
  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   libtscore.la '/usr/lib'
 libtool: warning: relinking 'libtscore.la'
-libtool: install: (cd /src/trafficserver/src/tscore; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -no-undefined -version-info 11:0:2 -L/src/trafficserver/lib/yamlcpp -o libtscore.la -rpath /usr/lib AcidPtr.lo Arena.lo ArgParser.lo BaseLogFile.lo BufferWriterFormat.lo ConsistentHash.lo ContFlags.lo CryptoHash.lo Diags.lo Errata.lo EventNotify.lo Extendible.lo Hash.lo HashFNV.lo HashMD5.lo HashSip.lo HostLookup.lo hugepages.lo ink_args.lo ink_assert.lo ink_base64.lo ink_cap.lo ink_code.lo ink_defs.lo InkErrno.lo ink_error.lo ink_file.lo ink_hrtime.lo ink_hw.lo ink_inet.lo ink_memory.lo ink_mutex.lo ink_queue.lo ink_queue_utils.lo ink_rand.lo ink_res_init.lo ink_res_mkquery.lo ink_resource.lo ink_rwlock.lo ink_sock.lo ink_sprintf.lo ink_stack_trace.lo ink_string.lo ink_string++.lo ink_sys_control.lo ink_syslog.lo ink_thread.lo ink_time.lo ink_uuid.lo IpMap.lo IpMapConf.lo JeAllocator.lo Layout.lo llqueue.lo lockfile.lo MatcherUtils.lo MemArena.lo MMH.lo ParseRules.lo Random.lo RbTree.lo Regex.lo Regression.lo runroot.lo signals.lo SourceLocation.lo TextBuffer.lo LogMessage.lo Throttler.lo Tokenizer.lo ts_file.lo Version.lo X509HostnameValidator.lo HKDF_openssl3.lo ../../src/tscpp/util/libtscpputil.la -lhwloc -lpcre -lssl -lcrypto -lresolv -lcap -lyamlcpp -lc )
-libtool: install: /usr/bin/install -c .libs/libtscore.so.9.2.0T /usr/lib/libtscore.so.9.2.0
-libtool: install: (cd /usr/lib && { ln -s -f libtscore.so.9.2.0 libtscore.so.9 || { rm -f libtscore.so.9 && ln -s libtscore.so.9.2.0 libtscore.so.9; }; })
-libtool: install: (cd /usr/lib && { ln -s -f libtscore.so.9.2.0 libtscore.so || { rm -f libtscore.so && ln -s libtscore.so.9.2.0 libtscore.so; }; })
+libtool: install: (cd /src/trafficserver/src/tscore; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -no-undefined -version-info 10:0:0 -L/src/trafficserver/lib/yamlcpp -o libtscore.la -rpath /usr/lib AcidPtr.lo Arena.lo ArgParser.lo BaseLogFile.lo BufferWriterFormat.lo ConsistentHash.lo ContFlags.lo CryptoHash.lo DbgCtl.lo Diags.lo Errata.lo EventNotify.lo Extendible.lo Hash.lo HashFNV.lo HashSip.lo HostLookup.lo hugepages.lo ink_args.lo ink_assert.lo ink_base64.lo ink_cap.lo ink_defs.lo InkErrno.lo ink_error.lo ink_file.lo ink_hrtime.lo ink_hw.lo ink_inet.lo ink_memory.lo ink_mutex.lo ink_queue.lo ink_queue_utils.lo ink_rand.lo ink_res_init.lo ink_res_mkquery.lo ink_resource.lo ink_rwlock.lo ink_sock.lo ink_sprintf.lo ink_stack_trace.lo ink_string.lo ink_string++.lo ink_sys_control.lo ink_syslog.lo ink_thread.lo ink_time.lo ink_uuid.lo IpMap.lo IpMapConf.lo JeMiAllocator.lo Layout.lo llqueue.lo lockfile.lo MatcherUtils.lo MemArena.lo MMH.lo ParseRules.lo Random.lo RbTree.lo Regex.lo Regression.lo runroot.lo signals.lo SourceLocation.lo TextBuffer.lo LogMessage.lo Throttler.lo Tokenizer.lo ts_file.lo Version.lo X509HostnameValidator.lo HKDF_openssl3.lo ../../src/tscpp/util/libtscpputil.la -lhwloc -lpcre -lssl -lcrypto -lresolv -lcap -lyamlcpp -lc )
+libtool: install: /usr/bin/install -c .libs/libtscore.so.10.0.0T /usr/lib/libtscore.so.10.0.0
+libtool: install: (cd /usr/lib && { ln -s -f libtscore.so.10.0.0 libtscore.so.10 || { rm -f libtscore.so.10 && ln -s libtscore.so.10.0.0 libtscore.so.10; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libtscore.so.10.0.0 libtscore.so || { rm -f libtscore.so && ln -s libtscore.so.10.0.0 libtscore.so; }; })
 libtool: install: /usr/bin/install -c .libs/libtscore.lai /usr/lib/libtscore.la
 libtool: finish: PATH="/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/lib
 ----------------------------------------------------------------------
@@ -153,6 +150,13 @@ make[3]: Nothing to be done for 'install-data-am'.
 make[3]: Leaving directory '/src/trafficserver/src/tscore'
 make[2]: Leaving directory '/src/trafficserver/src/tscore'
 make[1]: Leaving directory '/src/trafficserver/src/tscore'
+Making install in src/records
+make[1]: Entering directory '/src/trafficserver/src/records'
+make[2]: Entering directory '/src/trafficserver/src/records'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/src/trafficserver/src/records'
+make[1]: Leaving directory '/src/trafficserver/src/records'
 Making install in iocore
 make[1]: Entering directory '/src/trafficserver/iocore'
 Making install in eventsystem
@@ -316,7 +320,7 @@ make[4]: Entering directory '/src/trafficserver/proxy'
 if [ `id -un` == "root" ]; then \
 	chown -R nobody:nogroup /usr/etc/trafficserver /usr/share/trafficserver;\
 fi
-echo "<TS_VERSION> 9.2.0" > /usr/etc/trafficserver/trafficserver-release
+echo "<TS_VERSION> 10.0.0" > /usr/etc/trafficserver/trafficserver-release
 make[4]: Leaving directory '/src/trafficserver/proxy'
 make[3]: Leaving directory '/src/trafficserver/proxy'
 make[2]: Leaving directory '/src/trafficserver/proxy'
@@ -345,10 +349,10 @@ make[4]: Entering directory '/src/trafficserver/mgmt/api'
  /usr/bin/mkdir -p '/usr/lib'
  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   libtsmgmt.la '/usr/lib'
 libtool: warning: relinking 'libtsmgmt.la'
-libtool: install: (cd /src/trafficserver/mgmt/api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -no-undefined -version-info 11:0:2 -o libtsmgmt.la -rpath /usr/lib CoreAPIRemote.lo NetworkUtilsRemote.lo libmgmtapi.la ../../src/tscore/libtscore.la ../../mgmt/utils/libutils_p.la )
-libtool: install: /usr/bin/install -c .libs/libtsmgmt.so.9.2.0T /usr/lib/libtsmgmt.so.9.2.0
-libtool: install: (cd /usr/lib && { ln -s -f libtsmgmt.so.9.2.0 libtsmgmt.so.9 || { rm -f libtsmgmt.so.9 && ln -s libtsmgmt.so.9.2.0 libtsmgmt.so.9; }; })
-libtool: install: (cd /usr/lib && { ln -s -f libtsmgmt.so.9.2.0 libtsmgmt.so || { rm -f libtsmgmt.so && ln -s libtsmgmt.so.9.2.0 libtsmgmt.so; }; })
+libtool: install: (cd /src/trafficserver/mgmt/api; /bin/bash "/src/trafficserver/libtool"  --silent --tag CXX --mode=relink c++ -std=c++17 -ggdb3 -pipe -Wall -Wextra -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-format-truncation -Wno-cast-function-type -Wno-stringop-overflow -Werror -Wno-invalid-offsetof -Wno-noexcept-type -Wsuggest-override -mcx16 -rdynamic -Wl,--as-needed -no-undefined -version-info 10:0:0 -o libtsmgmt.la -rpath /usr/lib CoreAPIRemote.lo NetworkUtilsRemote.lo libmgmtapi.la ../../src/tscore/libtscore.la ../../mgmt/utils/libutils_p.la )
+libtool: install: /usr/bin/install -c .libs/libtsmgmt.so.10.0.0T /usr/lib/libtsmgmt.so.10.0.0
+libtool: install: (cd /usr/lib && { ln -s -f libtsmgmt.so.10.0.0 libtsmgmt.so.10 || { rm -f libtsmgmt.so.10 && ln -s libtsmgmt.so.10.0.0 libtsmgmt.so.10; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libtsmgmt.so.10.0.0 libtsmgmt.so || { rm -f libtsmgmt.so && ln -s libtsmgmt.so.10.0.0 libtsmgmt.so; }; })
 libtool: install: /usr/bin/install -c .libs/libtsmgmt.lai /usr/lib/libtsmgmt.la
 libtool: finish: PATH="/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/lib
 ----------------------------------------------------------------------
@@ -387,9 +391,9 @@ make[2]: Entering directory '/src/trafficserver/src/tscpp/api'
 make[3]: Entering directory '/src/trafficserver/src/tscpp/api'
  /usr/bin/mkdir -p '/usr/lib'
  /bin/bash ../../../libtool   --mode=install /usr/bin/install -c   libtscppapi.la '/usr/lib'
-libtool: install: /usr/bin/install -c .libs/libtscppapi.so.9.2.0 /usr/lib/libtscppapi.so.9.2.0
-libtool: install: (cd /usr/lib && { ln -s -f libtscppapi.so.9.2.0 libtscppapi.so.9 || { rm -f libtscppapi.so.9 && ln -s libtscppapi.so.9.2.0 libtscppapi.so.9; }; })
-libtool: install: (cd /usr/lib && { ln -s -f libtscppapi.so.9.2.0 libtscppapi.so || { rm -f libtscppapi.so && ln -s libtscppapi.so.9.2.0 libtscppapi.so; }; })
+libtool: install: /usr/bin/install -c .libs/libtscppapi.so.10.0.0 /usr/lib/libtscppapi.so.10.0.0
+libtool: install: (cd /usr/lib && { ln -s -f libtscppapi.so.10.0.0 libtscppapi.so.10 || { rm -f libtscppapi.so.10 && ln -s libtscppapi.so.10.0.0 libtscppapi.so.10; }; })
+libtool: install: (cd /usr/lib && { ln -s -f libtscppapi.so.10.0.0 libtscppapi.so || { rm -f libtscppapi.so && ln -s libtscppapi.so.10.0.0 libtscppapi.so; }; })
 libtool: install: /usr/bin/install -c .libs/libtscppapi.lai /usr/lib/libtscppapi.la
 libtool: finish: PATH="/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/lib
 ----------------------------------------------------------------------
@@ -872,7 +876,7 @@ make[3]: Entering directory '/src/trafficserver/configs/body_factory/default'
 make[4]: Entering directory '/src/trafficserver/configs/body_factory/default'
 make[4]: Nothing to be done for 'install-exec-am'.
  /usr/bin/mkdir -p '/usr/etc/trafficserver/body_factory/default'
- /usr/bin/install -c -m 644 access#denied access#proxy_auth_required access#ssl_forbidden .body_factory_info cache#not_in_cache cache#read_error connect#dns_failed connect#failed_connect connect#hangup default interception#no_host README redirect#moved_temporarily redirect#moved_permanently request#cycle_detected request#no_content_length request#invalid_content_length request#no_host request#scheme_unsupported request#syntax_error response#bad_response response#bad_version timeout#activity timeout#inactivity transcoding#unsupported urlrouting#no_mapping request#uri_len_too_long '/usr/etc/trafficserver/body_factory/default'
+ /usr/bin/install -c -m 644 access#denied access#proxy_auth_required access#ssl_forbidden .body_factory_info cache#not_in_cache cache#read_error connect#dns_failed connect#failed_connect connect#hangup connect#all_dead default interception#no_host README redirect#moved_temporarily redirect#moved_permanently request#cycle_detected request#no_content_length request#invalid_content_length request#no_host request#scheme_unsupported request#syntax_error response#bad_response response#bad_version timeout#activity timeout#inactivity transcoding#unsupported urlrouting#no_mapping request#uri_len_too_long '/usr/etc/trafficserver/body_factory/default'
 make[4]: Leaving directory '/src/trafficserver/configs/body_factory/default'
 make[3]: Leaving directory '/src/trafficserver/configs/body_factory/default'
 make[3]: Entering directory '/src/trafficserver/configs/body_factory'

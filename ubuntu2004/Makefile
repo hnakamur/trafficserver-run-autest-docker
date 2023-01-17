@@ -1,13 +1,20 @@
+IMAGE = ats920rc0-ubuntu2004
+
 build:
-	docker build -t ats920rc0-ubuntu2004 .
+	docker build -t $(IMAGE) .
+
+getlogs:
+	docker run -d --rm -it --entrypoint bash $(IMAGE)
+	echo -n configure.log make.log make-install.log | xargs -d ' ' -I {} docker cp $$(docker ps -lq):/build-log/{} ./log/
+	docker stop $$(docker ps -lq)
+
+test:
+	mkdir -p ./log
+	docker run --rm -it --init --cap-add=SYS_PTRACE -v $${HOME}/ccache:/tmp/ccache:rw -v $${PWD}/log:/test-log:rw $(IMAGE) 2>&1 | tee ./log/autest.log
 
 run:
-	docker run --rm -it --cap-add=SYS_PTRACE ats920rc0-ubuntu2004 bash
+	mkdir -p ./log
+	docker run --rm -it --init --cap-add=SYS_PTRACE -v $${HOME}/ccache:/tmp/ccache:rw -v $${PWD}/log:/test-log:rw --entrypoint bash $(IMAGE) 
 
 exec:
 	docker exec -it $$(docker ps -lq) bash
-
-getlogs:
-	docker run -d --rm -it ats920rc0-ubuntu2004 bash
-	echo -n configure.log make.log make-install.log autest.log | xargs -d ' ' -I {} docker cp $$(docker ps -lq):/src/{} {}
-	docker stop $$(docker ps -lq)
