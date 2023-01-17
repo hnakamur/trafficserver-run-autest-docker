@@ -2,7 +2,7 @@ build:
 	docker build -t ats920rc0-ubuntu2004 .
 
 run:
-	docker run --rm -it ats920rc0-ubuntu2004 bash
+	docker run --rm -it --cap-add=SYS_PTRACE ats920rc0-ubuntu2004 bash
 
 exec:
 	docker exec -it $$(docker ps -lq) bash
