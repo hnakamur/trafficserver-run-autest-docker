@@ -2,7 +2,7 @@ IMAGE = ats920-ubuntu2204
 
 build:
 	mkdir -p ./log
-	docker build $(DOCKER_OPTS) -t $(IMAGE) . 2>&1 | tee ./log/build.log
+	docker build $(DOCKER_BUILD_OPTS) -t $(IMAGE) . 2>&1 | tee ./log/build.log
 
 test:
 	mkdir -p ./log ./data
