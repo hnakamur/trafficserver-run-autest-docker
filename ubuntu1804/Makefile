@@ -1,4 +1,4 @@
-IMAGE = ats920-ubuntu2004
+IMAGE = ats920-ubuntu1804
 
 build:
 	mkdir -p ./log
