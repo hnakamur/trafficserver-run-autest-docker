@@ -1,19 +1,20 @@
 # trafficserver-run-autest-docker
 
-In each directory of ubuntu2204 and ubuntu2004, run the following command to build and run autest:
+In each directory of ubuntu{18,20,22}04, run the following command to build trafficserver and run `make check` in a Docker container:
 
 ```
 make build
 ```
 
-And then run the following command to get the log files:
+Run the following command to run autest in the Docker container built with the above command:
 
 ```
-make getlogs
+make test
 ```
 
 Finally you can view the log files like the following:
 
 ```
-less -R autest.log
+less -R log/build.log
+less -R log/autest.log
 ```
