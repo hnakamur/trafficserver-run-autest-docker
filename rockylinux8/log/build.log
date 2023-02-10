@@ -1,0 +1,53 @@
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 590B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for ci.trafficserver.apache.org/ats/rockylinux:8
+#3 DONE 0.0s
+
+#4 [ 1/11] FROM ci.trafficserver.apache.org/ats/rockylinux:8
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 59B done
+#5 DONE 0.0s
+
+#6 [10/11] WORKDIR /src/trafficserver/tests
+#6 CACHED
+
+#7 [ 2/11] RUN mkdir -p /src/trafficserver
+#7 CACHED
+
+#8 [ 4/11] WORKDIR /src/trafficserver
+#8 CACHED
+
+#9 [ 9/11] RUN /src/build.sh
+#9 CACHED
+
+#10 [ 8/11] RUN git checkout FETCH_HEAD
+#10 CACHED
+
+#11 [ 5/11] RUN git init
+#11 CACHED
+
+#12 [ 3/11] COPY build.sh autest.sh /src/
+#12 CACHED
+
+#13 [ 6/11] RUN git remote add origin https://github.com/apache/trafficserver
+#13 CACHED
+
+#14 [ 7/11] RUN git fetch --depth 1 origin 086501cb58d7b872e955b49de952b554ba7b5685
+#14 CACHED
+
+#15 [11/11] RUN mkdir -p /tmp/sandbox
+#15 CACHED
+
+#16 exporting to image
+#16 exporting layers done
+#16 writing image sha256:478672d51964d4047b3a14efc9f5d2b2c13da49988dab6a5f6e3dc260688a37f done
+#16 naming to docker.io/library/ats-rockylinux8 done
+#16 DONE 0.0s
