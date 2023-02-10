@@ -1,4 +1,4 @@
-IMAGE = ats920-ubuntu2204
+IMAGE = ats-ubuntu2204
 
 build:
 	mkdir -p ./log

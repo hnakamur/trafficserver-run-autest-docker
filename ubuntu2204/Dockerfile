@@ -25,9 +25,8 @@ RUN curl -sSL https://github.com/summerwind/h2spec/releases/download/v2.6.0/h2sp
 RUN pip install pipenv
 ENV PATH /src/.local/bin:$PATH
 
-ENV REPO https://github.com/hnakamur/trafficserver
-# 9.2.0 + patches for autest
-ENV COMMIT 8bcb2b76f95a4c53280b486a54301d52e67d77ba
+ENV REPO https://github.com/apache/trafficserver
+ENV COMMIT 086501cb58d7b872e955b49de952b554ba7b5685
 
 RUN mkdir -p /src/trafficserver
 WORKDIR /src/trafficserver
