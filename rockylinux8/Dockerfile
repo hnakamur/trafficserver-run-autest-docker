@@ -10,11 +10,14 @@ RUN git init
 RUN git remote add origin ${REPO}
 RUN git fetch --depth 1 origin ${COMMIT}
 RUN git checkout FETCH_HEAD
+
+ENV ATS_PREFIX /usr/ats
 RUN /src/build.sh
 
 WORKDIR /src/trafficserver/tests
-RUN mkdir -p /tmp/sandbox
+ENV SANDBOX /data/sandbox
 ENV WORKSPACE /src/trafficserver
 ENV GITHUB_BRANCH master
 ENV SHARDCNT 0
+RUN mkdir -p ${SANDBOX}
 CMD ["/bin/bash", "-x", "/src/autest.sh"]
