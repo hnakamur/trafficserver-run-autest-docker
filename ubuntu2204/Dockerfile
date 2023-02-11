@@ -5,7 +5,7 @@ ENV LANG C
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
       git python3 python3-pip curl \
-      g++-12 make autoconf pkg-config \
+      g++ make autoconf pkg-config \
       libssl-dev tcl-dev libexpat1-dev \
       libpcre3-dev libtool libcap-dev graphviz \
       libluajit-5.1-dev libboost-dev libhwloc-dev default-libmysqlclient-dev \
@@ -17,7 +17,7 @@ RUN apt-get update \
       libmaxminddb-dev \
       zlib1g-dev libgeoip-dev \
       # autest stuff
-      ncat iproute2 telnet nghttp2 libnghttp2-dev 
+      ncat iproute2 telnet nghttp2 libnghttp2-dev sudo
 
 RUN curl -sSL https://github.com/summerwind/h2spec/releases/download/v2.6.0/h2spec_linux_amd64.tar.gz \
     | tar zxf - -C /usr/local/bin/
@@ -25,24 +25,29 @@ RUN curl -sSL https://github.com/summerwind/h2spec/releases/download/v2.6.0/h2sp
 RUN pip install pipenv
 ENV PATH /src/.local/bin:$PATH
 
-ENV REPO https://github.com/apache/trafficserver
-ENV COMMIT 086501cb58d7b872e955b49de952b554ba7b5685
+ENV REPO https://github.com/hnakamur/trafficserver
+ENV GITHUB_BRANCH adjust_autest_for_rockylinux8
 
-RUN mkdir -p /src/trafficserver
-WORKDIR /src/trafficserver
-RUN git init
-RUN git remote add origin ${REPO}
-RUN git fetch --depth 1 origin ${COMMIT}
-RUN git checkout FETCH_HEAD
-RUN autoreconf -if
-RUN CXX=g++-12 CC=gcc-12 ./configure --enable-experimental-plugins --enable-example-plugins --prefix=/usr --enable-werror --enable-debug --enable-wccp --enable-luajit --enable-ccache
-RUN make -j V=1
-RUN make install
-RUN make check V=1
+ENV WORKSPACE /src/trafficserver
+RUN git clone --depth 1 -b ${GITHUB_BRANCH} ${REPO} ${WORKSPACE}
+WORKDIR ${WORKSPACE}
+RUN git log -1 --pretty=fuller
 
-WORKDIR /src/trafficserver/tests
+WORKDIR ${WORKSPACE}/tests
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
 RUN pipenv install
 
-WORKDIR /src/trafficserver/tests
-ENTRYPOINT ["pipenv", "run", "./autest.sh", "--ats-bin", "/usr/bin"]
-CMD ["--sandbox", "/data/sandbox"]
+WORKDIR ${WORKSPACE}
+ENV ATS_PREFIX /usr
+RUN autoreconf -if
+RUN ./configure --enable-experimental-plugins --enable-example-plugins \
+    --prefix=$ATS_PREFIX --enable-werror --enable-debug --enable-wccp --enable-luajit
+RUN make -j V=1
+RUN make install
+
+COPY run_autest.sh check.sh /src/
+ENV SHARDCNT 0
+ENV SHARD 0
+WORKDIR ${WORKSPACE}/tests
+ENTRYPOINT ["/bin/bash", "-x", "/src/run_autest.sh"]

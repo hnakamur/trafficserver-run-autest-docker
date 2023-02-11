@@ -1,0 +1,1785 @@
++ export PATH=/opt/bin:/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ PATH=/opt/bin:/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ mkdir -p /src/trafficserver/output/adjust_autest_for_rockylinux8
++ umask 0000
++ '[' 4 -le 0 ']'
++ testsall=($( find . -iname "*.test.py" | awk -F'/' '{print $NF}' | awk -F'.' '{print $1}' ))
+++ find . -iname '*.test.py'
+++ awk -F/ '{print $NF}'
+++ awk -F. '{print $1}'
++ testsall=($(
+		for el in  "${testsall[@]}" ; do
+			echo $el
+		done | sort))
+++ sort
+++ for el in "${testsall[@]}"
+++ echo schedule_on_pool
+++ for el in "${testsall[@]}"
+++ echo thread_affinity
+++ for el in "${testsall[@]}"
+++ echo schedule_on_thread
+++ for el in "${testsall[@]}"
+++ echo log_pipe
+++ for el in "${testsall[@]}"
+++ echo new_log_flds
+++ for el in "${testsall[@]}"
+++ echo log_retention
+++ for el in "${testsall[@]}"
+++ echo custom-log
+++ for el in "${testsall[@]}"
+++ echo log-field-json
+++ for el in "${testsall[@]}"
+++ echo all_headers
+++ for el in "${testsall[@]}"
+++ echo log-debug-client-ip
+++ for el in "${testsall[@]}"
+++ echo log-field
+++ for el in "${testsall[@]}"
+++ echo log-filter
+++ for el in "${testsall[@]}"
+++ echo pqsi-pqsp
+++ for el in "${testsall[@]}"
+++ echo log-filenames
+++ for el in "${testsall[@]}"
+++ echo sigusr2
+++ for el in "${testsall[@]}"
+++ echo thread_config
+++ for el in "${testsall[@]}"
+++ echo remap_inc
+++ for el in "${testsall[@]}"
+++ echo ip_allow
+++ for el in "${testsall[@]}"
+++ echo proxy_serve_stale
+++ for el in "${testsall[@]}"
+++ echo proxy_serve_stale_dns_fail
+++ for el in "${testsall[@]}"
+++ echo proxy_protocol
+++ for el in "${testsall[@]}"
+++ echo httpbin
+++ for el in "${testsall[@]}"
+++ echo h2spec
+++ for el in "${testsall[@]}"
+++ echo h2disable
+++ for el in "${testsall[@]}"
+++ echo h2enable
+++ for el in "${testsall[@]}"
+++ echo http2_priority
+++ for el in "${testsall[@]}"
+++ echo http2
+++ for el in "${testsall[@]}"
+++ echo nghttp
+++ for el in "${testsall[@]}"
+++ echo http2_flow_control
+++ for el in "${testsall[@]}"
+++ echo h2enable_no_accept_threads
+++ for el in "${testsall[@]}"
+++ echo h2disable_no_accept_threads
+++ for el in "${testsall[@]}"
+++ echo inactive_timeout
+++ for el in "${testsall[@]}"
+++ echo default_inactivity_timeout
+++ for el in "${testsall[@]}"
+++ echo active_timeout
+++ for el in "${testsall[@]}"
+++ echo tls_conn_timeout
+++ for el in "${testsall[@]}"
+++ echo conn_timeout
+++ for el in "${testsall[@]}"
+++ echo inactive_client_timeout
+++ for el in "${testsall[@]}"
+++ echo accept_timeout
+++ for el in "${testsall[@]}"
+++ echo uri
+++ for el in "${testsall[@]}"
+++ echo collapseslashes
+++ for el in "${testsall[@]}"
+++ echo subcookie
+++ for el in "${testsall[@]}"
+++ echo notexistscookie
+++ for el in "${testsall[@]}"
+++ echo matrixparams
+++ for el in "${testsall[@]}"
+++ echo existscookie
+++ for el in "${testsall[@]}"
+++ echo matchuri
+++ for el in "${testsall[@]}"
+++ echo regexcookie
+++ for el in "${testsall[@]}"
+++ echo connector
+++ for el in "${testsall[@]}"
+++ echo setstatus
+++ for el in "${testsall[@]}"
+++ echo substitute
+++ for el in "${testsall[@]}"
+++ echo psubstitute
+++ for el in "${testsall[@]}"
+++ echo pcollapseslashes
+++ for el in "${testsall[@]}"
+++ echo bucketcookie
+++ for el in "${testsall[@]}"
+++ echo matchcookie
+++ for el in "${testsall[@]}"
+++ echo cert_update
+++ for el in "${testsall[@]}"
+++ echo x_effective_url
+++ for el in "${testsall[@]}"
+++ echo x_remap
+++ for el in "${testsall[@]}"
+++ echo x_cache_info
+++ for el in "${testsall[@]}"
+++ echo server_push_preload
+++ for el in "${testsall[@]}"
+++ echo parent_select_optional_scheme_matching
+++ for el in "${testsall[@]}"
+++ echo parent_select_peer
+++ for el in "${testsall[@]}"
+++ echo parent_select_peer2
+++ for el in "${testsall[@]}"
+++ echo parent_select
+++ for el in "${testsall[@]}"
+++ echo url_sig
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_cachekey
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_cache_complete_responses
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_ims
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_cachekey_global
+++ for el in "${testsall[@]}"
+++ echo hook_add
+++ for el in "${testsall[@]}"
+++ echo body_buffer
+++ for el in "${testsall[@]}"
+++ echo ssn_start_delay_hook
+++ for el in "${testsall[@]}"
+++ echo test_hooks
+++ for el in "${testsall[@]}"
+++ echo polite_hook_wait
+++ for el in "${testsall[@]}"
+++ echo cppapi
+++ for el in "${testsall[@]}"
+++ echo money_trace
+++ for el in "${testsall[@]}"
+++ echo money_trace_global
+++ for el in "${testsall[@]}"
+++ echo transaction_data_sink
+++ for el in "${testsall[@]}"
+++ echo s3_auth_config
+++ for el in "${testsall[@]}"
+++ echo TSVConnFd
+++ for el in "${testsall[@]}"
+++ echo slice_selfhealing
+++ for el in "${testsall[@]}"
+++ echo slice_error
+++ for el in "${testsall[@]}"
+++ echo slice_regex
+++ for el in "${testsall[@]}"
+++ echo slice
+++ for el in "${testsall[@]}"
+++ echo slice_rm_range
+++ for el in "${testsall[@]}"
+++ echo slice_prefetch
+++ for el in "${testsall[@]}"
+++ echo lua_states_stats
+++ for el in "${testsall[@]}"
+++ echo lua_debug_tags
+++ for el in "${testsall[@]}"
+++ echo lua_header_table
+++ for el in "${testsall[@]}"
+++ echo lua_watermark
+++ for el in "${testsall[@]}"
+++ echo sslheaders
+++ for el in "${testsall[@]}"
+++ echo compress
+++ for el in "${testsall[@]}"
+++ echo uri_signing
+++ for el in "${testsall[@]}"
+++ echo stek_share
+++ for el in "${testsall[@]}"
+++ echo prefetch_simple
+++ for el in "${testsall[@]}"
+++ echo regex_remap
+++ for el in "${testsall[@]}"
+++ echo esi
+++ for el in "${testsall[@]}"
+++ echo esi_304
+++ for el in "${testsall[@]}"
+++ echo CppDelayTransformation
+++ for el in "${testsall[@]}"
+++ echo tsapi
+++ for el in "${testsall[@]}"
+++ echo client_context_dump
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_sni_filter
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_ip_filter
+++ for el in "${testsall[@]}"
+++ echo traffic_dump
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_http3
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_response_body
+++ for el in "${testsall[@]}"
+++ echo combo_handler
+++ for el in "${testsall[@]}"
+++ echo certifier
+++ for el in "${testsall[@]}"
+++ echo remap_stats_post
+++ for el in "${testsall[@]}"
+++ echo remap_stats
+++ for el in "${testsall[@]}"
+++ echo stats_over_http
+++ for el in "${testsall[@]}"
+++ echo multiplexer
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate_miss
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate_state
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate
+++ for el in "${testsall[@]}"
+++ echo header_rewrite
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_url
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_cond_cache
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_cond_ssn_txn_count
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_l_value
+++ for el in "${testsall[@]}"
+++ echo http304_response
+++ for el in "${testsall[@]}"
+++ echo http_head_no_origin
+++ for el in "${testsall[@]}"
+++ echo http204_response_plugin
+++ for el in "${testsall[@]}"
+++ echo http_with_origin
+++ for el in "${testsall[@]}"
+++ echo http204_response
+++ for el in "${testsall[@]}"
+++ echo cachedIMSRange
+++ for el in "${testsall[@]}"
+++ echo cache_and_req_body
+++ for el in "${testsall[@]}"
+++ echo hsts
+++ for el in "${testsall[@]}"
+++ echo syntax
+++ for el in "${testsall[@]}"
+++ echo field_name_space
+++ for el in "${testsall[@]}"
+++ echo domain-blacklist-30x
+++ for el in "${testsall[@]}"
+++ echo normalize_ae
+++ for el in "${testsall[@]}"
+++ echo via
+++ for el in "${testsall[@]}"
+++ echo http408
+++ for el in "${testsall[@]}"
+++ echo range
+++ for el in "${testsall[@]}"
+++ echo accept_webp
+++ for el in "${testsall[@]}"
+++ echo general-connection-failure-502
+++ for el in "${testsall[@]}"
+++ echo forwarded
+++ for el in "${testsall[@]}"
+++ echo good_request_after_bad
+++ for el in "${testsall[@]}"
+++ echo conf_remap_float
+++ for el in "${testsall[@]}"
+++ echo remap_http
+++ for el in "${testsall[@]}"
+++ echo remap_load_missing_success
+++ for el in "${testsall[@]}"
+++ echo regex_map
+++ for el in "${testsall[@]}"
+++ echo remap_reload
+++ for el in "${testsall[@]}"
+++ echo remap_load_empty_success
+++ for el in "${testsall[@]}"
+++ echo remap_https
+++ for el in "${testsall[@]}"
+++ echo remap_load_missing_failure
+++ for el in "${testsall[@]}"
+++ echo remap_load_empty_failure
+++ for el in "${testsall[@]}"
+++ echo remap_ws
+++ for el in "${testsall[@]}"
+++ echo remap_ip_resolve
+++ for el in "${testsall[@]}"
+++ echo old_config_fail
+++ for el in "${testsall[@]}"
+++ echo records_yaml
+++ for el in "${testsall[@]}"
+++ echo records_config_to_yaml
+++ for el in "${testsall[@]}"
+++ echo post-early-return
+++ for el in "${testsall[@]}"
+++ echo post-continue
+++ for el in "${testsall[@]}"
+++ echo openclose_h2
+++ for el in "${testsall[@]}"
+++ echo double_h2
+++ for el in "${testsall[@]}"
+++ echo session_id
+++ for el in "${testsall[@]}"
+++ echo openclose
+++ for el in "${testsall[@]}"
+++ echo double
+++ for el in "${testsall[@]}"
+++ echo bad_http_fmt
+++ for el in "${testsall[@]}"
+++ echo strategies_ch
+++ for el in "${testsall[@]}"
+++ echo strategies_ch2
+++ for el in "${testsall[@]}"
+++ echo zzz_strategies_peer
+++ for el in "${testsall[@]}"
+++ echo zzz_strategies_peer2
+++ for el in "${testsall[@]}"
+++ echo runroot_use
+++ for el in "${testsall[@]}"
+++ echo runroot_verify
+++ for el in "${testsall[@]}"
+++ echo runroot_remove
+++ for el in "${testsall[@]}"
+++ echo runroot_init
+++ for el in "${testsall[@]}"
+++ echo runroot_error
+++ for el in "${testsall[@]}"
+++ echo bigobj
+++ for el in "${testsall[@]}"
+++ echo connect
+++ for el in "${testsall[@]}"
+++ echo copy_config
+++ for el in "${testsall[@]}"
+++ echo basic
+++ for el in "${testsall[@]}"
+++ echo copy_config2
+++ for el in "${testsall[@]}"
+++ echo deny0
+++ for el in "${testsall[@]}"
+++ echo config
+++ for el in "${testsall[@]}"
+++ echo tls_ocsp
+++ for el in "${testsall[@]}"
+++ echo tls_verify_override_sni
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert
+++ for el in "${testsall[@]}"
+++ echo tls_client_verify2
+++ for el in "${testsall[@]}"
+++ echo tls_client_alpn_configuration
+++ for el in "${testsall[@]}"
+++ echo tls_partial_blind_tunnel
+++ for el in "${testsall[@]}"
+++ echo tls_verify_base
+++ for el in "${testsall[@]}"
+++ echo tls_verify
+++ for el in "${testsall[@]}"
+++ echo tls_keepalive
+++ for el in "${testsall[@]}"
+++ echo tls_verify2
+++ for el in "${testsall[@]}"
+++ echo tls_check_dual_cert_selection_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_override_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_engine
+++ for el in "${testsall[@]}"
+++ echo ssl_multicert_loader
+++ for el in "${testsall[@]}"
+++ echo tls_verify3
+++ for el in "${testsall[@]}"
+++ echo tls_0rtt_server
+++ for el in "${testsall[@]}"
+++ echo tls_check_dual_cert_selection2
+++ for el in "${testsall[@]}"
+++ echo tls_forward_nonhttp
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_override
+++ for el in "${testsall[@]}"
+++ echo tls_verify_not_pristine
+++ for el in "${testsall[@]}"
+++ echo tls_client_verify3
+++ for el in "${testsall[@]}"
+++ echo tls_session_reuse
+++ for el in "${testsall[@]}"
+++ echo tls_origin_session_reuse
+++ for el in "${testsall[@]}"
+++ echo tls_check_cert_select_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_ticket
+++ for el in "${testsall[@]}"
+++ echo tls_sni_host_policy
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert2
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_verify_override
+++ for el in "${testsall[@]}"
+++ echo tls
+++ for el in "${testsall[@]}"
+++ echo tls_tunnel
+++ for el in "${testsall[@]}"
+++ echo tls_check_cert_selection
+++ for el in "${testsall[@]}"
+++ echo tls_verify_ca_override
+++ for el in "${testsall[@]}"
+++ echo tls_verify_override_base
+++ for el in "${testsall[@]}"
+++ echo tls_session_key_logging
+++ for el in "${testsall[@]}"
+++ echo tls_sni_yaml_reload
+++ for el in "${testsall[@]}"
+++ echo tls_hooks_verify
+++ for el in "${testsall[@]}"
+++ echo tls_client_versions
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert2_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_check_dual_cert_selection
+++ for el in "${testsall[@]}"
+++ echo tls_check_cert_selection_reload
+++ for el in "${testsall[@]}"
+++ echo tls_tunnel_forward
+++ for el in "${testsall[@]}"
+++ echo tls_bad_alpn
+++ for el in "${testsall[@]}"
+++ echo tls_hooks_client_verify
+++ for el in "${testsall[@]}"
+++ echo tls_client_verify
+++ for el in "${testsall[@]}"
+++ echo bad_chunked_encoding
+++ for el in "${testsall[@]}"
+++ echo chunked_encoding_disabled
+++ for el in "${testsall[@]}"
+++ echo chunked_encoding_h2
+++ for el in "${testsall[@]}"
+++ echo chunked_encoding
+++ for el in "${testsall[@]}"
+++ echo dns_down_nameserver
+++ for el in "${testsall[@]}"
+++ echo splitdns
+++ for el in "${testsall[@]}"
+++ echo dns_ttl
+++ for el in "${testsall[@]}"
+++ echo dns_host_down
+++ for el in "${testsall[@]}"
+++ echo basic_plugin_handler
+++ for el in "${testsall[@]}"
+++ echo jsonrpc_api_schema
+++ for el in "${testsall[@]}"
+++ echo null_transform
+++ for el in "${testsall[@]}"
+++ echo per_server_connection_max
+++ for el in "${testsall[@]}"
+++ echo tls_hooks9
+++ for el in "${testsall[@]}"
+++ echo tls_hooks
+++ for el in "${testsall[@]}"
+++ echo tls_hooks14
+++ for el in "${testsall[@]}"
+++ echo tls_hooks10
+++ for el in "${testsall[@]}"
+++ echo tls_hooks18
+++ for el in "${testsall[@]}"
+++ echo tls_hooks15
+++ for el in "${testsall[@]}"
+++ echo tls_hooks11
+++ for el in "${testsall[@]}"
+++ echo tls_hooks8
+++ for el in "${testsall[@]}"
+++ echo tls_hooks4
+++ for el in "${testsall[@]}"
+++ echo tls_hooks17
+++ for el in "${testsall[@]}"
+++ echo tls_hooks13
+++ for el in "${testsall[@]}"
+++ echo tls_hooks6
+++ for el in "${testsall[@]}"
+++ echo tls_hooks2
+++ for el in "${testsall[@]}"
+++ echo tls_hooks7
+++ for el in "${testsall[@]}"
+++ echo tls_hooks3
+++ for el in "${testsall[@]}"
+++ echo tls_hooks16
+++ for el in "${testsall[@]}"
+++ echo tls_hooks12
+++ for el in "${testsall[@]}"
+++ echo redirect_actions
+++ for el in "${testsall[@]}"
+++ echo redirect_post
+++ for el in "${testsall[@]}"
+++ echo redirect
+++ for el in "${testsall[@]}"
+++ echo redirect_stale
+++ for el in "${testsall[@]}"
+++ echo number_of_redirects
+++ for el in "${testsall[@]}"
+++ echo session_match
+++ for el in "${testsall[@]}"
+++ echo fatal
+++ for el in "${testsall[@]}"
+++ echo emergency
+++ for el in "${testsall[@]}"
+++ echo cache-request-method
+++ for el in "${testsall[@]}"
+++ echo background_fill
+++ for el in "${testsall[@]}"
+++ echo negative-caching
+++ for el in "${testsall[@]}"
+++ echo conditional-get-hit
+++ for el in "${testsall[@]}"
+++ echo cache-range-response
+++ for el in "${testsall[@]}"
+++ echo cache-generation-clear
+++ for el in "${testsall[@]}"
+++ echo cache-auth
+++ for el in "${testsall[@]}"
+++ echo alternate-caching
+++ for el in "${testsall[@]}"
+++ echo cache-generation-disjoint
+++ for el in "${testsall[@]}"
+++ echo cache-control
+++ for el in "${testsall[@]}"
+++ echo vary-handling
+++ for el in "${testsall[@]}"
+++ echo negative-revalidating
+++ for el in "${testsall[@]}"
+++ echo disjoint-wait-for-cache
+++ for el in "${testsall[@]}"
+++ echo cache-cookie
+++ for el in "${testsall[@]}"
+++ echo forward_proxy
+++ for el in "${testsall[@]}"
+++ echo verify_remap_plugin
+++ for el in "${testsall[@]}"
+++ echo verify_global_plugin
+++ for el in "${testsall[@]}"
+++ echo post_slow_server_max_requests_in
+++ for el in "${testsall[@]}"
+++ echo post_slow_server
+++ for el in "${testsall[@]}"
+++ echo quick_server
+++ for el in "${testsall[@]}"
+++ echo slow_post
++ ntests=279
++ shardsize=69
++ '[' 0 -ne 3 ']'
++ shardsize=70
++ shardbeg=0
++ sliced='CppDelayTransformation TSVConnFd accept_timeout accept_webp active_timeout all_headers alternate-caching background_fill bad_chunked_encoding bad_http_fmt basic basic_plugin_handler bigobj body_buffer bucketcookie cache-auth cache-control cache-cookie cache-generation-clear cache-generation-disjoint cache-range-response cache-request-method cache_and_req_body cache_range_requests cache_range_requests_cache_complete_responses cache_range_requests_cachekey cache_range_requests_cachekey_global cache_range_requests_ims cachedIMSRange cert_update certifier chunked_encoding chunked_encoding_disabled chunked_encoding_h2 client_context_dump collapseslashes combo_handler compress conditional-get-hit conf_remap_float config conn_timeout connect connector copy_config copy_config2 cppapi custom-log default_inactivity_timeout deny0 disjoint-wait-for-cache dns_down_nameserver dns_host_down dns_ttl domain-blacklist-30x double double_h2 emergency esi esi_304 existscookie fatal field_name_space forward_proxy forwarded general-connection-failure-502 good_request_after_bad h2disable h2disable_no_accept_threads h2enable'
++ ./autest.sh --ats-bin /usr/bin/ --sandbox /tmp/sandbox -f CppDelayTransformation TSVConnFd accept_timeout accept_webp active_timeout all_headers alternate-caching background_fill bad_chunked_encoding bad_http_fmt basic basic_plugin_handler bigobj body_buffer bucketcookie cache-auth cache-control cache-cookie cache-generation-clear cache-generation-disjoint cache-range-response cache-request-method cache_and_req_body cache_range_requests cache_range_requests_cache_complete_responses cache_range_requests_cachekey cache_range_requests_cachekey_global cache_range_requests_ims cachedIMSRange cert_update certifier chunked_encoding chunked_encoding_disabled chunked_encoding_h2 client_context_dump collapseslashes combo_handler compress conditional-get-hit conf_remap_float config conn_timeout connect connector copy_config copy_config2 cppapi custom-log default_inactivity_timeout deny0 disjoint-wait-for-cache dns_down_nameserver dns_host_down dns_ttl domain-blacklist-30x double double_h2 emergency esi esi_304 existscookie fatal field_name_space forward_proxy forwarded general-connection-failure-502 good_request_after_bad h2disable h2disable_no_accept_threads h2enable
+#=#=#                                                                         ##O#-#                                                                        ##O=#  #                                                                      #=#=-#  #                                                                                                                                                0.1%                                                                           0.3%                                                                           0.7%#                                                                          1.5%##                                                                         3.0%###                                                                        4.9%#####                                                                      8.0%#######                                                                    9.9%##############                                                            20.4%#####################                                                     30.0%#######################                                                   32.1%########################                                                  34.6%##########################                                                37.4%#############################                                             40.6%###############################                                           43.7%#################################                                         46.9%####################################                                      50.1%######################################                                    53.4%########################################                                  56.7%###########################################                               60.0%#############################################                             63.4%################################################                          66.8%##################################################                        70.2%####################################################                      73.6%#######################################################                   77.0%#########################################################                 80.5%############################################################              83.9%##############################################################            87.4%#################################################################         91.0%####################################################################      94.5%######################################################################    98.0%######################################################################## 100.0%
+/src/trafficserver/tests/proxy-verifier/proxy-verifier-v2.6.0.tar.gz: OK
+Python 3.6 or newer detected!
+python3-dev/devel detected!
+pipenv detected!
+Using the pre-existing virtual environment.
+Environment config finished. Running AuTest...
+[1mRunning Test CppDelayTransformation:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test TSVConnFd:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test accept_timeout:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test accept_webp:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test active_timeout:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test all_headers:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test alternate-caching:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test background_fill:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test bad_chunked_encoding:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test bad_http_fmt:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test basic:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test basic_plugin_handler:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test bigobj:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test body_buffer:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test bucketcookie:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache-auth:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache-control:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache-cookie:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache-generation-clear:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache-generation-disjoint:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache-range-response:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache-request-method:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache_and_req_body:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache_range_requests:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache_range_requests_cache_complete_responses:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache_range_requests_cachekey:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache_range_requests_cachekey_global:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cache_range_requests_ims:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cachedIMSRange:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cert_update:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test certifier:[0m[1m [0m[31mException[0m[1m
+[0m[1mRunning Test chunked_encoding:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1mF[0m[1m [0m[31mFailed[0m[1m
+[0m[1mRunning Test chunked_encoding_disabled:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test chunked_encoding_h2:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test client_context_dump:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test collapseslashes:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test combo_handler:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test compress:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test conditional-get-hit:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test conf_remap_float:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test config:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test conn_timeout:[0m[1m [0m[1mSkipped[0m[1m
+[0m[93mWarning: Skipping test conn_timeout because:
+ Test requires privilege
+[0m[1mRunning Test connect:[0m[1mF[0m[1m.[0m[1m.[0m[1m [0m[31mFailed[0m[1m
+[0m[1mRunning Test connector:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test copy_config:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test copy_config2:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test cppapi:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test custom-log:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test default_inactivity_timeout:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test deny0:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test disjoint-wait-for-cache:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test dns_down_nameserver:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test dns_host_down:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test dns_ttl:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test domain-blacklist-30x:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test double:[0m[1m.[0m[1mF[0m[1mF[0m[1m.[0m[1m [0m[31mFailed[0m[1m
+[0m[1mRunning Test double_h2:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test emergency:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test esi:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test esi_304:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test existscookie:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test fatal:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test field_name_space:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test forward_proxy:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test forwarded:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test general-connection-failure-502:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test good_request_after_bad:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test h2disable:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test h2disable_no_accept_threads:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test h2enable:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test inactive_timeout:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test notexistscookie:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test pcollapseslashes:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test s3_auth_config:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test thread_config:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test tls_conn_timeout:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1m
+Generating Report: --------------
+[0m[1m1 Tests were skipped:
+[0m[1m--------------------------------------------------------------------------------
+[0m[1m Test "conn_timeout" Skipped
+    File: conn_timeout.test.py
+    Directory: /src/trafficserver/tests/gold_tests/timeout
+[0m[1m  Reason: Test requires privilege
+[0m[1m
+[0m[1m Test: certifier: [0m[31mException[0m[1m
+    File: certifier.test.py
+    Directory: /src/trafficserver/tests/gold_tests/pluginTest/certifier
+   Setting up : Copying '/src/trafficserver/tests/gold_tests/pluginTest/certifier/certs' to '/tmp/sandbox/certifier/ts1/config/certifier-certs' - [0m[32mPassed[0m[1m
+   Setting up : On /tmp/sandbox/certifier/ts1/config/certifier-certs/ca-serial.txt with uid: nobody gid: nobody - [0m[31mException[0m[1m
+      Reason: Traceback (most recent call last):
+         File "/root/.local/share/virtualenvs/tests-L5-scKRl/lib/python3.10/site-packages/autest/core/setup.py", line 22, in dosetup
+           item.setup()
+         File "/root/.local/share/virtualenvs/tests-L5-scKRl/lib/python3.10/site-packages/autest/setupitems/chown.py", line 17, in setup
+           self.Chown(self.path, self.uid, self.gid)
+         File "/root/.local/share/virtualenvs/tests-L5-scKRl/lib/python3.10/site-packages/autest/core/setupitem.py", line 209, in Chown
+           gid = grp.getgrnam(gid).gr_gid
+       KeyError: "getgrnam(): name not found: 'nobody'"
+   Setting up : Making Directory /tmp/sandbox/certifier/ts1/config/certifier-certs/store - [0m[32mPassed[0m[1m
+   Setting up : Copying '/src/trafficserver/tests/gold_tests/pluginTest/certifier/certs' to '/tmp/sandbox/certifier/ts2/config/certifier-certs' - [0m[32mPassed[0m[1m
+   Setting up : On /tmp/sandbox/certifier/ts2/config/certifier-certs/ca-serial.txt with uid: nobody gid: nobody - [0m[31mException[0m[1m
+      Reason: Traceback (most recent call last):
+         File "/root/.local/share/virtualenvs/tests-L5-scKRl/lib/python3.10/site-packages/autest/core/setup.py", line 22, in dosetup
+           item.setup()
+         File "/root/.local/share/virtualenvs/tests-L5-scKRl/lib/python3.10/site-packages/autest/setupitems/chown.py", line 17, in setup
+           self.Chown(self.path, self.uid, self.gid)
+         File "/root/.local/share/virtualenvs/tests-L5-scKRl/lib/python3.10/site-packages/autest/core/setupitem.py", line 209, in Chown
+           gid = grp.getgrnam(gid).gr_gid
+       KeyError: "getgrnam(): name not found: 'nobody'"
+   Setting up : Making Directory /tmp/sandbox/certifier/ts2/config/certifier-certs/store - [0m[32mPassed[0m[1m
+   Process: verifier-server1: [0m[32mPassed[0m[1m
+   Process: ts1: [0m[32mPassed[0m[1m
+   Process: verifier-server2: [0m[32mPassed[0m[1m
+   Process: ts2: [0m[32mPassed[0m[1m
+   Run: Verify the cert doesn't exist in the store: [0m[1mUnknown[0m[1m
+     Process: Default: [0m[1mSkipped[0m[1m
+        Reason: Was not started
+   Run: Test dynamic generation of certs: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+   Run: Verify the content of the generated cert: [0m[1mUnknown[0m[1m
+     Process: Default: [0m[1mSkipped[0m[1m
+        Reason: Was not started
+   Run: Test dynamic generation of certs: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+
+[0m[1m Test: double: [0m[31mFailed[0m[1m
+    File: double.test.py
+    Directory: /src/trafficserver/tests/gold_tests/continuations
+   Starting Test double : No issues found - [0m[32mPassed[0m[1m
+      Reason: Started!
+   Process: ts: [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/double/ts - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/bin' to '/tmp/sandbox/double/ts/bin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/double/ts/config - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/double/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/double/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/double/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/double/ts/config/body_factory' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/double/ts/cache - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/double/ts/plugin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/double/ts/log - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/log with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/log with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/double/ts/runtime - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/runtime with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/runtime with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/double/ts/ssl - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/ssl with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/ssl with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/double/ts/storage - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/storage with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/double/ts/storage with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61467, queue size: 973 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61468, queue size: 972 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61469, queue size: 971 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61470, queue size: 970 - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/tools/plugins/.libs/continuations_verify.so' to '/tmp/sandbox/double/ts/plugin' - [0m[32mPassed[0m[1m
+     Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+        Reason: Returned Value: 0 == 0
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 1.9884083271026611 < 600.0
+     file /tmp/sandbox/double/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/double/ts/log/diags.log excludes expression
+     file /tmp/sandbox/double/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/double/ts/log/diags.log excludes expression
+     file /tmp/sandbox/double/ts/log/diags.log : Diags log file diags.log should not contain a warning about an unrecognized configuration - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/double/ts/log/diags.log excludes expression
+     Appending File /tmp/sandbox/double/ts/config/records.yaml : Writing config file records.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/double/ts/config/runroot.yaml : Appended file /tmp/sandbox/double/ts/config/runroot.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/double/ts/config/remap.config : Appended file /tmp/sandbox/double/ts/config/remap.config - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/double/ts/config/plugin.config : Appended file /tmp/sandbox/double/ts/config/plugin.config - [0m[32mPassed[0m[1m
+        Reason: Success
+   Process: server: [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61471, queue size: 969 - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/double/server - [0m[32mPassed[0m[1m
+     Test : Checking that any test passes - [0m[32mPassed[0m[1m
+        Reason: One or more tests passed
+     
+       Test : Checking that ReturnCode == None - [0m[31mFailed[0m[1m
+          Reason: Returned Value 0 != None
+       
+     
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 3.1369175910949707 < 600.0
+   Run: 0-tr: [0m[32mPassed[0m[1m
+     Process: cmdline-0: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-1: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-2: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-3: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-4: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-5: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-6: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-7: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-8: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-9: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-10: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-11: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-12: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-13: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-14: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-15: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-16: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-17: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-18: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-19: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-20: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-21: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-22: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-23: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-24: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-25: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-26: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-27: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-28: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-29: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-30: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-31: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-32: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-33: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-34: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-35: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-36: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-37: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-38: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-39: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-40: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-41: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-42: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-43: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-44: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-45: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-46: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-47: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-48: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-49: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-50: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-51: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-52: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: cmdline-53: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+     Process: Default: [0m[32mPassed[0m[1m
+       Test : Checking that any test passes - [0m[32mPassed[0m[1m
+          Reason: One or more tests passed
+       
+         Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+            Reason: Returned Value: 0 == 0
+         
+       
+         Test : Checking that ReturnCode == 2 - [0m[31mFailed[0m[1m
+            Reason: Returned Value 0 != 2
+         
+   Run: Curl Done: [0m[31mFailed[0m[1m
+     Test : Checking that True == _isRunningAfter - [0m[32mPassed[0m[1m
+        Reason: Returned Value: True == _isRunningAfter
+     Starting TestRun 1-tr : No Issues found - [0m[32mPassed[0m[1m
+        Reason: Started!
+     Process: Default: [0m[31mFailed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
+          Reason: Returned Value 1 != 0
+   Run: Check Ssn: [0m[31mFailed[0m[1m
+     Test : Checking that True == _isRunningAfter - [0m[32mPassed[0m[1m
+        Reason: Returned Value: True == _isRunningAfter
+     Starting TestRun 2-tr : No Issues found - [0m[32mPassed[0m[1m
+        Reason: Started!
+     Process: Default: [0m[31mFailed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt : should verify contents - [0m[32mPassed[0m[1m
+          Reason: Contents of /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt contained expression
+       file /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt : should be nonzero - [0m[32mPassed[0m[1m
+          Reason: Contents of /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt excludes expression
+       file /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt : should be nonzero - [0m[32mPassed[0m[1m
+          Reason: Contents of /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt excludes expression
+       file /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt : should be nonzero - [0m[32mPassed[0m[1m
+          Reason: Contents of /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt excludes expression
+       file /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt : should be nonzero - [0m[32mPassed[0m[1m
+          Reason: Contents of /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt excludes expression
+       file /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt : should be the number of transactions we made - [0m[31mFailed[0m[1m
+          Reason: Contents of /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt did not contains expression: "continuations_verify.txn.close.1 55"
+       file /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt : should be the number of transactions we made - [0m[31mFailed[0m[1m
+          Reason: Contents of /tmp/sandbox/double/_output/2-tr-Default/stream.stdout.txt did not contains expression: "continuations_verify.txn.close.2 55"
+   Run: Check Txn: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/double/_output/3-tr-Default/stream.stdout.txt : should verify contents - [0m[32mPassed[0m[1m
+          Reason: Contents of /tmp/sandbox/double/_output/3-tr-Default/stream.stdout.txt contained expression
+
+[0m[1m Test: connect: [0m[31mFailed[0m[1m
+    File: connect.test.py
+    Directory: /src/trafficserver/tests/gold_tests/connect
+   file /tmp/sandbox/connect/ts/log/access.log : Checking that file "/tmp/sandbox/connect/ts/log/access.log" exists - [0m[32mPassed[0m[1m
+      Reason: File "/tmp/sandbox/connect/ts/log/access.log" exists
+   file /tmp/sandbox/connect/ts/log/access.log : Checking that /tmp/sandbox/connect/ts/log/access.log matches gold/connect_access.gold - [0m[32mPassed[0m[1m
+      Reason: Values match
+   Starting Test connect : No issues found - [0m[32mPassed[0m[1m
+      Reason: Started!
+   Process: httpbin: [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61361, queue size: 974 - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/httpbin - [0m[32mPassed[0m[1m
+     Test : Checking that any test passes - [0m[32mPassed[0m[1m
+        Reason: One or more tests passed
+     
+       Test : Checking that ReturnCode == None - [0m[31mFailed[0m[1m
+          Reason: Returned Value 0 != None
+       
+     
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 15.819527387619019 < 600.0
+   Process: ts: [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/ts - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/bin' to '/tmp/sandbox/connect/ts/bin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/ts/config - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/connect/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/connect/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/connect/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/connect/ts/config/body_factory' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/ts/cache - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/connect/ts/plugin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/ts/log - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/log with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/log with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/ts/runtime - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/runtime with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/runtime with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/ts/ssl - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/ssl with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/ssl with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/ts/storage - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/storage with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/ts/storage with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61362, queue size: 973 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61363, queue size: 972 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61364, queue size: 971 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61365, queue size: 970 - [0m[32mPassed[0m[1m
+     Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+        Reason: Returned Value: 0 == 0
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 14.577972412109375 < 600.0
+     file /tmp/sandbox/connect/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/ts/log/diags.log excludes expression
+     file /tmp/sandbox/connect/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/ts/log/diags.log excludes expression
+     file /tmp/sandbox/connect/ts/log/diags.log : Diags log file diags.log should not contain a warning about an unrecognized configuration - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/ts/log/diags.log excludes expression
+     Appending File /tmp/sandbox/connect/ts/config/records.yaml : Writing config file records.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/connect/ts/config/runroot.yaml : Appended file /tmp/sandbox/connect/ts/config/runroot.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/connect/ts/config/remap.config : Appended file /tmp/sandbox/connect/ts/config/remap.config - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/connect/ts/config/logging.yaml : Appended file /tmp/sandbox/connect/ts/config/logging.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+   Process: connect-verifier-server: [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/proxy-verifier/unpack/v2.6.0/bin' to '/tmp/sandbox/connect/connect-verifier-server/bin' - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61366, queue size: 969 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61367, queue size: 968 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61368, queue size: 967 - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/proxy-verifier/ssl/server.pem' to '/tmp/sandbox/connect/connect-verifier-server/server.pem' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/proxy-verifier/ssl/ca.pem' to '/tmp/sandbox/connect/connect-verifier-server/ca.pem' - [0m[32mPassed[0m[1m
+     Setting up : Copying 'replays/connect.replay.yaml' to '/tmp/sandbox/connect/connect-verifier-server/connect.replay.yaml' - [0m[32mPassed[0m[1m
+     Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+        Reason: Returned Value: 0 == 0
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 5.209292650222778 < 600.0
+     file /tmp/sandbox/connect/_output/connect-connect-verifier-server/stream.stdout.txt : There should be no Proxy Verifier violation errors. - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/_output/connect-connect-verifier-server/stream.stdout.txt excludes expression
+     file /tmp/sandbox/connect/_output/connect-connect-verifier-server/stream.stdout.txt : Verify the CONNECT request doesn't reach the server. - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/_output/connect-connect-verifier-server/stream.stdout.txt excludes expression
+     file /tmp/sandbox/connect/_output/connect-connect-verifier-server/stream.stdout.txt : Verify the server gets the second request. - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/_output/connect-connect-verifier-server/stream.stdout.txt contained expression
+   Process: connect-ts: [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/connect-ts - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/bin' to '/tmp/sandbox/connect/connect-ts/bin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/connect-ts/config - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/connect/connect-ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/connect/connect-ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/connect/connect-ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/connect/connect-ts/config/body_factory' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/connect-ts/cache - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/connect/connect-ts/plugin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/connect-ts/log - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/log with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/log with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/connect-ts/runtime - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/runtime with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/runtime with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/connect-ts/ssl - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/ssl with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/ssl with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/connect/connect-ts/storage - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/storage with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/connect/connect-ts/storage with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61369, queue size: 966 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61370, queue size: 965 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61371, queue size: 964 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61372, queue size: 963 - [0m[32mPassed[0m[1m
+     Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+        Reason: Returned Value: 0 == 0
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 4.206768035888672 < 600.0
+     file /tmp/sandbox/connect/connect-ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/connect-ts/log/diags.log excludes expression
+     file /tmp/sandbox/connect/connect-ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/connect-ts/log/diags.log excludes expression
+     file /tmp/sandbox/connect/connect-ts/log/diags.log : Diags log file diags.log should not contain a warning about an unrecognized configuration - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/connect-ts/log/diags.log excludes expression
+     file /tmp/sandbox/connect/connect-ts/log/traffic.out : Verify that ATS recognizes the CONNECT request. - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/connect/connect-ts/log/traffic.out contained expression
+     Appending File /tmp/sandbox/connect/connect-ts/config/records.yaml : Writing config file records.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/connect/connect-ts/config/runroot.yaml : Appended file /tmp/sandbox/connect/connect-ts/config/runroot.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/connect/connect-ts/config/remap.config : Appended file /tmp/sandbox/connect/connect-ts/config/remap.config - [0m[32mPassed[0m[1m
+        Reason: Success
+   Run: 0-tr: [0m[31mFailed[0m[1m
+     Test : Checking that True == _isRunningAfter - [0m[32mPassed[0m[1m
+        Reason: Returned Value: True == _isRunningAfter
+     Starting TestRun 0-tr : No Issues found - [0m[32mPassed[0m[1m
+        Reason: Started!
+     Process: Default: [0m[31mFailed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/connect/_output/0-tr-Default/stream.stderr.txt : Checking that /tmp/sandbox/connect/_output/0-tr-Default/stream.stderr.txt matches gold/connect_0_stderr.gold - [0m[31mFailed[0m[1m
+          Reason: File differences
+           Gold File : /src/trafficserver/tests/gold_tests/connect/gold/connect_0_stderr.gold
+           Data File : /tmp/sandbox/connect/_output/0-tr-Default/stream.stderr.txt
+             *   Trying 127.0.0.1:61362...
+           - * Connected to 127.0.0.1 (127.0.0.1) port 61362 (#0)
+           ?                ^^^^^^^^^
+           
+           + * Connected to (nil) (127.0.0.1) port 61362 (#0)
+           ?                ^^^^^
+           
+             * allocate connect buffer!
+             * Establish HTTP proxy tunnel to foo.com:80
+             > CONNECT foo.com:80 HTTP/1.1
+             > Host: foo.com:80
+             > User-Agent: curl/7.81.0
+             > Proxy-Connection: Keep-Alive
+             > 
+             < HTTP/1.1 200 OK
+             < Date: Sat, 11 Feb 2023 23:16:25 GMT
+             < Proxy-Connection: keep-alive
+             < Server: ATS/10.0.0
+             < 
+             * Proxy replied 200 to CONNECT request
+             * CONNECT phase completed!
+             > GET /get HTTP/1.1
+             > Host: foo.com
+             > User-Agent: curl/7.81.0
+             > Accept: */*
+             > 
+             * Mark bundle as not supporting multiuse
+             < HTTP/1.1 200 OK
+             < Server: gunicorn
+             < Date: Sat, 11 Feb 2023 23:16:25 GMT
+             < Connection: close
+             < Content-Type: application/json
+             < Content-Length: 131
+             < Access-Control-Allow-Origin: *
+             < Access-Control-Allow-Credentials: true
+             < 
+             { [131 bytes data]
+             * Closing connection 0
+   Run: 1-tr: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+          Reason: Returned value: 10.538811922073364 < 600.0
+   Run: Verify correct handling of CONNECT request: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+       Setting up : Copying '/src/trafficserver/tests/proxy-verifier/unpack/v2.6.0/bin' to '/tmp/sandbox/connect/connect-client/bin' - [0m[32mPassed[0m[1m
+       Setting up : Copying 'replays/connect.replay.yaml' to '/tmp/sandbox/connect/connect-client/connect.replay.yaml' - [0m[32mPassed[0m[1m
+       Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/proxy-verifier/ssl/client.pem' to '/tmp/sandbox/connect/connect-client/client.pem' - [0m[32mPassed[0m[1m
+       Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/proxy-verifier/ssl/ca.pem' to '/tmp/sandbox/connect/connect-client/ca.pem' - [0m[32mPassed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/connect/_output/2-tr-Default/stream.stdout.txt : There should be no Proxy Verifier violation errors. - [0m[32mPassed[0m[1m
+          Reason: Contents of /tmp/sandbox/connect/_output/2-tr-Default/stream.stdout.txt excludes expression
+
+[0m[1m Test: chunked_encoding: [0m[31mFailed[0m[1m
+    File: chunked_encoding.test.py
+    Directory: /src/trafficserver/tests/gold_tests/chunked_encoding
+   Setting up : recycling port: 61294, queue size: 981 - [0m[32mPassed[0m[1m
+   Setting up : Copying '/src/trafficserver/tests/gold_tests/chunked_encoding/smuggle-client' to 'None' - [0m[32mPassed[0m[1m
+   file outserver4 : Extra body bytes should not be delivered - [0m[32mPassed[0m[1m
+      Reason: Contents of /tmp/sandbox/chunked_encoding/outserver4 excludes expression
+   Starting Test chunked_encoding : No issues found - [0m[32mPassed[0m[1m
+      Reason: Started!
+   Process: ts: [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/ts - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/bin' to '/tmp/sandbox/chunked_encoding/ts/bin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/ts/config - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/chunked_encoding/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/chunked_encoding/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/chunked_encoding/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/chunked_encoding/ts/config/body_factory' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/ts/cache - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/chunked_encoding/ts/plugin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/ts/log - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/log with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/log with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/ts/runtime - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/runtime with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/runtime with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/ts/ssl - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/ssl with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/ssl with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/ts/storage - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/storage with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/chunked_encoding/ts/storage with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61295, queue size: 980 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61296, queue size: 979 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61297, queue size: 978 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61298, queue size: 977 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61299, queue size: 976 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61300, queue size: 975 - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/ssl/server.pem' to directory '/tmp/sandbox/chunked_encoding/ts/ssl' as 'server.pem'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/ssl/server.key' to directory '/tmp/sandbox/chunked_encoding/ts/ssl' as 'server.key'' - [0m[32mPassed[0m[1m
+     Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+        Reason: Returned Value: 0 == 0
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 5.397881031036377 < 600.0
+     file /tmp/sandbox/chunked_encoding/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/chunked_encoding/ts/log/diags.log excludes expression
+     file /tmp/sandbox/chunked_encoding/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/chunked_encoding/ts/log/diags.log excludes expression
+     file /tmp/sandbox/chunked_encoding/ts/log/diags.log : Diags log file diags.log should not contain a warning about an unrecognized configuration - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/chunked_encoding/ts/log/diags.log excludes expression
+     Appending File /tmp/sandbox/chunked_encoding/ts/config/records.yaml : Writing config file records.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/chunked_encoding/ts/config/runroot.yaml : Appended file /tmp/sandbox/chunked_encoding/ts/config/runroot.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/chunked_encoding/ts/config/remap.config : Appended file /tmp/sandbox/chunked_encoding/ts/config/remap.config - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/chunked_encoding/ts/config/ssl_multicert.config : Appended file /tmp/sandbox/chunked_encoding/ts/config/ssl_multicert.config - [0m[32mPassed[0m[1m
+        Reason: Success
+   Process: server: [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61301, queue size: 974 - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/server - [0m[32mPassed[0m[1m
+     Test : Checking that any test passes - [0m[32mPassed[0m[1m
+        Reason: One or more tests passed
+     
+       Test : Checking that ReturnCode == None - [0m[31mFailed[0m[1m
+          Reason: Returned Value 0 != None
+       
+     
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 4.274318695068359 < 600.0
+   Process: server2: [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61302, queue size: 973 - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/server2 - [0m[32mPassed[0m[1m
+     Test : Checking that any test passes - [0m[32mPassed[0m[1m
+        Reason: One or more tests passed
+     
+       Test : Checking that ReturnCode == None - [0m[31mFailed[0m[1m
+          Reason: Returned Value 0 != None
+       
+     
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 5.2189109325408936 < 600.0
+   Process: server3: [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61303, queue size: 972 - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/chunked_encoding/server3 - [0m[32mPassed[0m[1m
+     Test : Checking that any test passes - [0m[32mPassed[0m[1m
+        Reason: One or more tests passed
+     
+       Test : Checking that ReturnCode == None - [0m[31mFailed[0m[1m
+          Reason: Returned Value 0 != None
+       
+     
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 6.148996114730835 < 600.0
+   Run: 0-tr: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/chunked_encoding/_output/0-tr-Default/stream.stderr.txt : Checking that /tmp/sandbox/chunked_encoding/_output/0-tr-Default/stream.stderr.txt matches gold/chunked_GET_200.gold - [0m[32mPassed[0m[1m
+          Reason: Values match
+   Run: 1-tr: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/chunked_encoding/_output/1-tr-Default/stream.stderr.txt : Checking that /tmp/sandbox/chunked_encoding/_output/1-tr-Default/stream.stderr.txt matches gold/h2_chunked_POST_200.gold - [0m[32mPassed[0m[1m
+          Reason: Values match
+   Run: 2-tr: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/chunked_encoding/_output/2-tr-Default/stream.stderr.txt : Checking that /tmp/sandbox/chunked_encoding/_output/2-tr-Default/stream.stderr.txt matches gold/chunked_POST_200.gold - [0m[32mPassed[0m[1m
+          Reason: Values match
+   Run: 3-tr: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/chunked_encoding/_output/3-tr-Default/stream.stderr.txt : Checking that /tmp/sandbox/chunked_encoding/_output/3-tr-Default/stream.stderr.txt matches gold/chunked_POST_200.gold - [0m[32mPassed[0m[1m
+          Reason: Values match
+   Run: 4-tr: [0m[31mFailed[0m[1m
+     Setting up : Copying 'server4.sh' to 'None' - [0m[32mPassed[0m[1m
+     Setting up : Copying 'case4.sh' to 'None' - [0m[32mPassed[0m[1m
+     Time-Out : TestRun finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 1.108680009841919 < 5.0
+     Starting TestRun 4-tr : No Issues found - [0m[32mPassed[0m[1m
+        Reason: Started!
+     Process: Default: [0m[31mFailed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
+          Reason: Returned Value 1 != 0
+       Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+          Reason: Returned value: 1.0039830207824707 < 600.0
+       file /tmp/sandbox/chunked_encoding/_output/4-tr-Default/stream.all.txt : Response should not include content length - [0m[32mPassed[0m[1m
+          Reason: Contents of /tmp/sandbox/chunked_encoding/_output/4-tr-Default/stream.all.txt excludes expression
+
+[0m[1mTotal of 76 test
+[0m[1m  Unknown: 0
+[0m[1m  Exception: 1
+[0m[1m  Failed: 3
+[0m[1m  Warning: 0
+[0m[1m  Skipped: 1
+[0m[1m  Passed: 71
+[0m[0m+ true
+++ ls -A /tmp/sandbox/
++ '[' -n 'certifier
+chunked_encoding
+connect
+double' ']'
++ cp -rf /tmp/sandbox/ /src/trafficserver/output/adjust_autest_for_rockylinux8/
++ exit 1
+Command exited with non-zero status 1
+0.07user 0.09system 18:51.09elapsed 0%CPU (0avgtext+0avgdata 19136maxresident)k
+16999inputs+0outputs (3353major+9264minor)pagefaults 0swaps
