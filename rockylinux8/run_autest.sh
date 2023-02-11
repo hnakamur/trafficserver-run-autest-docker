@@ -32,9 +32,9 @@ if [ -n "$(ls -A /tmp/sandbox/)" ]; then
 	exit 1
 else
 	if [ ${SHARDCNT:-0} -le 0 ]; then
-		sudo touch ${WORKSPACE}/output/${GITHUB_BRANCH}/No_autest_failures
+		touch ${WORKSPACE}/output/${GITHUB_BRANCH}/No_autest_failures
 	else
-		sudo touch ${WORKSPACE}/output/${GITHUB_BRANCH}/No_autest_failures_shard_${SHARD}
+		touch ${WORKSPACE}/output/${GITHUB_BRANCH}/No_autest_failures_shard_${SHARD}
 	fi
 	exit 0
 fi

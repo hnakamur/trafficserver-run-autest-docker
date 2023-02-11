@@ -13,6 +13,7 @@ make[2]: Entering directory '/src/trafficserver/include/tscpp/util'
 make[2]: Nothing to be done for 'check'.
 make[2]: Leaving directory '/src/trafficserver/include/tscpp/util'
 make[2]: Entering directory '/src/trafficserver/include'
+make[2]: Nothing to be done for 'check-am'.
 make[2]: Leaving directory '/src/trafficserver/include'
 make[1]: Leaving directory '/src/trafficserver/include'
 Making check in lib
@@ -1208,3 +1209,5 @@ make[3]: Entering directory '/src/trafficserver'
 make[3]: Leaving directory '/src/trafficserver'
 make[2]: Leaving directory '/src/trafficserver'
 make[1]: Leaving directory '/src/trafficserver'
+0.07user 0.07system 15:22.63elapsed 0%CPU (0avgtext+0avgdata 22996maxresident)k
+15inputs+0outputs (11major+9920minor)pagefaults 0swaps

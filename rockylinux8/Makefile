@@ -4,16 +4,16 @@ IMAGE = ats-rockylinux8
 
 build:
 	mkdir -p ./log
-	docker build $(DOCKER_BUILD_OPTS) -t $(IMAGE) . 2>&1 | tee ./log/build.log
+	time docker build $(DOCKER_BUILD_OPTS) -t $(IMAGE) . 2>&1 | tee ./log/build.log
 
 check:
 	mkdir -p ./log
-	docker run --rm -it --init --cap-add=SYS_PTRACE \
+	time docker run --rm -it --init --cap-add=SYS_PTRACE \
 		--entrypoint=bash $(IMAGE) -c /src/check.sh 2>&1 | tee ./log/check.log
 
 test:
 	mkdir -p ./log ./data
-	docker run --rm -it --init --cap-add=SYS_PTRACE \
+	time docker run --rm -it --init --cap-add=SYS_PTRACE \
 		-v $${PWD}/data:/src/trafficserver/output:rw \
 		$(IMAGE) 2>&1 | tee ./log/autest.log &
 
@@ -24,7 +24,7 @@ test-shard:
 # make test-filter test=test_name_to_run
 test-filter:
 	mkdir -p ./log ./data
-	docker run --rm -it --init --cap-add=SYS_PTRACE \
+	time docker run --rm -it --init --cap-add=SYS_PTRACE \
 		-v $${PWD}/data:/src/trafficserver/output:rw \
 		$(IMAGE) -f $(test) 2>&1 \
 		| tee ./log/autest-$(test).log

@@ -13,125 +13,403 @@
 		done | sort))
 ++ sort
 ++ for el in "${testsall[@]}"
-++ echo connect
+++ echo tls_verify_override_base
 ++ for el in "${testsall[@]}"
-++ echo tls_tunnel_forward
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert_override
-++ for el in "${testsall[@]}"
-++ echo tls_keepalive
-++ for el in "${testsall[@]}"
-++ echo tls_origin_session_reuse
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert2
-++ for el in "${testsall[@]}"
-++ echo tls_check_dual_cert_selection_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_verify_not_pristine
-++ for el in "${testsall[@]}"
-++ echo tls_ocsp
-++ for el in "${testsall[@]}"
-++ echo tls_verify2
-++ for el in "${testsall[@]}"
-++ echo tls_check_dual_cert_selection2
-++ for el in "${testsall[@]}"
-++ echo tls_hooks_verify
-++ for el in "${testsall[@]}"
-++ echo tls_verify3
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert_override_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_tunnel
-++ for el in "${testsall[@]}"
-++ echo tls_forward_nonhttp
-++ for el in "${testsall[@]}"
-++ echo tls_check_dual_cert_selection
-++ for el in "${testsall[@]}"
-++ echo tls_verify_override_sni
-++ for el in "${testsall[@]}"
-++ echo tls_partial_blind_tunnel
-++ for el in "${testsall[@]}"
-++ echo tls_session_reuse
-++ for el in "${testsall[@]}"
-++ echo tls_client_verify3
+++ echo tls_verify
 ++ for el in "${testsall[@]}"
 ++ echo tls_0rtt_server
 ++ for el in "${testsall[@]}"
-++ echo tls_verify_ca_override
-++ for el in "${testsall[@]}"
-++ echo tls_ticket
-++ for el in "${testsall[@]}"
-++ echo tls_check_cert_selection_reload
-++ for el in "${testsall[@]}"
-++ echo tls_hooks_client_verify
+++ echo tls_client_verify2
 ++ for el in "${testsall[@]}"
 ++ echo tls_verify_override
 ++ for el in "${testsall[@]}"
-++ echo tls_verify_override_base
-++ for el in "${testsall[@]}"
-++ echo tls_client_alpn_configuration
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_check_cert_select_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_session_key_logging
-++ for el in "${testsall[@]}"
-++ echo tls_sni_host_policy
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert2_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_verify_base
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert
-++ for el in "${testsall[@]}"
-++ echo tls_check_cert_selection
+++ echo tls_engine
 ++ for el in "${testsall[@]}"
 ++ echo tls
 ++ for el in "${testsall[@]}"
-++ echo tls_engine
+++ echo tls_client_verify
+++ for el in "${testsall[@]}"
+++ echo tls_bad_alpn
+++ for el in "${testsall[@]}"
+++ echo tls_sni_host_policy
+++ for el in "${testsall[@]}"
+++ echo tls_check_cert_selection_reload
+++ for el in "${testsall[@]}"
+++ echo ssl_multicert_loader
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert
+++ for el in "${testsall[@]}"
+++ echo tls_verify_ca_override
+++ for el in "${testsall[@]}"
+++ echo tls_verify_base
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert2_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_session_key_logging
 ++ for el in "${testsall[@]}"
 ++ echo tls_client_versions
 ++ for el in "${testsall[@]}"
 ++ echo tls_sni_yaml_reload
 ++ for el in "${testsall[@]}"
-++ echo tls_client_verify2
+++ echo tls_ticket
 ++ for el in "${testsall[@]}"
-++ echo tls_bad_alpn
+++ echo tls_check_cert_select_plugin
 ++ for el in "${testsall[@]}"
-++ echo ssl_multicert_loader
+++ echo tls_hooks_client_verify
 ++ for el in "${testsall[@]}"
-++ echo tls_client_verify
+++ echo tls_client_verify3
 ++ for el in "${testsall[@]}"
-++ echo tls_verify
+++ echo tls_client_cert_plugin
 ++ for el in "${testsall[@]}"
-++ echo runroot_remove
+++ echo tls_client_alpn_configuration
 ++ for el in "${testsall[@]}"
-++ echo runroot_use
+++ echo tls_check_cert_selection
 ++ for el in "${testsall[@]}"
-++ echo runroot_init
+++ echo tls_keepalive
 ++ for el in "${testsall[@]}"
-++ echo runroot_verify
+++ echo tls_check_dual_cert_selection2
 ++ for el in "${testsall[@]}"
-++ echo runroot_error
+++ echo tls_verify_override_sni
 ++ for el in "${testsall[@]}"
-++ echo quick_server
+++ echo tls_hooks_verify
 ++ for el in "${testsall[@]}"
-++ echo slow_post
+++ echo tls_client_cert_override_plugin
 ++ for el in "${testsall[@]}"
-++ echo null_transform
+++ echo tls_tunnel
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_override
+++ for el in "${testsall[@]}"
+++ echo tls_verify3
+++ for el in "${testsall[@]}"
+++ echo tls_session_reuse
+++ for el in "${testsall[@]}"
+++ echo tls_origin_session_reuse
+++ for el in "${testsall[@]}"
+++ echo tls_check_dual_cert_selection
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert2
+++ for el in "${testsall[@]}"
+++ echo tls_ocsp
+++ for el in "${testsall[@]}"
+++ echo tls_verify2
+++ for el in "${testsall[@]}"
+++ echo tls_partial_blind_tunnel
+++ for el in "${testsall[@]}"
+++ echo tls_check_dual_cert_selection_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_forward_nonhttp
+++ for el in "${testsall[@]}"
+++ echo tls_tunnel_forward
+++ for el in "${testsall[@]}"
+++ echo tls_verify_not_pristine
+++ for el in "${testsall[@]}"
+++ echo http408
+++ for el in "${testsall[@]}"
+++ echo accept_webp
+++ for el in "${testsall[@]}"
+++ echo cache_and_req_body
+++ for el in "${testsall[@]}"
+++ echo domain-blacklist-30x
+++ for el in "${testsall[@]}"
+++ echo via
+++ for el in "${testsall[@]}"
+++ echo general-connection-failure-502
+++ for el in "${testsall[@]}"
+++ echo hsts
+++ for el in "${testsall[@]}"
+++ echo good_request_after_bad
+++ for el in "${testsall[@]}"
+++ echo forwarded
+++ for el in "${testsall[@]}"
+++ echo field_name_space
+++ for el in "${testsall[@]}"
+++ echo normalize_ae
+++ for el in "${testsall[@]}"
+++ echo syntax
+++ for el in "${testsall[@]}"
+++ echo range
+++ for el in "${testsall[@]}"
+++ echo cachedIMSRange
+++ for el in "${testsall[@]}"
+++ echo old_config_fail
+++ for el in "${testsall[@]}"
+++ echo records_yaml
+++ for el in "${testsall[@]}"
+++ echo records_config_to_yaml
 ++ for el in "${testsall[@]}"
 ++ echo ip_allow
 ++ for el in "${testsall[@]}"
-++ echo schedule_on_pool
+++ echo session_match
 ++ for el in "${testsall[@]}"
-++ echo thread_affinity
+++ echo conn_timeout
 ++ for el in "${testsall[@]}"
-++ echo schedule_on_thread
+++ echo accept_timeout
 ++ for el in "${testsall[@]}"
-++ echo copy_config2
+++ echo default_inactivity_timeout
+++ for el in "${testsall[@]}"
+++ echo active_timeout
+++ for el in "${testsall[@]}"
+++ echo inactive_timeout
+++ for el in "${testsall[@]}"
+++ echo tls_conn_timeout
+++ for el in "${testsall[@]}"
+++ echo inactive_client_timeout
+++ for el in "${testsall[@]}"
+++ echo forward_proxy
+++ for el in "${testsall[@]}"
+++ echo bad_http_fmt
+++ for el in "${testsall[@]}"
+++ echo null_transform
+++ for el in "${testsall[@]}"
+++ echo polite_hook_wait
+++ for el in "${testsall[@]}"
+++ echo transaction_data_sink
+++ for el in "${testsall[@]}"
+++ echo CppDelayTransformation
+++ for el in "${testsall[@]}"
+++ echo TSVConnFd
+++ for el in "${testsall[@]}"
+++ echo client_context_dump
+++ for el in "${testsall[@]}"
+++ echo regex_remap
+++ for el in "${testsall[@]}"
+++ echo esi_304
+++ for el in "${testsall[@]}"
+++ echo esi
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_cachekey_global
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_cache_complete_responses
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_cachekey
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_ims
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests
+++ for el in "${testsall[@]}"
+++ echo s3_auth_config
+++ for el in "${testsall[@]}"
+++ echo compress
+++ for el in "${testsall[@]}"
+++ echo x_cache_info
+++ for el in "${testsall[@]}"
+++ echo x_effective_url
+++ for el in "${testsall[@]}"
+++ echo x_remap
+++ for el in "${testsall[@]}"
+++ echo url_sig
+++ for el in "${testsall[@]}"
+++ echo tsapi
+++ for el in "${testsall[@]}"
+++ echo cppapi
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_l_value
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_url
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_cond_ssn_txn_count
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_cond_cache
+++ for el in "${testsall[@]}"
+++ echo header_rewrite
+++ for el in "${testsall[@]}"
+++ echo parent_select
+++ for el in "${testsall[@]}"
+++ echo parent_select_optional_scheme_matching
+++ for el in "${testsall[@]}"
+++ echo parent_select_peer
+++ for el in "${testsall[@]}"
+++ echo parent_select_peer2
+++ for el in "${testsall[@]}"
+++ echo remap_stats
+++ for el in "${testsall[@]}"
+++ echo remap_stats_post
+++ for el in "${testsall[@]}"
+++ echo subcookie
+++ for el in "${testsall[@]}"
+++ echo matchcookie
+++ for el in "${testsall[@]}"
+++ echo existscookie
+++ for el in "${testsall[@]}"
+++ echo pcollapseslashes
+++ for el in "${testsall[@]}"
+++ echo matrixparams
+++ for el in "${testsall[@]}"
+++ echo psubstitute
+++ for el in "${testsall[@]}"
+++ echo substitute
+++ for el in "${testsall[@]}"
+++ echo setstatus
+++ for el in "${testsall[@]}"
+++ echo connector
+++ for el in "${testsall[@]}"
+++ echo regexcookie
+++ for el in "${testsall[@]}"
+++ echo notexistscookie
+++ for el in "${testsall[@]}"
+++ echo matchuri
+++ for el in "${testsall[@]}"
+++ echo collapseslashes
+++ for el in "${testsall[@]}"
+++ echo bucketcookie
+++ for el in "${testsall[@]}"
+++ echo multiplexer
+++ for el in "${testsall[@]}"
+++ echo combo_handler
+++ for el in "${testsall[@]}"
+++ echo certifier
+++ for el in "${testsall[@]}"
+++ echo server_push_preload
+++ for el in "${testsall[@]}"
+++ echo stats_over_http
+++ for el in "${testsall[@]}"
+++ echo slice
+++ for el in "${testsall[@]}"
+++ echo slice_regex
+++ for el in "${testsall[@]}"
+++ echo slice_selfhealing
+++ for el in "${testsall[@]}"
+++ echo slice_rm_range
+++ for el in "${testsall[@]}"
+++ echo slice_prefetch
+++ for el in "${testsall[@]}"
+++ echo slice_error
+++ for el in "${testsall[@]}"
+++ echo cert_update
+++ for el in "${testsall[@]}"
+++ echo body_buffer
+++ for el in "${testsall[@]}"
+++ echo test_hooks
+++ for el in "${testsall[@]}"
+++ echo ssn_start_delay_hook
+++ for el in "${testsall[@]}"
+++ echo hook_add
+++ for el in "${testsall[@]}"
+++ echo uri_signing
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_sni_filter
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_response_body
+++ for el in "${testsall[@]}"
+++ echo traffic_dump
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_http3
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_ip_filter
+++ for el in "${testsall[@]}"
+++ echo sslheaders
+++ for el in "${testsall[@]}"
+++ echo lua_states_stats
+++ for el in "${testsall[@]}"
+++ echo lua_header_table
+++ for el in "${testsall[@]}"
+++ echo lua_debug_tags
+++ for el in "${testsall[@]}"
+++ echo lua_watermark
+++ for el in "${testsall[@]}"
+++ echo prefetch_simple
+++ for el in "${testsall[@]}"
+++ echo money_trace_global
+++ for el in "${testsall[@]}"
+++ echo money_trace
+++ for el in "${testsall[@]}"
+++ echo stek_share
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate_state
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate_miss
+++ for el in "${testsall[@]}"
+++ echo remap_load_empty_failure
+++ for el in "${testsall[@]}"
+++ echo remap_load_empty_success
+++ for el in "${testsall[@]}"
+++ echo remap_ws
+++ for el in "${testsall[@]}"
+++ echo remap_ip_resolve
+++ for el in "${testsall[@]}"
+++ echo regex_map
+++ for el in "${testsall[@]}"
+++ echo remap_load_missing_success
+++ for el in "${testsall[@]}"
+++ echo conf_remap_float
+++ for el in "${testsall[@]}"
+++ echo remap_https
+++ for el in "${testsall[@]}"
+++ echo remap_http
+++ for el in "${testsall[@]}"
+++ echo remap_reload
+++ for el in "${testsall[@]}"
+++ echo remap_load_missing_failure
+++ for el in "${testsall[@]}"
+++ echo openclose
+++ for el in "${testsall[@]}"
+++ echo openclose_h2
+++ for el in "${testsall[@]}"
+++ echo double
+++ for el in "${testsall[@]}"
+++ echo session_id
+++ for el in "${testsall[@]}"
+++ echo double_h2
+++ for el in "${testsall[@]}"
+++ echo dns_ttl
+++ for el in "${testsall[@]}"
+++ echo splitdns
+++ for el in "${testsall[@]}"
+++ echo dns_host_down
+++ for el in "${testsall[@]}"
+++ echo dns_down_nameserver
+++ for el in "${testsall[@]}"
+++ echo per_server_connection_max
+++ for el in "${testsall[@]}"
+++ echo log-field
+++ for el in "${testsall[@]}"
+++ echo log_pipe
+++ for el in "${testsall[@]}"
+++ echo log-filenames
+++ for el in "${testsall[@]}"
+++ echo new_log_flds
+++ for el in "${testsall[@]}"
+++ echo custom-log
+++ for el in "${testsall[@]}"
+++ echo pqsi-pqsp
+++ for el in "${testsall[@]}"
+++ echo all_headers
+++ for el in "${testsall[@]}"
+++ echo sigusr2
+++ for el in "${testsall[@]}"
+++ echo log-debug-client-ip
+++ for el in "${testsall[@]}"
+++ echo log-field-json
+++ for el in "${testsall[@]}"
+++ echo log_retention
+++ for el in "${testsall[@]}"
+++ echo log-filter
+++ for el in "${testsall[@]}"
+++ echo nghttp
+++ for el in "${testsall[@]}"
+++ echo http2_flow_control
+++ for el in "${testsall[@]}"
+++ echo h2spec
+++ for el in "${testsall[@]}"
+++ echo http2
+++ for el in "${testsall[@]}"
+++ echo h2enable
+++ for el in "${testsall[@]}"
+++ echo http2_priority
+++ for el in "${testsall[@]}"
+++ echo h2disable
+++ for el in "${testsall[@]}"
+++ echo httpbin
+++ for el in "${testsall[@]}"
+++ echo h2disable_no_accept_threads
+++ for el in "${testsall[@]}"
+++ echo h2enable_no_accept_threads
 ++ for el in "${testsall[@]}"
 ++ echo basic
+++ for el in "${testsall[@]}"
+++ echo copy_config2
 ++ for el in "${testsall[@]}"
 ++ echo config
 ++ for el in "${testsall[@]}"
@@ -139,11 +417,21 @@
 ++ for el in "${testsall[@]}"
 ++ echo copy_config
 ++ for el in "${testsall[@]}"
+++ echo post_slow_server_max_requests_in
+++ for el in "${testsall[@]}"
+++ echo post_slow_server
+++ for el in "${testsall[@]}"
+++ echo post-continue
+++ for el in "${testsall[@]}"
+++ echo post-early-return
+++ for el in "${testsall[@]}"
+++ echo tls_hooks
+++ for el in "${testsall[@]}"
+++ echo tls_hooks9
+++ for el in "${testsall[@]}"
 ++ echo tls_hooks15
 ++ for el in "${testsall[@]}"
 ++ echo tls_hooks11
-++ for el in "${testsall[@]}"
-++ echo tls_hooks9
 ++ for el in "${testsall[@]}"
 ++ echo tls_hooks4
 ++ for el in "${testsall[@]}"
@@ -163,73 +451,21 @@
 ++ for el in "${testsall[@]}"
 ++ echo tls_hooks12
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks
+++ echo tls_hooks3
+++ for el in "${testsall[@]}"
+++ echo tls_hooks7
 ++ for el in "${testsall[@]}"
 ++ echo tls_hooks17
 ++ for el in "${testsall[@]}"
 ++ echo tls_hooks13
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks3
+++ echo verify_global_plugin
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks7
-++ for el in "${testsall[@]}"
-++ echo thread_config
-++ for el in "${testsall[@]}"
-++ echo post-continue
-++ for el in "${testsall[@]}"
-++ echo post-early-return
-++ for el in "${testsall[@]}"
-++ echo session_match
-++ for el in "${testsall[@]}"
-++ echo http_head_no_origin
-++ for el in "${testsall[@]}"
-++ echo http204_response
-++ for el in "${testsall[@]}"
-++ echo http_with_origin
-++ for el in "${testsall[@]}"
-++ echo http204_response_plugin
-++ for el in "${testsall[@]}"
-++ echo http304_response
-++ for el in "${testsall[@]}"
-++ echo cache-auth
-++ for el in "${testsall[@]}"
-++ echo cache-generation-clear
-++ for el in "${testsall[@]}"
-++ echo negative-revalidating
-++ for el in "${testsall[@]}"
-++ echo negative-caching
-++ for el in "${testsall[@]}"
-++ echo cache-control
-++ for el in "${testsall[@]}"
-++ echo vary-handling
-++ for el in "${testsall[@]}"
-++ echo cache-range-response
-++ for el in "${testsall[@]}"
-++ echo background_fill
-++ for el in "${testsall[@]}"
-++ echo conditional-get-hit
-++ for el in "${testsall[@]}"
-++ echo cache-cookie
-++ for el in "${testsall[@]}"
-++ echo disjoint-wait-for-cache
-++ for el in "${testsall[@]}"
-++ echo cache-generation-disjoint
-++ for el in "${testsall[@]}"
-++ echo cache-request-method
-++ for el in "${testsall[@]}"
-++ echo alternate-caching
-++ for el in "${testsall[@]}"
-++ echo basic_plugin_handler
+++ echo verify_remap_plugin
 ++ for el in "${testsall[@]}"
 ++ echo jsonrpc_api_schema
 ++ for el in "${testsall[@]}"
-++ echo dns_ttl
-++ for el in "${testsall[@]}"
-++ echo splitdns
-++ for el in "${testsall[@]}"
-++ echo dns_down_nameserver
-++ for el in "${testsall[@]}"
-++ echo dns_host_down
+++ echo basic_plugin_handler
 ++ for el in "${testsall[@]}"
 ++ echo strategies_ch2
 ++ for el in "${testsall[@]}"
@@ -241,7 +477,19 @@
 ++ for el in "${testsall[@]}"
 ++ echo bigobj
 ++ for el in "${testsall[@]}"
-++ echo per_server_connection_max
+++ echo slow_post
+++ for el in "${testsall[@]}"
+++ echo quick_server
+++ for el in "${testsall[@]}"
+++ echo connect
+++ for el in "${testsall[@]}"
+++ echo chunked_encoding_disabled
+++ for el in "${testsall[@]}"
+++ echo chunked_encoding_h2
+++ for el in "${testsall[@]}"
+++ echo chunked_encoding
+++ for el in "${testsall[@]}"
+++ echo bad_chunked_encoding
 ++ for el in "${testsall[@]}"
 ++ echo proxy_serve_stale_dns_fail
 ++ for el in "${testsall[@]}"
@@ -249,327 +497,79 @@
 ++ for el in "${testsall[@]}"
 ++ echo proxy_protocol
 ++ for el in "${testsall[@]}"
-++ echo url_sig
+++ echo runroot_error
 ++ for el in "${testsall[@]}"
-++ echo uri_signing
+++ echo runroot_init
 ++ for el in "${testsall[@]}"
-++ echo regex_revalidate_state
+++ echo runroot_remove
 ++ for el in "${testsall[@]}"
-++ echo regex_revalidate
+++ echo runroot_verify
 ++ for el in "${testsall[@]}"
-++ echo regex_revalidate_miss
-++ for el in "${testsall[@]}"
-++ echo money_trace
-++ for el in "${testsall[@]}"
-++ echo money_trace_global
-++ for el in "${testsall[@]}"
-++ echo esi_304
-++ for el in "${testsall[@]}"
-++ echo esi
-++ for el in "${testsall[@]}"
-++ echo header_rewrite_l_value
-++ for el in "${testsall[@]}"
-++ echo header_rewrite_cond_ssn_txn_count
-++ for el in "${testsall[@]}"
-++ echo header_rewrite_cond_cache
-++ for el in "${testsall[@]}"
-++ echo header_rewrite
-++ for el in "${testsall[@]}"
-++ echo header_rewrite_url
-++ for el in "${testsall[@]}"
-++ echo slice
-++ for el in "${testsall[@]}"
-++ echo slice_rm_range
-++ for el in "${testsall[@]}"
-++ echo slice_error
-++ for el in "${testsall[@]}"
-++ echo slice_prefetch
-++ for el in "${testsall[@]}"
-++ echo slice_regex
-++ for el in "${testsall[@]}"
-++ echo slice_selfhealing
-++ for el in "${testsall[@]}"
-++ echo pcollapseslashes
-++ for el in "${testsall[@]}"
-++ echo notexistscookie
-++ for el in "${testsall[@]}"
-++ echo regexcookie
-++ for el in "${testsall[@]}"
-++ echo collapseslashes
-++ for el in "${testsall[@]}"
-++ echo setstatus
-++ for el in "${testsall[@]}"
-++ echo connector
-++ for el in "${testsall[@]}"
-++ echo existscookie
-++ for el in "${testsall[@]}"
-++ echo matrixparams
-++ for el in "${testsall[@]}"
-++ echo substitute
-++ for el in "${testsall[@]}"
-++ echo psubstitute
-++ for el in "${testsall[@]}"
-++ echo matchcookie
-++ for el in "${testsall[@]}"
-++ echo matchuri
-++ for el in "${testsall[@]}"
-++ echo bucketcookie
-++ for el in "${testsall[@]}"
-++ echo subcookie
-++ for el in "${testsall[@]}"
-++ echo s3_auth_config
-++ for el in "${testsall[@]}"
-++ echo TSVConnFd
-++ for el in "${testsall[@]}"
-++ echo transaction_data_sink
-++ for el in "${testsall[@]}"
-++ echo cert_update
-++ for el in "${testsall[@]}"
-++ echo client_context_dump
-++ for el in "${testsall[@]}"
-++ echo combo_handler
-++ for el in "${testsall[@]}"
-++ echo CppDelayTransformation
-++ for el in "${testsall[@]}"
-++ echo parent_select_peer2
-++ for el in "${testsall[@]}"
-++ echo parent_select_peer
-++ for el in "${testsall[@]}"
-++ echo parent_select
-++ for el in "${testsall[@]}"
-++ echo parent_select_optional_scheme_matching
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests_cache_complete_responses
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests_cachekey_global
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests_ims
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests_cachekey
-++ for el in "${testsall[@]}"
-++ echo tsapi
-++ for el in "${testsall[@]}"
-++ echo stats_over_http
-++ for el in "${testsall[@]}"
-++ echo cppapi
-++ for el in "${testsall[@]}"
-++ echo remap_stats_post
-++ for el in "${testsall[@]}"
-++ echo remap_stats
-++ for el in "${testsall[@]}"
-++ echo sslheaders
-++ for el in "${testsall[@]}"
-++ echo multiplexer
-++ for el in "${testsall[@]}"
-++ echo stek_share
-++ for el in "${testsall[@]}"
-++ echo x_remap
-++ for el in "${testsall[@]}"
-++ echo x_cache_info
-++ for el in "${testsall[@]}"
-++ echo x_effective_url
-++ for el in "${testsall[@]}"
-++ echo regex_remap
-++ for el in "${testsall[@]}"
-++ echo server_push_preload
-++ for el in "${testsall[@]}"
-++ echo polite_hook_wait
-++ for el in "${testsall[@]}"
-++ echo hook_add
-++ for el in "${testsall[@]}"
-++ echo ssn_start_delay_hook
-++ for el in "${testsall[@]}"
-++ echo test_hooks
-++ for el in "${testsall[@]}"
-++ echo body_buffer
-++ for el in "${testsall[@]}"
-++ echo lua_debug_tags
-++ for el in "${testsall[@]}"
-++ echo lua_states_stats
-++ for el in "${testsall[@]}"
-++ echo lua_watermark
-++ for el in "${testsall[@]}"
-++ echo lua_header_table
-++ for el in "${testsall[@]}"
-++ echo prefetch_simple
-++ for el in "${testsall[@]}"
-++ echo certifier
-++ for el in "${testsall[@]}"
-++ echo compress
-++ for el in "${testsall[@]}"
-++ echo traffic_dump_ip_filter
-++ for el in "${testsall[@]}"
-++ echo traffic_dump_http3
-++ for el in "${testsall[@]}"
-++ echo traffic_dump_sni_filter
-++ for el in "${testsall[@]}"
-++ echo traffic_dump
-++ for el in "${testsall[@]}"
-++ echo traffic_dump_response_body
-++ for el in "${testsall[@]}"
-++ echo bad_http_fmt
-++ for el in "${testsall[@]}"
-++ echo log_pipe
-++ for el in "${testsall[@]}"
-++ echo log-debug-client-ip
-++ for el in "${testsall[@]}"
-++ echo log_retention
-++ for el in "${testsall[@]}"
-++ echo custom-log
-++ for el in "${testsall[@]}"
-++ echo sigusr2
-++ for el in "${testsall[@]}"
-++ echo pqsi-pqsp
-++ for el in "${testsall[@]}"
-++ echo new_log_flds
-++ for el in "${testsall[@]}"
-++ echo log-field-json
-++ for el in "${testsall[@]}"
-++ echo log-filenames
-++ for el in "${testsall[@]}"
-++ echo all_headers
-++ for el in "${testsall[@]}"
-++ echo log-filter
-++ for el in "${testsall[@]}"
-++ echo log-field
-++ for el in "${testsall[@]}"
-++ echo openclose_h2
-++ for el in "${testsall[@]}"
-++ echo double
-++ for el in "${testsall[@]}"
-++ echo openclose
-++ for el in "${testsall[@]}"
-++ echo session_id
-++ for el in "${testsall[@]}"
-++ echo double_h2
-++ for el in "${testsall[@]}"
-++ echo bad_chunked_encoding
-++ for el in "${testsall[@]}"
-++ echo chunked_encoding_h2
-++ for el in "${testsall[@]}"
-++ echo chunked_encoding
-++ for el in "${testsall[@]}"
-++ echo chunked_encoding_disabled
-++ for el in "${testsall[@]}"
-++ echo fatal
-++ for el in "${testsall[@]}"
-++ echo emergency
+++ echo runroot_use
 ++ for el in "${testsall[@]}"
 ++ echo uri
 ++ for el in "${testsall[@]}"
-++ echo old_config_fail
+++ echo negative-caching
 ++ for el in "${testsall[@]}"
-++ echo records_yaml
+++ echo cache-generation-clear
 ++ for el in "${testsall[@]}"
-++ echo records_config_to_yaml
+++ echo negative-revalidating
 ++ for el in "${testsall[@]}"
-++ echo number_of_redirects
+++ echo disjoint-wait-for-cache
 ++ for el in "${testsall[@]}"
-++ echo redirect_stale
+++ echo cache-request-method
 ++ for el in "${testsall[@]}"
-++ echo redirect
+++ echo cache-auth
 ++ for el in "${testsall[@]}"
-++ echo redirect_actions
+++ echo cache-generation-disjoint
+++ for el in "${testsall[@]}"
+++ echo vary-handling
+++ for el in "${testsall[@]}"
+++ echo cache-cookie
+++ for el in "${testsall[@]}"
+++ echo cache-control
+++ for el in "${testsall[@]}"
+++ echo cache-range-response
+++ for el in "${testsall[@]}"
+++ echo conditional-get-hit
+++ for el in "${testsall[@]}"
+++ echo alternate-caching
+++ for el in "${testsall[@]}"
+++ echo background_fill
+++ for el in "${testsall[@]}"
+++ echo http_head_no_origin
+++ for el in "${testsall[@]}"
+++ echo http_with_origin
+++ for el in "${testsall[@]}"
+++ echo http204_response
+++ for el in "${testsall[@]}"
+++ echo http304_response
+++ for el in "${testsall[@]}"
+++ echo http204_response_plugin
+++ for el in "${testsall[@]}"
+++ echo emergency
+++ for el in "${testsall[@]}"
+++ echo fatal
+++ for el in "${testsall[@]}"
+++ echo remap_inc
 ++ for el in "${testsall[@]}"
 ++ echo redirect_post
 ++ for el in "${testsall[@]}"
-++ echo hsts
+++ echo number_of_redirects
 ++ for el in "${testsall[@]}"
-++ echo cachedIMSRange
+++ echo redirect_actions
 ++ for el in "${testsall[@]}"
-++ echo field_name_space
+++ echo redirect
 ++ for el in "${testsall[@]}"
-++ echo general-connection-failure-502
+++ echo redirect_stale
 ++ for el in "${testsall[@]}"
-++ echo via
+++ echo schedule_on_pool
 ++ for el in "${testsall[@]}"
-++ echo cache_and_req_body
+++ echo thread_affinity
 ++ for el in "${testsall[@]}"
-++ echo forwarded
+++ echo schedule_on_thread
 ++ for el in "${testsall[@]}"
-++ echo normalize_ae
-++ for el in "${testsall[@]}"
-++ echo good_request_after_bad
-++ for el in "${testsall[@]}"
-++ echo range
-++ for el in "${testsall[@]}"
-++ echo domain-blacklist-30x
-++ for el in "${testsall[@]}"
-++ echo http408
-++ for el in "${testsall[@]}"
-++ echo syntax
-++ for el in "${testsall[@]}"
-++ echo accept_webp
-++ for el in "${testsall[@]}"
-++ echo forward_proxy
-++ for el in "${testsall[@]}"
-++ echo inactive_timeout
-++ for el in "${testsall[@]}"
-++ echo tls_conn_timeout
-++ for el in "${testsall[@]}"
-++ echo default_inactivity_timeout
-++ for el in "${testsall[@]}"
-++ echo accept_timeout
-++ for el in "${testsall[@]}"
-++ echo active_timeout
-++ for el in "${testsall[@]}"
-++ echo inactive_client_timeout
-++ for el in "${testsall[@]}"
-++ echo conn_timeout
-++ for el in "${testsall[@]}"
-++ echo h2disable_no_accept_threads
-++ for el in "${testsall[@]}"
-++ echo http2_flow_control
-++ for el in "${testsall[@]}"
-++ echo http2
-++ for el in "${testsall[@]}"
-++ echo h2enable
-++ for el in "${testsall[@]}"
-++ echo httpbin
-++ for el in "${testsall[@]}"
-++ echo h2disable
-++ for el in "${testsall[@]}"
-++ echo h2spec
-++ for el in "${testsall[@]}"
-++ echo h2enable_no_accept_threads
-++ for el in "${testsall[@]}"
-++ echo http2_priority
-++ for el in "${testsall[@]}"
-++ echo nghttp
-++ for el in "${testsall[@]}"
-++ echo verify_global_plugin
-++ for el in "${testsall[@]}"
-++ echo verify_remap_plugin
-++ for el in "${testsall[@]}"
-++ echo post_slow_server
-++ for el in "${testsall[@]}"
-++ echo post_slow_server_max_requests_in
-++ for el in "${testsall[@]}"
-++ echo regex_map
-++ for el in "${testsall[@]}"
-++ echo remap_https
-++ for el in "${testsall[@]}"
-++ echo conf_remap_float
-++ for el in "${testsall[@]}"
-++ echo remap_load_missing_failure
-++ for el in "${testsall[@]}"
-++ echo remap_load_empty_success
-++ for el in "${testsall[@]}"
-++ echo remap_ip_resolve
-++ for el in "${testsall[@]}"
-++ echo remap_load_missing_success
-++ for el in "${testsall[@]}"
-++ echo remap_reload
-++ for el in "${testsall[@]}"
-++ echo remap_ws
-++ for el in "${testsall[@]}"
-++ echo remap_load_empty_failure
-++ for el in "${testsall[@]}"
-++ echo remap_http
-++ for el in "${testsall[@]}"
-++ echo remap_inc
+++ echo thread_config
 + ntests=279
 + shardsize=69
 + '[' 0 -ne 3 ']'
@@ -577,7 +577,7 @@
 + shardbeg=210
 + sliced='tls_client_cert2_plugin tls_client_cert_override tls_client_cert_override_plugin tls_client_cert_plugin tls_client_verify tls_client_verify2 tls_client_verify3 tls_client_versions tls_conn_timeout tls_engine tls_forward_nonhttp tls_hooks tls_hooks10 tls_hooks11 tls_hooks12 tls_hooks13 tls_hooks14 tls_hooks15 tls_hooks16 tls_hooks17 tls_hooks18 tls_hooks2 tls_hooks3 tls_hooks4 tls_hooks6 tls_hooks7 tls_hooks8 tls_hooks9 tls_hooks_client_verify tls_hooks_verify tls_keepalive tls_ocsp tls_origin_session_reuse tls_partial_blind_tunnel tls_session_key_logging tls_session_reuse tls_sni_host_policy tls_sni_yaml_reload tls_ticket tls_tunnel tls_tunnel_forward tls_verify tls_verify2 tls_verify3 tls_verify_base tls_verify_ca_override tls_verify_not_pristine tls_verify_override tls_verify_override_base tls_verify_override_sni traffic_dump traffic_dump_http3 traffic_dump_ip_filter traffic_dump_response_body traffic_dump_sni_filter transaction_data_sink tsapi uri uri_signing url_sig vary-handling verify_global_plugin verify_remap_plugin via x_cache_info x_effective_url x_remap zzz_strategies_peer zzz_strategies_peer2'
 + ./autest.sh --ats-bin /usr/ats/bin/ --sandbox /tmp/sandbox -f tls_client_cert2_plugin tls_client_cert_override tls_client_cert_override_plugin tls_client_cert_plugin tls_client_verify tls_client_verify2 tls_client_verify3 tls_client_versions tls_conn_timeout tls_engine tls_forward_nonhttp tls_hooks tls_hooks10 tls_hooks11 tls_hooks12 tls_hooks13 tls_hooks14 tls_hooks15 tls_hooks16 tls_hooks17 tls_hooks18 tls_hooks2 tls_hooks3 tls_hooks4 tls_hooks6 tls_hooks7 tls_hooks8 tls_hooks9 tls_hooks_client_verify tls_hooks_verify tls_keepalive tls_ocsp tls_origin_session_reuse tls_partial_blind_tunnel tls_session_key_logging tls_session_reuse tls_sni_host_policy tls_sni_yaml_reload tls_ticket tls_tunnel tls_tunnel_forward tls_verify tls_verify2 tls_verify3 tls_verify_base tls_verify_ca_override tls_verify_not_pristine tls_verify_override tls_verify_override_base tls_verify_override_sni traffic_dump traffic_dump_http3 traffic_dump_ip_filter traffic_dump_response_body traffic_dump_sni_filter transaction_data_sink tsapi uri uri_signing url_sig vary-handling verify_global_plugin verify_remap_plugin via x_cache_info x_effective_url x_remap zzz_strategies_peer zzz_strategies_peer2
-#=#=#                                                                         ##O#-#                                                                        ##O=#  #                                                                                                                                                 0.1%                                                                           0.3%                                                                           0.6%                                                                           1.0%#                                                                          1.4%#                                                                          2.6%##                                                                         3.9%###                                                                        4.4%###                                                                        5.0%###                                                                        5.5%####                                                                       6.1%####                                                                       6.7%#####                                                                      7.2%#####                                                                      7.8%######                                                                     8.4%######                                                                     9.0%######                                                                     9.6%#######                                                                   10.2%#######                                                                   10.8%########                                                                  11.5%########                                                                  12.1%#########                                                                 12.7%#########                                                                 13.4%##########                                                                14.0%##########                                                                14.6%##########                                                                15.2%###########                                                               15.9%###########                                                               16.5%############                                                              17.1%############                                                              17.8%#############                                                             18.4%#############                                                             19.0%##############                                                            19.7%##############                                                            20.3%###############                                                           20.9%###############                                                           21.7%################                                                          22.3%################                                                          23.1%#################                                                         23.7%#################                                                         24.4%##################                                                        25.1%##################                                                        25.8%###################                                                       26.6%###################                                                       27.2%####################                                                      28.0%####################                                                      28.7%#####################                                                     29.5%#####################                                                     30.2%######################                                                    31.0%######################                                                    31.7%#######################                                                   32.5%#######################                                                   33.3%########################                                                  34.0%#########################                                                 34.8%#########################                                                 35.5%##########################                                                36.4%##########################                                                37.2%###########################                                               37.9%###########################                                               38.8%############################                                              39.6%#############################                                             40.4%#############################                                             41.2%##############################                                            42.1%##############################                                            43.0%###############################                                           43.8%################################                                          44.8%################################                                          45.7%#################################                                         46.7%##################################                                        47.7%###################################                                       48.9%###################################                                       49.9%####################################                                      51.0%#####################################                                     52.2%######################################                                    53.4%#######################################                                   54.7%########################################                                  55.9%#########################################                                 57.3%##########################################                                58.7%###########################################                               60.1%############################################                              61.6%#############################################                             63.1%##############################################                            64.6%###############################################                           66.3%################################################                          68.0%##################################################                        69.8%###################################################                       71.6%####################################################                      73.4%######################################################                    75.5%#######################################################                   77.5%#########################################################                 79.6%##########################################################                81.8%############################################################              84.0%##############################################################            86.4%###############################################################           88.8%#################################################################         91.3%###################################################################       94.0%#####################################################################     96.8%#######################################################################   99.5%######################################################################## 100.0%
+#=#=#                                                                         ##O#-#                                                                        ##O=#  #                                                                                                                                                 0.1%                                                                           0.3%                                                                           0.7%#                                                                          1.5%##                                                                         3.2%###                                                                        5.4%######                                                                     8.5%#######                                                                   10.6%###############                                                           20.9%################                                                          23.6%##################                                                        26.3%#####################                                                     29.2%#######################                                                   32.0%#########################                                                 34.9%###########################                                               37.9%#############################                                             40.8%###############################                                           43.8%#################################                                         46.9%###################################                                       49.9%######################################                                    52.9%########################################                                  56.1%##########################################                                59.1%############################################                              62.2%###############################################                           65.4%#################################################                         68.5%###################################################                       71.7%#####################################################                     75.0%########################################################                  78.1%##########################################################                81.4%############################################################              84.5%###############################################################           87.8%#################################################################         91.1%###################################################################       94.4%######################################################################    97.6%######################################################################## 100.0%
 /src/trafficserver/tests/proxy-verifier/proxy-verifier-v2.6.0.tar.gz: OK
 Python 3.6 or newer detected!
 python3-dev/devel detected!
@@ -685,3 +685,5 @@ Generating Report: --------------
 + '[' 4 -le 0 ']'
 + sudo touch /src/trafficserver/output/adjust_autest_for_rockylinux8/No_autest_failures_shard_3
 + exit 0
+0.08user 0.04system 11:18.41elapsed 0%CPU (0avgtext+0avgdata 22680maxresident)k
+487inputs+0outputs (16major+9867minor)pagefaults 0swaps
