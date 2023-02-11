@@ -29,7 +29,6 @@ fi
 
 if [ -n "$(ls -A /tmp/sandbox/)" ]; then
 	cp -rf /tmp/sandbox/ ${WORKSPACE}/output/${GITHUB_BRANCH}/
-	sudo chmod -R 777 ${WORKSPACE}/output
 	exit 1
 else
 	if [ ${SHARDCNT:-0} -le 0 ]; then
@@ -37,6 +36,5 @@ else
 	else
 		sudo touch ${WORKSPACE}/output/${GITHUB_BRANCH}/No_autest_failures_shard_${SHARD}
 	fi
-	sudo chmod -R 777 ${WORKSPACE}/output
 	exit 0
 fi

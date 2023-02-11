@@ -1,10 +1,15 @@
 IMAGE = ats-rockylinux8
 
-.PHONY: build test test-shard test-filter run exec
+.PHONY: build check test test-shard test-filter run exec
 
 build:
 	mkdir -p ./log
 	docker build $(DOCKER_BUILD_OPTS) -t $(IMAGE) . 2>&1 | tee ./log/build.log
+
+check:
+	mkdir -p ./log
+	docker run --rm -it --init --cap-add=SYS_PTRACE \
+		--entrypoint=bash $(IMAGE) -c /src/check.sh 2>&1 | tee ./log/check.log
 
 test:
 	mkdir -p ./log ./data

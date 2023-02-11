@@ -9,6 +9,6 @@ export PATH=/opt/bin:${PATH}
 # (default user umask may change and make these unreadable)
 sudo chmod -R o+r .
 autoreconf -fiv
-./configure --enable-experimental-plugins --enable-example-plugins --prefix=${ATS_PREFIX:-/tmp/ats} --enable-werror --enable-debug --enable-wccp --enable-luajit --enable-ccache
+./configure --enable-experimental-plugins --enable-example-plugins --prefix=${ATS_PREFIX:-/tmp/ats} --enable-werror --enable-debug --enable-wccp --enable-luajit
 make -j4 V=1
 make install
