@@ -1,5 +1,7 @@
 IMAGE = ats-rockylinux8
 
+.PHONY: build test test-shard test-filter run exec
+
 build:
 	mkdir -p ./log
 	docker build $(DOCKER_BUILD_OPTS) -t $(IMAGE) . 2>&1 | tee ./log/build.log
@@ -7,20 +9,25 @@ build:
 test:
 	mkdir -p ./log ./data
 	docker run --rm -it --init --cap-add=SYS_PTRACE \
-		-v $${PWD}/data:/data:rw \
-		$(IMAGE) 2>&1 | tee ./log/autest.log
+		-v $${PWD}/data:/src/trafficserver/output:rw \
+		$(IMAGE) 2>&1 | tee ./log/autest.log &
 
+test-shard:
+	IMAGE=$(IMAGE) SHARDCNT=$${SHARDCNT:-4} ./test-shard.sh
+
+# Run this target like:
+# make test-filter test=test_name_to_run
 test-filter:
 	mkdir -p ./log ./data
 	docker run --rm -it --init --cap-add=SYS_PTRACE \
-		-v $${PWD}/data:/data:rw \
-		$(IMAGE) --sandbox /data/sandbox-$(test) -f $(test) 2>&1 \
+		-v $${PWD}/data:/src/trafficserver/output:rw \
+		$(IMAGE) -f $(test) 2>&1 \
 		| tee ./log/autest-$(test).log
 
 run:
 	mkdir -p ./log
 	docker run --rm -it --init --cap-add=SYS_PTRACE \
-		-v $${PWD}/data:/data:rw \
+		-v $${PWD}/data:/src/trafficserver/output:rw \
 		--entrypoint bash $(IMAGE)
 
 exec:

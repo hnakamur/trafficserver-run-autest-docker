@@ -1,23 +1,31 @@
+# syntax=docker/dockerfile:1.2
 FROM ci.trafficserver.apache.org/ats/rockylinux:8
 
-ENV REPO https://github.com/apache/trafficserver
-ENV COMMIT 086501cb58d7b872e955b49de952b554ba7b5685
+ENV REPO https://github.com/hnakamur/trafficserver
+ENV COMMIT b613715f2ab1cf53c743f9a0b75cbf6b09c15ab8
 
-RUN mkdir -p /src/trafficserver
-COPY build.sh autest.sh /src/
-WORKDIR /src/trafficserver
+ENV WORKSPACE /src/trafficserver
+RUN mkdir -p ${WORKSPACE}
+WORKDIR ${WORKSPACE}
 RUN git init
 RUN git remote add origin ${REPO}
 RUN git fetch --depth 1 origin ${COMMIT}
 RUN git checkout FETCH_HEAD
 
-ENV ATS_PREFIX /usr/ats
-RUN /src/build.sh
+WORKDIR ${WORKSPACE}/tests
+RUN pipenv install
 
-WORKDIR /src/trafficserver/tests
-ENV SANDBOX /data/sandbox
-ENV WORKSPACE /src/trafficserver
+COPY build.sh /src/
+ENV ATS_PREFIX /usr/ats
+ENV CCACHE_DIR /tmp/ccache
+ENV CCACHE_BASEDIR ${WORKSPACE}
+WORKDIR ${WORKSPACE}
+RUN --mount=type=cache,target=${CCACHE_BASEDIR} \
+    /src/build.sh
+
+COPY run_autest.sh /src/
 ENV GITHUB_BRANCH master
 ENV SHARDCNT 0
-RUN mkdir -p ${SANDBOX}
-CMD ["/bin/bash", "-x", "/src/autest.sh"]
+ENV SHARD 0
+WORKDIR ${WORKSPACE}/tests
+ENTRYPOINT ["/bin/bash", "-x", "/src/run_autest.sh"]
