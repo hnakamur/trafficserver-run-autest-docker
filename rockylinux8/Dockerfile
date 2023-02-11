@@ -1,16 +1,12 @@
 # syntax=docker/dockerfile:1.2
 FROM ci.trafficserver.apache.org/ats/rockylinux:8
 
-ENV REPO https://github.com/hnakamur/trafficserver
-ENV COMMIT b613715f2ab1cf53c743f9a0b75cbf6b09c15ab8
+ENV REPO https://github.com/apache/trafficserver
+ENV GITHUB_BRANCH master
 
 ENV WORKSPACE /src/trafficserver
-RUN mkdir -p ${WORKSPACE}
-WORKDIR ${WORKSPACE}
-RUN git init
-RUN git remote add origin ${REPO}
-RUN git fetch --depth 1 origin ${COMMIT}
-RUN git checkout FETCH_HEAD
+RUN git clone --depth 1 -b ${GITHUB_BRANCH} ${REPO} ${WORKSPACE}
+RUN chown -R nobody:nobody ${WORKSPACE}
 
 WORKDIR ${WORKSPACE}/tests
 RUN pipenv install
@@ -24,7 +20,6 @@ RUN --mount=type=cache,target=${CCACHE_BASEDIR} \
     /src/build.sh
 
 COPY run_autest.sh /src/
-ENV GITHUB_BRANCH master
 ENV SHARDCNT 0
 ENV SHARD 0
 WORKDIR ${WORKSPACE}/tests

@@ -13,309 +13,65 @@
 		done | sort))
 ++ sort
 ++ for el in "${testsall[@]}"
-++ echo proxy_serve_stale
+++ echo inactive_client_timeout
 ++ for el in "${testsall[@]}"
-++ echo proxy_protocol
+++ echo inactive_timeout
 ++ for el in "${testsall[@]}"
-++ echo proxy_serve_stale_dns_fail
+++ echo active_timeout
 ++ for el in "${testsall[@]}"
-++ echo cache-generation-disjoint
+++ echo tls_conn_timeout
 ++ for el in "${testsall[@]}"
-++ echo cache-generation-clear
+++ echo accept_timeout
 ++ for el in "${testsall[@]}"
-++ echo cache-request-method
+++ echo conn_timeout
 ++ for el in "${testsall[@]}"
-++ echo cache-cookie
+++ echo default_inactivity_timeout
 ++ for el in "${testsall[@]}"
-++ echo background_fill
+++ echo chunked_encoding_disabled
 ++ for el in "${testsall[@]}"
-++ echo alternate-caching
+++ echo chunked_encoding
 ++ for el in "${testsall[@]}"
-++ echo negative-caching
+++ echo bad_chunked_encoding
 ++ for el in "${testsall[@]}"
-++ echo cache-auth
+++ echo chunked_encoding_h2
 ++ for el in "${testsall[@]}"
-++ echo conditional-get-hit
+++ echo bigobj
 ++ for el in "${testsall[@]}"
-++ echo vary-handling
+++ echo http408
 ++ for el in "${testsall[@]}"
-++ echo cache-control
+++ echo cache_and_req_body
 ++ for el in "${testsall[@]}"
-++ echo negative-revalidating
+++ echo cachedIMSRange
 ++ for el in "${testsall[@]}"
-++ echo cache-range-response
+++ echo hsts
 ++ for el in "${testsall[@]}"
-++ echo disjoint-wait-for-cache
+++ echo via
 ++ for el in "${testsall[@]}"
-++ echo strategies_ch
+++ echo domain-blacklist-30x
 ++ for el in "${testsall[@]}"
-++ echo strategies_ch2
+++ echo syntax
 ++ for el in "${testsall[@]}"
-++ echo zzz_strategies_peer
+++ echo general-connection-failure-502
 ++ for el in "${testsall[@]}"
-++ echo zzz_strategies_peer2
+++ echo range
 ++ for el in "${testsall[@]}"
-++ echo jsonrpc_api_schema
+++ echo normalize_ae
 ++ for el in "${testsall[@]}"
-++ echo basic_plugin_handler
+++ echo field_name_space
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks8
+++ echo accept_webp
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks4
+++ echo forwarded
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks14
+++ echo good_request_after_bad
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks10
+++ echo session_match
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks18
+++ echo records_config_to_yaml
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks15
+++ echo old_config_fail
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks11
-++ for el in "${testsall[@]}"
-++ echo tls_hooks9
-++ for el in "${testsall[@]}"
-++ echo tls_hooks17
-++ for el in "${testsall[@]}"
-++ echo tls_hooks13
-++ for el in "${testsall[@]}"
-++ echo tls_hooks3
-++ for el in "${testsall[@]}"
-++ echo tls_hooks7
-++ for el in "${testsall[@]}"
-++ echo tls_hooks2
-++ for el in "${testsall[@]}"
-++ echo tls_hooks6
-++ for el in "${testsall[@]}"
-++ echo tls_hooks16
-++ for el in "${testsall[@]}"
-++ echo tls_hooks12
-++ for el in "${testsall[@]}"
-++ echo tls_hooks
-++ for el in "${testsall[@]}"
-++ echo per_server_connection_max
-++ for el in "${testsall[@]}"
-++ echo uri
-++ for el in "${testsall[@]}"
-++ echo quick_server
-++ for el in "${testsall[@]}"
-++ echo slow_post
-++ for el in "${testsall[@]}"
-++ echo parent_select_peer
-++ for el in "${testsall[@]}"
-++ echo parent_select
-++ for el in "${testsall[@]}"
-++ echo parent_select_optional_scheme_matching
-++ for el in "${testsall[@]}"
-++ echo parent_select_peer2
-++ for el in "${testsall[@]}"
-++ echo uri_signing
-++ for el in "${testsall[@]}"
-++ echo CppDelayTransformation
-++ for el in "${testsall[@]}"
-++ echo client_context_dump
-++ for el in "${testsall[@]}"
-++ echo money_trace
-++ for el in "${testsall[@]}"
-++ echo money_trace_global
-++ for el in "${testsall[@]}"
-++ echo notexistscookie
-++ for el in "${testsall[@]}"
-++ echo collapseslashes
-++ for el in "${testsall[@]}"
-++ echo regexcookie
-++ for el in "${testsall[@]}"
-++ echo bucketcookie
-++ for el in "${testsall[@]}"
-++ echo setstatus
-++ for el in "${testsall[@]}"
-++ echo connector
-++ for el in "${testsall[@]}"
-++ echo matchuri
-++ for el in "${testsall[@]}"
-++ echo psubstitute
-++ for el in "${testsall[@]}"
-++ echo existscookie
-++ for el in "${testsall[@]}"
-++ echo matrixparams
-++ for el in "${testsall[@]}"
-++ echo matchcookie
-++ for el in "${testsall[@]}"
-++ echo pcollapseslashes
-++ for el in "${testsall[@]}"
-++ echo subcookie
-++ for el in "${testsall[@]}"
-++ echo substitute
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests_cachekey
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests_ims
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests_cache_complete_responses
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests_cachekey_global
-++ for el in "${testsall[@]}"
-++ echo tsapi
-++ for el in "${testsall[@]}"
-++ echo lua_debug_tags
-++ for el in "${testsall[@]}"
-++ echo lua_states_stats
-++ for el in "${testsall[@]}"
-++ echo lua_watermark
-++ for el in "${testsall[@]}"
-++ echo lua_header_table
-++ for el in "${testsall[@]}"
-++ echo polite_hook_wait
-++ for el in "${testsall[@]}"
-++ echo cert_update
-++ for el in "${testsall[@]}"
-++ echo compress
-++ for el in "${testsall[@]}"
-++ echo certifier
-++ for el in "${testsall[@]}"
-++ echo regex_revalidate_miss
-++ for el in "${testsall[@]}"
-++ echo regex_revalidate
-++ for el in "${testsall[@]}"
-++ echo regex_revalidate_state
-++ for el in "${testsall[@]}"
-++ echo sslheaders
-++ for el in "${testsall[@]}"
-++ echo x_cache_info
-++ for el in "${testsall[@]}"
-++ echo x_remap
-++ for el in "${testsall[@]}"
-++ echo x_effective_url
-++ for el in "${testsall[@]}"
-++ echo cppapi
-++ for el in "${testsall[@]}"
-++ echo stek_share
-++ for el in "${testsall[@]}"
-++ echo stats_over_http
-++ for el in "${testsall[@]}"
-++ echo multiplexer
-++ for el in "${testsall[@]}"
-++ echo slice_error
-++ for el in "${testsall[@]}"
-++ echo slice_prefetch
-++ for el in "${testsall[@]}"
-++ echo slice_rm_range
-++ for el in "${testsall[@]}"
-++ echo slice_regex
-++ for el in "${testsall[@]}"
-++ echo slice
-++ for el in "${testsall[@]}"
-++ echo slice_selfhealing
-++ for el in "${testsall[@]}"
-++ echo remap_stats
-++ for el in "${testsall[@]}"
-++ echo remap_stats_post
-++ for el in "${testsall[@]}"
-++ echo esi_304
-++ for el in "${testsall[@]}"
-++ echo esi
-++ for el in "${testsall[@]}"
-++ echo server_push_preload
-++ for el in "${testsall[@]}"
-++ echo s3_auth_config
-++ for el in "${testsall[@]}"
-++ echo header_rewrite_l_value
-++ for el in "${testsall[@]}"
-++ echo header_rewrite_cond_ssn_txn_count
-++ for el in "${testsall[@]}"
-++ echo header_rewrite_url
-++ for el in "${testsall[@]}"
-++ echo header_rewrite_cond_cache
-++ for el in "${testsall[@]}"
-++ echo header_rewrite
-++ for el in "${testsall[@]}"
-++ echo regex_remap
-++ for el in "${testsall[@]}"
-++ echo url_sig
-++ for el in "${testsall[@]}"
-++ echo hook_add
-++ for el in "${testsall[@]}"
-++ echo ssn_start_delay_hook
-++ for el in "${testsall[@]}"
-++ echo body_buffer
-++ for el in "${testsall[@]}"
-++ echo test_hooks
-++ for el in "${testsall[@]}"
-++ echo TSVConnFd
-++ for el in "${testsall[@]}"
-++ echo transaction_data_sink
-++ for el in "${testsall[@]}"
-++ echo traffic_dump_http3
-++ for el in "${testsall[@]}"
-++ echo traffic_dump
-++ for el in "${testsall[@]}"
-++ echo traffic_dump_response_body
-++ for el in "${testsall[@]}"
-++ echo traffic_dump_sni_filter
-++ for el in "${testsall[@]}"
-++ echo traffic_dump_ip_filter
-++ for el in "${testsall[@]}"
-++ echo prefetch_simple
-++ for el in "${testsall[@]}"
-++ echo combo_handler
-++ for el in "${testsall[@]}"
-++ echo redirect_stale
-++ for el in "${testsall[@]}"
-++ echo redirect
-++ for el in "${testsall[@]}"
-++ echo redirect_post
-++ for el in "${testsall[@]}"
-++ echo number_of_redirects
-++ for el in "${testsall[@]}"
-++ echo redirect_actions
-++ for el in "${testsall[@]}"
-++ echo emergency
-++ for el in "${testsall[@]}"
-++ echo fatal
-++ for el in "${testsall[@]}"
-++ echo http204_response
-++ for el in "${testsall[@]}"
-++ echo http_with_origin
-++ for el in "${testsall[@]}"
-++ echo http_head_no_origin
-++ for el in "${testsall[@]}"
-++ echo http204_response_plugin
-++ for el in "${testsall[@]}"
-++ echo http304_response
-++ for el in "${testsall[@]}"
-++ echo basic
-++ for el in "${testsall[@]}"
-++ echo config
-++ for el in "${testsall[@]}"
-++ echo copy_config2
-++ for el in "${testsall[@]}"
-++ echo copy_config
-++ for el in "${testsall[@]}"
-++ echo deny0
-++ for el in "${testsall[@]}"
-++ echo thread_config
-++ for el in "${testsall[@]}"
-++ echo runroot_remove
-++ for el in "${testsall[@]}"
-++ echo runroot_error
-++ for el in "${testsall[@]}"
-++ echo runroot_use
-++ for el in "${testsall[@]}"
-++ echo runroot_verify
-++ for el in "${testsall[@]}"
-++ echo runroot_init
-++ for el in "${testsall[@]}"
-++ echo thread_affinity
-++ for el in "${testsall[@]}"
-++ echo schedule_on_thread
-++ for el in "${testsall[@]}"
-++ echo schedule_on_pool
-++ for el in "${testsall[@]}"
-++ echo connect
-++ for el in "${testsall[@]}"
-++ echo null_transform
+++ echo records_yaml
 ++ for el in "${testsall[@]}"
 ++ echo dns_ttl
 ++ for el in "${testsall[@]}"
@@ -325,251 +81,495 @@
 ++ for el in "${testsall[@]}"
 ++ echo dns_down_nameserver
 ++ for el in "${testsall[@]}"
-++ echo h2disable
-++ for el in "${testsall[@]}"
-++ echo http2_flow_control
-++ for el in "${testsall[@]}"
-++ echo nghttp
-++ for el in "${testsall[@]}"
-++ echo http2_priority
-++ for el in "${testsall[@]}"
-++ echo h2enable
-++ for el in "${testsall[@]}"
-++ echo httpbin
-++ for el in "${testsall[@]}"
-++ echo h2spec
-++ for el in "${testsall[@]}"
-++ echo h2enable_no_accept_threads
-++ for el in "${testsall[@]}"
-++ echo http2
-++ for el in "${testsall[@]}"
-++ echo h2disable_no_accept_threads
-++ for el in "${testsall[@]}"
-++ echo forward_proxy
-++ for el in "${testsall[@]}"
-++ echo remap_load_missing_success
-++ for el in "${testsall[@]}"
-++ echo conf_remap_float
-++ for el in "${testsall[@]}"
 ++ echo remap_load_missing_failure
-++ for el in "${testsall[@]}"
-++ echo remap_http
 ++ for el in "${testsall[@]}"
 ++ echo remap_https
 ++ for el in "${testsall[@]}"
-++ echo remap_reload
+++ echo conf_remap_float
+++ for el in "${testsall[@]}"
+++ echo remap_load_missing_success
 ++ for el in "${testsall[@]}"
 ++ echo remap_ws
 ++ for el in "${testsall[@]}"
-++ echo remap_ip_resolve
+++ echo remap_reload
 ++ for el in "${testsall[@]}"
 ++ echo remap_load_empty_success
 ++ for el in "${testsall[@]}"
-++ echo remap_load_empty_failure
-++ for el in "${testsall[@]}"
 ++ echo regex_map
 ++ for el in "${testsall[@]}"
-++ echo accept_timeout
+++ echo remap_http
 ++ for el in "${testsall[@]}"
-++ echo tls_conn_timeout
+++ echo remap_ip_resolve
 ++ for el in "${testsall[@]}"
-++ echo inactive_client_timeout
-++ for el in "${testsall[@]}"
-++ echo default_inactivity_timeout
-++ for el in "${testsall[@]}"
-++ echo inactive_timeout
-++ for el in "${testsall[@]}"
-++ echo conn_timeout
-++ for el in "${testsall[@]}"
-++ echo active_timeout
-++ for el in "${testsall[@]}"
-++ echo bad_http_fmt
-++ for el in "${testsall[@]}"
-++ echo syntax
-++ for el in "${testsall[@]}"
-++ echo domain-blacklist-30x
-++ for el in "${testsall[@]}"
-++ echo http408
-++ for el in "${testsall[@]}"
-++ echo normalize_ae
-++ for el in "${testsall[@]}"
-++ echo good_request_after_bad
-++ for el in "${testsall[@]}"
-++ echo accept_webp
-++ for el in "${testsall[@]}"
-++ echo cache_and_req_body
-++ for el in "${testsall[@]}"
-++ echo general-connection-failure-502
-++ for el in "${testsall[@]}"
-++ echo field_name_space
-++ for el in "${testsall[@]}"
-++ echo hsts
-++ for el in "${testsall[@]}"
-++ echo cachedIMSRange
-++ for el in "${testsall[@]}"
-++ echo via
-++ for el in "${testsall[@]}"
-++ echo forwarded
-++ for el in "${testsall[@]}"
-++ echo range
-++ for el in "${testsall[@]}"
-++ echo session_match
-++ for el in "${testsall[@]}"
-++ echo chunked_encoding
-++ for el in "${testsall[@]}"
-++ echo chunked_encoding_disabled
-++ for el in "${testsall[@]}"
-++ echo chunked_encoding_h2
-++ for el in "${testsall[@]}"
-++ echo bad_chunked_encoding
-++ for el in "${testsall[@]}"
-++ echo records_yaml
-++ for el in "${testsall[@]}"
-++ echo records_config_to_yaml
-++ for el in "${testsall[@]}"
-++ echo old_config_fail
-++ for el in "${testsall[@]}"
-++ echo ip_allow
-++ for el in "${testsall[@]}"
-++ echo bigobj
-++ for el in "${testsall[@]}"
-++ echo sigusr2
-++ for el in "${testsall[@]}"
-++ echo log_retention
-++ for el in "${testsall[@]}"
-++ echo log-debug-client-ip
-++ for el in "${testsall[@]}"
-++ echo log-field-json
-++ for el in "${testsall[@]}"
-++ echo log-filter
-++ for el in "${testsall[@]}"
-++ echo pqsi-pqsp
-++ for el in "${testsall[@]}"
-++ echo log-filenames
-++ for el in "${testsall[@]}"
-++ echo new_log_flds
-++ for el in "${testsall[@]}"
-++ echo all_headers
-++ for el in "${testsall[@]}"
-++ echo custom-log
-++ for el in "${testsall[@]}"
-++ echo log-field
-++ for el in "${testsall[@]}"
-++ echo log_pipe
-++ for el in "${testsall[@]}"
-++ echo session_id
-++ for el in "${testsall[@]}"
-++ echo double_h2
-++ for el in "${testsall[@]}"
-++ echo openclose_h2
-++ for el in "${testsall[@]}"
-++ echo double
-++ for el in "${testsall[@]}"
-++ echo openclose
-++ for el in "${testsall[@]}"
-++ echo verify_remap_plugin
-++ for el in "${testsall[@]}"
-++ echo verify_global_plugin
-++ for el in "${testsall[@]}"
-++ echo post-early-return
-++ for el in "${testsall[@]}"
-++ echo post-continue
-++ for el in "${testsall[@]}"
-++ echo post_slow_server
+++ echo remap_load_empty_failure
 ++ for el in "${testsall[@]}"
 ++ echo post_slow_server_max_requests_in
 ++ for el in "${testsall[@]}"
+++ echo post_slow_server
+++ for el in "${testsall[@]}"
+++ echo null_transform
+++ for el in "${testsall[@]}"
 ++ echo remap_inc
 ++ for el in "${testsall[@]}"
-++ echo tls_keepalive
+++ echo tls_verify_override
 ++ for el in "${testsall[@]}"
-++ echo tls_bad_alpn
-++ for el in "${testsall[@]}"
-++ echo tls_client_verify
-++ for el in "${testsall[@]}"
-++ echo tls_verify3
-++ for el in "${testsall[@]}"
-++ echo tls
-++ for el in "${testsall[@]}"
-++ echo tls_check_dual_cert_selection_plugin
+++ echo tls_verify_ca_override
 ++ for el in "${testsall[@]}"
 ++ echo tls_client_alpn_configuration
 ++ for el in "${testsall[@]}"
+++ echo tls_sni_host_policy
+++ for el in "${testsall[@]}"
+++ echo tls_client_verify2
+++ for el in "${testsall[@]}"
+++ echo tls_check_cert_selection
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_bad_alpn
+++ for el in "${testsall[@]}"
+++ echo tls_hooks_verify
+++ for el in "${testsall[@]}"
+++ echo tls_session_key_logging
+++ for el in "${testsall[@]}"
+++ echo tls_client_verify3
+++ for el in "${testsall[@]}"
 ++ echo tls_tunnel
 ++ for el in "${testsall[@]}"
-++ echo ssl_multicert_loader
+++ echo tls_check_cert_selection_reload
+++ for el in "${testsall[@]}"
+++ echo tls_keepalive
+++ for el in "${testsall[@]}"
+++ echo tls_session_reuse
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert2_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_verify_override_base
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert2
+++ for el in "${testsall[@]}"
+++ echo tls_hooks_client_verify
+++ for el in "${testsall[@]}"
+++ echo tls_client_versions
+++ for el in "${testsall[@]}"
+++ echo tls_sni_yaml_reload
+++ for el in "${testsall[@]}"
+++ echo tls_verify_base
 ++ for el in "${testsall[@]}"
 ++ echo tls_partial_blind_tunnel
+++ for el in "${testsall[@]}"
+++ echo tls_ticket
+++ for el in "${testsall[@]}"
+++ echo tls_verify3
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_override_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert
+++ for el in "${testsall[@]}"
+++ echo tls_verify_override_sni
+++ for el in "${testsall[@]}"
+++ echo tls_check_dual_cert_selection_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_ocsp
+++ for el in "${testsall[@]}"
+++ echo tls
+++ for el in "${testsall[@]}"
+++ echo tls_check_cert_select_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_tunnel_forward
 ++ for el in "${testsall[@]}"
 ++ echo tls_0rtt_server
 ++ for el in "${testsall[@]}"
 ++ echo tls_forward_nonhttp
 ++ for el in "${testsall[@]}"
-++ echo tls_client_cert_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert_override
-++ for el in "${testsall[@]}"
-++ echo tls_check_cert_selection_reload
-++ for el in "${testsall[@]}"
-++ echo tls_hooks_client_verify
-++ for el in "${testsall[@]}"
-++ echo tls_origin_session_reuse
-++ for el in "${testsall[@]}"
-++ echo tls_tunnel_forward
-++ for el in "${testsall[@]}"
-++ echo tls_verify_ca_override
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert
-++ for el in "${testsall[@]}"
-++ echo tls_ocsp
-++ for el in "${testsall[@]}"
-++ echo tls_session_key_logging
-++ for el in "${testsall[@]}"
-++ echo tls_verify2
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert2_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_verify_base
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert_override_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_verify_override
-++ for el in "${testsall[@]}"
-++ echo tls_verify
-++ for el in "${testsall[@]}"
-++ echo tls_client_verify2
-++ for el in "${testsall[@]}"
-++ echo tls_hooks_verify
-++ for el in "${testsall[@]}"
-++ echo tls_session_reuse
-++ for el in "${testsall[@]}"
-++ echo tls_check_cert_selection
-++ for el in "${testsall[@]}"
-++ echo tls_sni_host_policy
-++ for el in "${testsall[@]}"
-++ echo tls_engine
-++ for el in "${testsall[@]}"
-++ echo tls_verify_override_sni
-++ for el in "${testsall[@]}"
-++ echo tls_verify_not_pristine
+++ echo tls_client_verify
 ++ for el in "${testsall[@]}"
 ++ echo tls_check_dual_cert_selection2
 ++ for el in "${testsall[@]}"
-++ echo tls_client_cert2
+++ echo tls_engine
 ++ for el in "${testsall[@]}"
-++ echo tls_ticket
-++ for el in "${testsall[@]}"
-++ echo tls_client_verify3
+++ echo ssl_multicert_loader
 ++ for el in "${testsall[@]}"
 ++ echo tls_check_dual_cert_selection
 ++ for el in "${testsall[@]}"
-++ echo tls_verify_override_base
+++ echo tls_verify_not_pristine
 ++ for el in "${testsall[@]}"
-++ echo tls_check_cert_select_plugin
+++ echo tls_verify2
 ++ for el in "${testsall[@]}"
-++ echo tls_sni_yaml_reload
+++ echo tls_origin_session_reuse
 ++ for el in "${testsall[@]}"
-++ echo tls_client_versions
+++ echo tls_verify
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_override
+++ for el in "${testsall[@]}"
+++ echo verify_global_plugin
+++ for el in "${testsall[@]}"
+++ echo verify_remap_plugin
+++ for el in "${testsall[@]}"
+++ echo h2disable_no_accept_threads
+++ for el in "${testsall[@]}"
+++ echo nghttp
+++ for el in "${testsall[@]}"
+++ echo h2enable
+++ for el in "${testsall[@]}"
+++ echo http2
+++ for el in "${testsall[@]}"
+++ echo h2spec
+++ for el in "${testsall[@]}"
+++ echo h2disable
+++ for el in "${testsall[@]}"
+++ echo httpbin
+++ for el in "${testsall[@]}"
+++ echo http2_flow_control
+++ for el in "${testsall[@]}"
+++ echo http2_priority
+++ for el in "${testsall[@]}"
+++ echo h2enable_no_accept_threads
+++ for el in "${testsall[@]}"
+++ echo pqsi-pqsp
+++ for el in "${testsall[@]}"
+++ echo all_headers
+++ for el in "${testsall[@]}"
+++ echo log_retention
+++ for el in "${testsall[@]}"
+++ echo log-filter
+++ for el in "${testsall[@]}"
+++ echo log-debug-client-ip
+++ for el in "${testsall[@]}"
+++ echo log-field
+++ for el in "${testsall[@]}"
+++ echo log-filenames
+++ for el in "${testsall[@]}"
+++ echo log-field-json
+++ for el in "${testsall[@]}"
+++ echo sigusr2
+++ for el in "${testsall[@]}"
+++ echo log_pipe
+++ for el in "${testsall[@]}"
+++ echo new_log_flds
+++ for el in "${testsall[@]}"
+++ echo custom-log
+++ for el in "${testsall[@]}"
+++ echo ip_allow
+++ for el in "${testsall[@]}"
+++ echo thread_config
+++ for el in "${testsall[@]}"
+++ echo bad_http_fmt
+++ for el in "${testsall[@]}"
+++ echo thread_affinity
+++ for el in "${testsall[@]}"
+++ echo schedule_on_pool
+++ for el in "${testsall[@]}"
+++ echo schedule_on_thread
+++ for el in "${testsall[@]}"
+++ echo http304_response
+++ for el in "${testsall[@]}"
+++ echo http_head_no_origin
+++ for el in "${testsall[@]}"
+++ echo http204_response_plugin
+++ for el in "${testsall[@]}"
+++ echo http_with_origin
+++ for el in "${testsall[@]}"
+++ echo http204_response
+++ for el in "${testsall[@]}"
+++ echo tls_hooks10
+++ for el in "${testsall[@]}"
+++ echo tls_hooks14
+++ for el in "${testsall[@]}"
+++ echo tls_hooks18
+++ for el in "${testsall[@]}"
+++ echo tls_hooks9
+++ for el in "${testsall[@]}"
+++ echo tls_hooks11
+++ for el in "${testsall[@]}"
+++ echo tls_hooks15
+++ for el in "${testsall[@]}"
+++ echo tls_hooks4
+++ for el in "${testsall[@]}"
+++ echo tls_hooks8
+++ for el in "${testsall[@]}"
+++ echo tls_hooks13
+++ for el in "${testsall[@]}"
+++ echo tls_hooks17
+++ for el in "${testsall[@]}"
+++ echo tls_hooks2
+++ for el in "${testsall[@]}"
+++ echo tls_hooks
+++ for el in "${testsall[@]}"
+++ echo tls_hooks6
+++ for el in "${testsall[@]}"
+++ echo tls_hooks12
+++ for el in "${testsall[@]}"
+++ echo tls_hooks16
+++ for el in "${testsall[@]}"
+++ echo tls_hooks3
+++ for el in "${testsall[@]}"
+++ echo tls_hooks7
+++ for el in "${testsall[@]}"
+++ echo uri
+++ for el in "${testsall[@]}"
+++ echo redirect_actions
+++ for el in "${testsall[@]}"
+++ echo redirect_stale
+++ for el in "${testsall[@]}"
+++ echo redirect
+++ for el in "${testsall[@]}"
+++ echo number_of_redirects
+++ for el in "${testsall[@]}"
+++ echo redirect_post
+++ for el in "${testsall[@]}"
+++ echo per_server_connection_max
+++ for el in "${testsall[@]}"
+++ echo forward_proxy
+++ for el in "${testsall[@]}"
+++ echo emergency
+++ for el in "${testsall[@]}"
+++ echo fatal
+++ for el in "${testsall[@]}"
+++ echo post-continue
+++ for el in "${testsall[@]}"
+++ echo post-early-return
+++ for el in "${testsall[@]}"
+++ echo slow_post
+++ for el in "${testsall[@]}"
+++ echo quick_server
+++ for el in "${testsall[@]}"
+++ echo jsonrpc_api_schema
+++ for el in "${testsall[@]}"
+++ echo basic_plugin_handler
+++ for el in "${testsall[@]}"
+++ echo cache-generation-clear
+++ for el in "${testsall[@]}"
+++ echo alternate-caching
+++ for el in "${testsall[@]}"
+++ echo cache-auth
+++ for el in "${testsall[@]}"
+++ echo vary-handling
+++ for el in "${testsall[@]}"
+++ echo cache-control
+++ for el in "${testsall[@]}"
+++ echo cache-request-method
+++ for el in "${testsall[@]}"
+++ echo cache-cookie
+++ for el in "${testsall[@]}"
+++ echo negative-revalidating
+++ for el in "${testsall[@]}"
+++ echo disjoint-wait-for-cache
+++ for el in "${testsall[@]}"
+++ echo cache-generation-disjoint
+++ for el in "${testsall[@]}"
+++ echo cache-range-response
+++ for el in "${testsall[@]}"
+++ echo background_fill
+++ for el in "${testsall[@]}"
+++ echo negative-caching
+++ for el in "${testsall[@]}"
+++ echo conditional-get-hit
+++ for el in "${testsall[@]}"
+++ echo runroot_use
+++ for el in "${testsall[@]}"
+++ echo runroot_init
+++ for el in "${testsall[@]}"
+++ echo runroot_error
+++ for el in "${testsall[@]}"
+++ echo runroot_remove
+++ for el in "${testsall[@]}"
+++ echo runroot_verify
+++ for el in "${testsall[@]}"
+++ echo proxy_serve_stale
+++ for el in "${testsall[@]}"
+++ echo proxy_protocol
+++ for el in "${testsall[@]}"
+++ echo proxy_serve_stale_dns_fail
+++ for el in "${testsall[@]}"
+++ echo connect
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_cond_ssn_txn_count
+++ for el in "${testsall[@]}"
+++ echo header_rewrite
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_l_value
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_cond_cache
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_url
+++ for el in "${testsall[@]}"
+++ echo prefetch_simple
+++ for el in "${testsall[@]}"
+++ echo regex_remap
+++ for el in "${testsall[@]}"
+++ echo esi_304
+++ for el in "${testsall[@]}"
+++ echo esi
+++ for el in "${testsall[@]}"
+++ echo certifier
+++ for el in "${testsall[@]}"
+++ echo tsapi
+++ for el in "${testsall[@]}"
+++ echo polite_hook_wait
+++ for el in "${testsall[@]}"
+++ echo remap_stats_post
+++ for el in "${testsall[@]}"
+++ echo remap_stats
+++ for el in "${testsall[@]}"
+++ echo combo_handler
+++ for el in "${testsall[@]}"
+++ echo server_push_preload
+++ for el in "${testsall[@]}"
+++ echo multiplexer
+++ for el in "${testsall[@]}"
+++ echo matchuri
+++ for el in "${testsall[@]}"
+++ echo pcollapseslashes
+++ for el in "${testsall[@]}"
+++ echo regexcookie
+++ for el in "${testsall[@]}"
+++ echo existscookie
+++ for el in "${testsall[@]}"
+++ echo notexistscookie
+++ for el in "${testsall[@]}"
+++ echo matrixparams
+++ for el in "${testsall[@]}"
+++ echo collapseslashes
+++ for el in "${testsall[@]}"
+++ echo setstatus
+++ for el in "${testsall[@]}"
+++ echo connector
+++ for el in "${testsall[@]}"
+++ echo substitute
+++ for el in "${testsall[@]}"
+++ echo matchcookie
+++ for el in "${testsall[@]}"
+++ echo psubstitute
+++ for el in "${testsall[@]}"
+++ echo bucketcookie
+++ for el in "${testsall[@]}"
+++ echo subcookie
+++ for el in "${testsall[@]}"
+++ echo x_remap
+++ for el in "${testsall[@]}"
+++ echo x_effective_url
+++ for el in "${testsall[@]}"
+++ echo x_cache_info
+++ for el in "${testsall[@]}"
+++ echo stats_over_http
+++ for el in "${testsall[@]}"
+++ echo cppapi
+++ for el in "${testsall[@]}"
+++ echo cert_update
+++ for el in "${testsall[@]}"
+++ echo body_buffer
+++ for el in "${testsall[@]}"
+++ echo ssn_start_delay_hook
+++ for el in "${testsall[@]}"
+++ echo hook_add
+++ for el in "${testsall[@]}"
+++ echo test_hooks
+++ for el in "${testsall[@]}"
+++ echo transaction_data_sink
+++ for el in "${testsall[@]}"
+++ echo parent_select_peer2
+++ for el in "${testsall[@]}"
+++ echo parent_select
+++ for el in "${testsall[@]}"
+++ echo parent_select_optional_scheme_matching
+++ for el in "${testsall[@]}"
+++ echo parent_select_peer
+++ for el in "${testsall[@]}"
+++ echo s3_auth_config
+++ for el in "${testsall[@]}"
+++ echo TSVConnFd
+++ for el in "${testsall[@]}"
+++ echo url_sig
+++ for el in "${testsall[@]}"
+++ echo money_trace_global
+++ for el in "${testsall[@]}"
+++ echo money_trace
+++ for el in "${testsall[@]}"
+++ echo sslheaders
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate_state
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate_miss
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_cachekey_global
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_ims
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_cache_complete_responses
+++ for el in "${testsall[@]}"
+++ echo cache_range_requests_cachekey
+++ for el in "${testsall[@]}"
+++ echo stek_share
+++ for el in "${testsall[@]}"
+++ echo client_context_dump
+++ for el in "${testsall[@]}"
+++ echo CppDelayTransformation
+++ for el in "${testsall[@]}"
+++ echo lua_header_table
+++ for el in "${testsall[@]}"
+++ echo lua_watermark
+++ for el in "${testsall[@]}"
+++ echo lua_debug_tags
+++ for el in "${testsall[@]}"
+++ echo lua_states_stats
+++ for el in "${testsall[@]}"
+++ echo compress
+++ for el in "${testsall[@]}"
+++ echo uri_signing
+++ for el in "${testsall[@]}"
+++ echo slice_rm_range
+++ for el in "${testsall[@]}"
+++ echo slice_prefetch
+++ for el in "${testsall[@]}"
+++ echo slice
+++ for el in "${testsall[@]}"
+++ echo slice_regex
+++ for el in "${testsall[@]}"
+++ echo slice_error
+++ for el in "${testsall[@]}"
+++ echo slice_selfhealing
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_http3
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_sni_filter
+++ for el in "${testsall[@]}"
+++ echo traffic_dump
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_ip_filter
+++ for el in "${testsall[@]}"
+++ echo traffic_dump_response_body
+++ for el in "${testsall[@]}"
+++ echo strategies_ch2
+++ for el in "${testsall[@]}"
+++ echo zzz_strategies_peer
+++ for el in "${testsall[@]}"
+++ echo strategies_ch
+++ for el in "${testsall[@]}"
+++ echo zzz_strategies_peer2
+++ for el in "${testsall[@]}"
+++ echo copy_config
+++ for el in "${testsall[@]}"
+++ echo deny0
+++ for el in "${testsall[@]}"
+++ echo copy_config2
+++ for el in "${testsall[@]}"
+++ echo basic
+++ for el in "${testsall[@]}"
+++ echo config
+++ for el in "${testsall[@]}"
+++ echo session_id
+++ for el in "${testsall[@]}"
+++ echo double
+++ for el in "${testsall[@]}"
+++ echo double_h2
+++ for el in "${testsall[@]}"
+++ echo openclose
+++ for el in "${testsall[@]}"
+++ echo openclose_h2
 + ntests=279
 + shardsize=69
 + '[' 0 -ne 3 ']'
@@ -577,7 +577,7 @@
 + shardbeg=0
 + sliced='CppDelayTransformation TSVConnFd accept_timeout accept_webp active_timeout all_headers alternate-caching background_fill bad_chunked_encoding bad_http_fmt basic basic_plugin_handler bigobj body_buffer bucketcookie cache-auth cache-control cache-cookie cache-generation-clear cache-generation-disjoint cache-range-response cache-request-method cache_and_req_body cache_range_requests cache_range_requests_cache_complete_responses cache_range_requests_cachekey cache_range_requests_cachekey_global cache_range_requests_ims cachedIMSRange cert_update certifier chunked_encoding chunked_encoding_disabled chunked_encoding_h2 client_context_dump collapseslashes combo_handler compress conditional-get-hit conf_remap_float config conn_timeout connect connector copy_config copy_config2 cppapi custom-log default_inactivity_timeout deny0 disjoint-wait-for-cache dns_down_nameserver dns_host_down dns_ttl domain-blacklist-30x double double_h2 emergency esi esi_304 existscookie fatal field_name_space forward_proxy forwarded general-connection-failure-502 good_request_after_bad h2disable h2disable_no_accept_threads h2enable'
 + ./autest.sh --ats-bin /usr/ats/bin/ --sandbox /tmp/sandbox -f CppDelayTransformation TSVConnFd accept_timeout accept_webp active_timeout all_headers alternate-caching background_fill bad_chunked_encoding bad_http_fmt basic basic_plugin_handler bigobj body_buffer bucketcookie cache-auth cache-control cache-cookie cache-generation-clear cache-generation-disjoint cache-range-response cache-request-method cache_and_req_body cache_range_requests cache_range_requests_cache_complete_responses cache_range_requests_cachekey cache_range_requests_cachekey_global cache_range_requests_ims cachedIMSRange cert_update certifier chunked_encoding chunked_encoding_disabled chunked_encoding_h2 client_context_dump collapseslashes combo_handler compress conditional-get-hit conf_remap_float config conn_timeout connect connector copy_config copy_config2 cppapi custom-log default_inactivity_timeout deny0 disjoint-wait-for-cache dns_down_nameserver dns_host_down dns_ttl domain-blacklist-30x double double_h2 emergency esi esi_304 existscookie fatal field_name_space forward_proxy forwarded general-connection-failure-502 good_request_after_bad h2disable h2disable_no_accept_threads h2enable
-#=#=#                                                                         ##O#-#                                                                        ##O=#  #                                                                                                                                                 0.1%                                                                           0.3%                                                                           0.7%#                                                                          1.6%##                                                                         3.3%###                                                                        5.2%####                                                                       6.5%########                                                                  12.5%#############                                                             18.8%###############                                                           21.4%#################                                                         24.2%###################                                                       27.0%#####################                                                     29.9%#######################                                                   32.8%#########################                                                 35.8%###########################                                               38.8%##############################                                            41.9%################################                                          45.0%##################################                                        48.1%#####################################                                     51.4%#######################################                                   54.7%#########################################                                 57.9%############################################                              61.2%##############################################                            64.6%################################################                          68.0%###################################################                       71.4%#####################################################                     75.0%########################################################                  78.4%##########################################################                81.9%#############################################################             85.4%################################################################          89.1%##################################################################        92.6%#####################################################################     96.2%#######################################################################   99.8%######################################################################## 100.0%
+#=#=#                                                                         ##O#-#                                                                        ##O=#  #                                                                                                                                                 0.1%                                                                           0.3%                                                                           0.7%#                                                                          1.6%##                                                                         3.3%###                                                                        4.3%######                                                                     9.2%#######                                                                   10.3%#########                                                                 13.5%############                                                              17.6%##############                                                            19.9%###############                                                           22.2%#################                                                         24.6%###################                                                       26.8%#####################                                                     29.2%######################                                                    31.6%########################                                                  34.1%##########################                                                36.5%############################                                              39.1%#############################                                             41.6%###############################                                           44.1%#################################                                         46.6%###################################                                       49.1%#####################################                                     51.7%#######################################                                   54.3%########################################                                  56.8%##########################################                                59.5%############################################                              62.1%##############################################                            64.8%################################################                          67.4%##################################################                        70.0%####################################################                      72.7%######################################################                    75.3%########################################################                  78.0%##########################################################                80.8%############################################################              83.4%#############################################################             86.0%###############################################################           88.8%#################################################################         91.5%###################################################################       94.1%#####################################################################     96.9%#######################################################################   99.5%######################################################################## 100.0%
 /src/trafficserver/tests/proxy-verifier/proxy-verifier-v2.6.0.tar.gz: OK
 Python 3.6 or newer detected!
 python3-dev/devel detected!
@@ -614,7 +614,7 @@ Environment config finished. Running AuTest...
 [0m[1mRunning Test cache_range_requests_ims:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test cachedIMSRange:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test cert_update:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
-[0m[1mRunning Test certifier:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test certifier:[0m[1m.[0m[1m.[0m[1mF[0m[1m [0m[31mFailed[0m[1m
 [0m[1mRunning Test chunked_encoding:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test chunked_encoding_disabled:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test chunked_encoding_h2:[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
@@ -671,16 +671,121 @@ Generating Report: --------------
     Directory: /src/trafficserver/tests/gold_tests/timeout
 [0m[1m  Reason: Test requires privilege
 [0m[1m
+[0m[1m Test: certifier: [0m[31mFailed[0m[1m
+    File: certifier.test.py
+    Directory: /src/trafficserver/tests/gold_tests/pluginTest/certifier
+   Setting up : Copying '/src/trafficserver/tests/gold_tests/pluginTest/certifier/certs' to '/tmp/sandbox/certifier/ts1/config/certifier-certs' - [0m[32mPassed[0m[1m
+   Setting up : Making Directory /tmp/sandbox/certifier/ts1/config/certifier-certs/store - [0m[32mPassed[0m[1m
+   Setting up : Copying '/src/trafficserver/tests/gold_tests/pluginTest/certifier/certs' to '/tmp/sandbox/certifier/ts2/config/certifier-certs' - [0m[32mPassed[0m[1m
+   Setting up : Making Directory /tmp/sandbox/certifier/ts2/config/certifier-certs/store - [0m[32mPassed[0m[1m
+   Starting Test certifier : No issues found - [0m[32mPassed[0m[1m
+      Reason: Started!
+   Process: verifier-server1: [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/proxy-verifier/unpack/v2.6.0/bin' to '/tmp/sandbox/certifier/verifier-server1/bin' - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61276, queue size: 999 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61277, queue size: 998 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61278, queue size: 997 - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/proxy-verifier/ssl/server.pem' to '/tmp/sandbox/certifier/verifier-server1/server.pem' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/proxy-verifier/ssl/ca.pem' to '/tmp/sandbox/certifier/verifier-server1/ca.pem' - [0m[32mPassed[0m[1m
+     Setting up : Copying 'replays/https.replay.yaml' to '/tmp/sandbox/certifier/verifier-server1/https.replay.yaml' - [0m[32mPassed[0m[1m
+     Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+        Reason: Returned Value: 0 == 0
+     file /tmp/sandbox/certifier/_output/certifier-verifier-server1/stream.stdout.txt : There should be no Proxy Verifier violation errors. - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/certifier/_output/certifier-verifier-server1/stream.stdout.txt excludes expression
+   Process: ts1: [0m[31mFailed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/certifier/ts1 - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/ats/bin' to '/tmp/sandbox/certifier/ts1/bin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/certifier/ts1/config - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/certifier/ts1/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/certifier/ts1/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/certifier/ts1/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/ats/etc/trafficserver/body_factory' to '/tmp/sandbox/certifier/ts1/config/body_factory' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/certifier/ts1/cache - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/ats/libexec/trafficserver' to '/tmp/sandbox/certifier/ts1/plugin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/certifier/ts1/log - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/log with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/log with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/certifier/ts1/runtime - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/runtime with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/runtime with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/certifier/ts1/ssl - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/ssl with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/ssl with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/certifier/ts1/storage - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/storage with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/certifier/ts1/storage with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61279, queue size: 996 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61280, queue size: 995 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61281, queue size: 994 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61282, queue size: 993 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61283, queue size: 992 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61284, queue size: 991 - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/ssl/server.pem' to directory '/tmp/sandbox/certifier/ts1/ssl' as 'server.pem'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/ssl/server.key' to directory '/tmp/sandbox/certifier/ts1/ssl' as 'server.key'' - [0m[32mPassed[0m[1m
+     Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+        Reason: Returned Value: 0 == 0
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 1.003436803817749 < 600.0
+     file /tmp/sandbox/certifier/ts1/log/diags.log : Diags log file diags.log should not contain errors - [0m[31mFailed[0m[1m
+        Reason: Contents of /tmp/sandbox/certifier/ts1/log/diags.log contains expression: "ERROR:"
+           Details:
+             [Feb 11 13:32:10.345] traffic_server ERROR: [certifier] Unable to initialize plugin. Failed to open serial. : 17
+     file /tmp/sandbox/certifier/ts1/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/certifier/ts1/log/diags.log excludes expression
+     file /tmp/sandbox/certifier/ts1/log/diags.log : Diags log file diags.log should not contain a warning about an unrecognized configuration - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/certifier/ts1/log/diags.log excludes expression
+     file /tmp/sandbox/certifier/ts1/log/traffic.out : Verify the certifier plugin generates the certificate dynamically. - [0m[31mFailed[0m[1m
+        Reason: Contents of /tmp/sandbox/certifier/ts1/log/traffic.out did not contains expression: "Creating shadow certs"
+     Appending File /tmp/sandbox/certifier/ts1/config/records.yaml : Writing config file records.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/certifier/ts1/config/runroot.yaml : Appended file /tmp/sandbox/certifier/ts1/config/runroot.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/certifier/ts1/config/ssl_multicert.config : Appended file /tmp/sandbox/certifier/ts1/config/ssl_multicert.config - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/certifier/ts1/config/remap.config : Appended file /tmp/sandbox/certifier/ts1/config/remap.config - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/certifier/ts1/config/plugin.config : Appended file /tmp/sandbox/certifier/ts1/config/plugin.config - [0m[32mPassed[0m[1m
+        Reason: Success
+   Process: verifier-server2: [0m[32mPassed[0m[1m
+   Process: ts2: [0m[32mPassed[0m[1m
+   Run: Verify the cert doesn't exist in the store: [0m[32mPassed[0m[1m
+     Process: Default: [0m[1mSkipped[0m[1m
+        Reason: Was not started
+   Run: Test dynamic generation of certs: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+       Setting up : Copying '/src/trafficserver/tests/proxy-verifier/unpack/v2.6.0/bin' to '/tmp/sandbox/certifier/client1/bin' - [0m[32mPassed[0m[1m
+       Setting up : Copying 'replays/https.replay.yaml' to '/tmp/sandbox/certifier/client1/https.replay.yaml' - [0m[32mPassed[0m[1m
+       Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/proxy-verifier/ssl/client.pem' to '/tmp/sandbox/certifier/client1/client.pem' - [0m[32mPassed[0m[1m
+       Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/../../tools/proxy-verifier/ssl/ca.pem' to '/tmp/sandbox/certifier/client1/ca.pem' - [0m[32mPassed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/certifier/_output/1-tr-Default/stream.stdout.txt : There should be no Proxy Verifier violation errors. - [0m[32mPassed[0m[1m
+          Reason: Contents of /tmp/sandbox/certifier/_output/1-tr-Default/stream.stdout.txt excludes expression
+   Run: Verify the content of the generated cert: [0m[31mFailed[0m[1m
+     Starting TestRun 2-tr : No Issues found - [0m[32mPassed[0m[1m
+        Reason: Started!
+     Process: Default: [0m[31mFailed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
+          Reason: Returned Value 1 != 0
+       file /tmp/sandbox/certifier/_output/2-tr-Default/stream.all.txt : Subject should match the host in the request - [0m[31mFailed[0m[1m
+          Reason: Contents of /tmp/sandbox/certifier/_output/2-tr-Default/stream.all.txt did not contains expression: "Subject: CN = www.tls.com"
+       file /tmp/sandbox/certifier/_output/2-tr-Default/stream.all.txt : Should contain the SAN extension - [0m[31mFailed[0m[1m
+          Reason: Contents of /tmp/sandbox/certifier/_output/2-tr-Default/stream.all.txt did not contains expression: "X509v3 extensions:\n.*X509v3 Subject Alternative Name:.*\n.*DNS:www.tls.com"
+   Run: Test dynamic generation of certs: [0m[1mSkipped[0m[1m
+      Reason: Test run 2-tr failed
+
 [0m[1mTotal of 76 test
 [0m[1m  Unknown: 0
 [0m[1m  Exception: 0
-[0m[1m  Failed: 0
+[0m[1m  Failed: 1
 [0m[1m  Warning: 0
 [0m[1m  Skipped: 1
-[0m[1m  Passed: 75
-[0m[0m++ ls -A /tmp/sandbox/
-+ '[' -n '' ']'
-+ '[' 4 -le 0 ']'
-+ sudo touch /src/trafficserver/output/master/No_autest_failures_shard_0
+[0m[1m  Passed: 74
+[0m[0m+ true
+++ ls -A /tmp/sandbox/
++ '[' -n certifier ']'
++ cp -rf /tmp/sandbox/ /src/trafficserver/output/master/
 + sudo chmod -R 777 /src/trafficserver/output
-+ exit 0
++ exit 1
