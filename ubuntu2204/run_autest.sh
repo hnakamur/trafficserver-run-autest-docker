@@ -6,9 +6,6 @@ export PATH=/opt/bin:${PATH}
 
 mkdir -p ${WORKSPACE}/output/${GITHUB_BRANCH}
 
-# Make all files which will be created during tests writable by nobody user.
-umask 0000
-
 if [ ${SHARDCNT:-0} -le 0 ]; then
 	./autest.sh --ats-bin ${ATS_PREFIX:-/tmp/ats}/bin/ --sandbox /tmp/sandbox "$@" || true
 else

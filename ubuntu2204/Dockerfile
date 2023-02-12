@@ -22,32 +22,40 @@ RUN apt-get update \
 RUN curl -sSL https://github.com/summerwind/h2spec/releases/download/v2.6.0/h2spec_linux_amd64.tar.gz \
     | tar zxf - -C /usr/local/bin/
 
-RUN pip install pipenv
-ENV PATH /src/.local/bin:$PATH
+ENV ATS_USER trafficserver
+ENV ATS_HOME /home/trafficserver
+RUN adduser --system --group --home $ATS_HOME $ATS_USER
 
-ENV REPO https://github.com/hnakamur/trafficserver
-ENV GITHUB_BRANCH adjust_autest_for_rockylinux8
+USER $ATS_USER
+RUN pip install --user pipenv
+ENV PATH $ATS_HOME/.local/bin:$PATH
 
-ENV WORKSPACE /src/trafficserver
-RUN git clone --depth 1 -b ${GITHUB_BRANCH} ${REPO} ${WORKSPACE}
-WORKDIR ${WORKSPACE}
+ENV REPO https://github.com/apache/trafficserver
+ENV GITHUB_BRANCH master
+
+ENV WORKSPACE $ATS_HOME/trafficserver
+RUN git clone --depth 1 -b $GITHUB_BRANCH $REPO $WORKSPACE
+WORKDIR $WORKSPACE
 RUN git log -1 --pretty=fuller
 
-WORKDIR ${WORKSPACE}/tests
+WORKDIR $WORKSPACE/tests
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 RUN pipenv install
 
-WORKDIR ${WORKSPACE}
+WORKDIR $WORKSPACE
 ENV ATS_PREFIX /usr
 RUN autoreconf -if
 RUN ./configure --enable-experimental-plugins --enable-example-plugins \
     --prefix=$ATS_PREFIX --enable-werror --enable-debug --enable-wccp --enable-luajit
 RUN make -j V=1
+
+USER root
 RUN make install
 
-COPY run_autest.sh check.sh /src/
+USER $ATS_USER
+COPY run_autest.sh check.sh /usr/local/bin/
 ENV SHARDCNT 0
 ENV SHARD 0
-WORKDIR ${WORKSPACE}/tests
-ENTRYPOINT ["/bin/bash", "-x", "/src/run_autest.sh"]
+WORKDIR $WORKSPACE/tests
+ENTRYPOINT ["/bin/bash", "-x", "/usr/local/bin/run_autest.sh"]

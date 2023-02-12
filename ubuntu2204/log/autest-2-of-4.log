@@ -1,7 +1,7 @@
-+ export PATH=/opt/bin:/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-+ PATH=/opt/bin:/src/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-+ mkdir -p /src/trafficserver/output/adjust_autest_for_rockylinux8
-+ umask 0000
++ export PATH=/opt/bin:/home/trafficserver/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ PATH=/opt/bin:/home/trafficserver/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ mkdir -p /home/trafficserver/trafficserver/output/master
+mkdir: cannot create directory ‘/home/trafficserver/trafficserver/output/master’: Permission denied
 + '[' 4 -le 0 ']'
 + testsall=($( find . -iname "*.test.py" | awk -F'/' '{print $NF}' | awk -F'.' '{print $1}' ))
 ++ find . -iname '*.test.py'
@@ -13,123 +13,87 @@
 		done | sort))
 ++ sort
 ++ for el in "${testsall[@]}"
-++ echo schedule_on_pool
+++ echo session_match
 ++ for el in "${testsall[@]}"
-++ echo thread_affinity
+++ echo post-early-return
 ++ for el in "${testsall[@]}"
-++ echo schedule_on_thread
+++ echo post-continue
 ++ for el in "${testsall[@]}"
-++ echo log_pipe
+++ echo http_head_no_origin
 ++ for el in "${testsall[@]}"
-++ echo new_log_flds
+++ echo http204_response
 ++ for el in "${testsall[@]}"
-++ echo log_retention
+++ echo http_with_origin
 ++ for el in "${testsall[@]}"
-++ echo custom-log
+++ echo http204_response_plugin
 ++ for el in "${testsall[@]}"
-++ echo log-field-json
-++ for el in "${testsall[@]}"
-++ echo all_headers
-++ for el in "${testsall[@]}"
-++ echo log-debug-client-ip
-++ for el in "${testsall[@]}"
-++ echo log-field
-++ for el in "${testsall[@]}"
-++ echo log-filter
-++ for el in "${testsall[@]}"
-++ echo pqsi-pqsp
-++ for el in "${testsall[@]}"
-++ echo log-filenames
-++ for el in "${testsall[@]}"
-++ echo sigusr2
-++ for el in "${testsall[@]}"
-++ echo thread_config
+++ echo http304_response
 ++ for el in "${testsall[@]}"
 ++ echo remap_inc
 ++ for el in "${testsall[@]}"
-++ echo ip_allow
+++ echo null_transform
 ++ for el in "${testsall[@]}"
-++ echo proxy_serve_stale
+++ echo basic
 ++ for el in "${testsall[@]}"
-++ echo proxy_serve_stale_dns_fail
+++ echo deny0
 ++ for el in "${testsall[@]}"
-++ echo proxy_protocol
+++ echo copy_config2
 ++ for el in "${testsall[@]}"
-++ echo httpbin
+++ echo config
 ++ for el in "${testsall[@]}"
-++ echo h2spec
+++ echo copy_config
 ++ for el in "${testsall[@]}"
-++ echo h2disable
+++ echo per_server_connection_max
 ++ for el in "${testsall[@]}"
-++ echo h2enable
+++ echo tsapi
 ++ for el in "${testsall[@]}"
-++ echo http2_priority
+++ echo body_buffer
 ++ for el in "${testsall[@]}"
-++ echo http2
+++ echo test_hooks
 ++ for el in "${testsall[@]}"
-++ echo nghttp
+++ echo ssn_start_delay_hook
 ++ for el in "${testsall[@]}"
-++ echo http2_flow_control
+++ echo hook_add
 ++ for el in "${testsall[@]}"
-++ echo h2enable_no_accept_threads
+++ echo compress
 ++ for el in "${testsall[@]}"
-++ echo h2disable_no_accept_threads
-++ for el in "${testsall[@]}"
-++ echo inactive_timeout
-++ for el in "${testsall[@]}"
-++ echo default_inactivity_timeout
-++ for el in "${testsall[@]}"
-++ echo active_timeout
-++ for el in "${testsall[@]}"
-++ echo tls_conn_timeout
-++ for el in "${testsall[@]}"
-++ echo conn_timeout
-++ for el in "${testsall[@]}"
-++ echo inactive_client_timeout
-++ for el in "${testsall[@]}"
-++ echo accept_timeout
-++ for el in "${testsall[@]}"
-++ echo uri
-++ for el in "${testsall[@]}"
-++ echo collapseslashes
-++ for el in "${testsall[@]}"
-++ echo subcookie
-++ for el in "${testsall[@]}"
-++ echo notexistscookie
-++ for el in "${testsall[@]}"
-++ echo matrixparams
-++ for el in "${testsall[@]}"
-++ echo existscookie
-++ for el in "${testsall[@]}"
-++ echo matchuri
-++ for el in "${testsall[@]}"
-++ echo regexcookie
-++ for el in "${testsall[@]}"
-++ echo connector
-++ for el in "${testsall[@]}"
-++ echo setstatus
-++ for el in "${testsall[@]}"
-++ echo substitute
-++ for el in "${testsall[@]}"
-++ echo psubstitute
-++ for el in "${testsall[@]}"
-++ echo pcollapseslashes
-++ for el in "${testsall[@]}"
-++ echo bucketcookie
-++ for el in "${testsall[@]}"
-++ echo matchcookie
-++ for el in "${testsall[@]}"
-++ echo cert_update
-++ for el in "${testsall[@]}"
-++ echo x_effective_url
-++ for el in "${testsall[@]}"
-++ echo x_remap
+++ echo cppapi
 ++ for el in "${testsall[@]}"
 ++ echo x_cache_info
 ++ for el in "${testsall[@]}"
-++ echo server_push_preload
+++ echo x_remap
 ++ for el in "${testsall[@]}"
-++ echo parent_select_optional_scheme_matching
+++ echo x_effective_url
+++ for el in "${testsall[@]}"
+++ echo remap_stats_post
+++ for el in "${testsall[@]}"
+++ echo remap_stats
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_cond_cache
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_l_value
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_cond_ssn_txn_count
+++ for el in "${testsall[@]}"
+++ echo header_rewrite_url
+++ for el in "${testsall[@]}"
+++ echo header_rewrite
+++ for el in "${testsall[@]}"
+++ echo multiplexer
+++ for el in "${testsall[@]}"
+++ echo lua_states_stats
+++ for el in "${testsall[@]}"
+++ echo lua_watermark
+++ for el in "${testsall[@]}"
+++ echo lua_debug_tags
+++ for el in "${testsall[@]}"
+++ echo lua_header_table
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate_state
+++ for el in "${testsall[@]}"
+++ echo regex_revalidate_miss
 ++ for el in "${testsall[@]}"
 ++ echo parent_select_peer
 ++ for el in "${testsall[@]}"
@@ -137,439 +101,475 @@
 ++ for el in "${testsall[@]}"
 ++ echo parent_select
 ++ for el in "${testsall[@]}"
-++ echo url_sig
+++ echo parent_select_optional_scheme_matching
 ++ for el in "${testsall[@]}"
-++ echo cache_range_requests_cachekey
+++ echo regex_remap
+++ for el in "${testsall[@]}"
+++ echo stek_share
+++ for el in "${testsall[@]}"
+++ echo setstatus
+++ for el in "${testsall[@]}"
+++ echo connector
+++ for el in "${testsall[@]}"
+++ echo pcollapseslashes
+++ for el in "${testsall[@]}"
+++ echo existscookie
+++ for el in "${testsall[@]}"
+++ echo matrixparams
+++ for el in "${testsall[@]}"
+++ echo regexcookie
+++ for el in "${testsall[@]}"
+++ echo notexistscookie
+++ for el in "${testsall[@]}"
+++ echo matchuri
+++ for el in "${testsall[@]}"
+++ echo substitute
+++ for el in "${testsall[@]}"
+++ echo collapseslashes
+++ for el in "${testsall[@]}"
+++ echo subcookie
+++ for el in "${testsall[@]}"
+++ echo psubstitute
+++ for el in "${testsall[@]}"
+++ echo matchcookie
+++ for el in "${testsall[@]}"
+++ echo bucketcookie
+++ for el in "${testsall[@]}"
+++ echo server_push_preload
+++ for el in "${testsall[@]}"
+++ echo sslheaders
+++ for el in "${testsall[@]}"
+++ echo TSVConnFd
+++ for el in "${testsall[@]}"
+++ echo CppDelayTransformation
+++ for el in "${testsall[@]}"
+++ echo transaction_data_sink
+++ for el in "${testsall[@]}"
+++ echo uri_signing
+++ for el in "${testsall[@]}"
+++ echo esi_304
+++ for el in "${testsall[@]}"
+++ echo esi
 ++ for el in "${testsall[@]}"
 ++ echo cache_range_requests_cache_complete_responses
-++ for el in "${testsall[@]}"
-++ echo cache_range_requests
 ++ for el in "${testsall[@]}"
 ++ echo cache_range_requests_ims
 ++ for el in "${testsall[@]}"
 ++ echo cache_range_requests_cachekey_global
 ++ for el in "${testsall[@]}"
-++ echo hook_add
+++ echo cache_range_requests_cachekey
 ++ for el in "${testsall[@]}"
-++ echo body_buffer
+++ echo cache_range_requests
 ++ for el in "${testsall[@]}"
-++ echo ssn_start_delay_hook
-++ for el in "${testsall[@]}"
-++ echo test_hooks
-++ for el in "${testsall[@]}"
-++ echo polite_hook_wait
-++ for el in "${testsall[@]}"
-++ echo cppapi
-++ for el in "${testsall[@]}"
-++ echo money_trace
-++ for el in "${testsall[@]}"
-++ echo money_trace_global
-++ for el in "${testsall[@]}"
-++ echo transaction_data_sink
+++ echo combo_handler
 ++ for el in "${testsall[@]}"
 ++ echo s3_auth_config
 ++ for el in "${testsall[@]}"
-++ echo TSVConnFd
+++ echo money_trace_global
 ++ for el in "${testsall[@]}"
-++ echo slice_selfhealing
+++ echo money_trace
 ++ for el in "${testsall[@]}"
-++ echo slice_error
+++ echo polite_hook_wait
 ++ for el in "${testsall[@]}"
-++ echo slice_regex
+++ echo stats_over_http
 ++ for el in "${testsall[@]}"
-++ echo slice
+++ echo url_sig
 ++ for el in "${testsall[@]}"
-++ echo slice_rm_range
-++ for el in "${testsall[@]}"
-++ echo slice_prefetch
-++ for el in "${testsall[@]}"
-++ echo lua_states_stats
-++ for el in "${testsall[@]}"
-++ echo lua_debug_tags
-++ for el in "${testsall[@]}"
-++ echo lua_header_table
-++ for el in "${testsall[@]}"
-++ echo lua_watermark
-++ for el in "${testsall[@]}"
-++ echo sslheaders
-++ for el in "${testsall[@]}"
-++ echo compress
-++ for el in "${testsall[@]}"
-++ echo uri_signing
-++ for el in "${testsall[@]}"
-++ echo stek_share
-++ for el in "${testsall[@]}"
-++ echo prefetch_simple
-++ for el in "${testsall[@]}"
-++ echo regex_remap
-++ for el in "${testsall[@]}"
-++ echo esi
-++ for el in "${testsall[@]}"
-++ echo esi_304
-++ for el in "${testsall[@]}"
-++ echo CppDelayTransformation
-++ for el in "${testsall[@]}"
-++ echo tsapi
-++ for el in "${testsall[@]}"
-++ echo client_context_dump
+++ echo traffic_dump_response_body
 ++ for el in "${testsall[@]}"
 ++ echo traffic_dump_sni_filter
-++ for el in "${testsall[@]}"
-++ echo traffic_dump_ip_filter
 ++ for el in "${testsall[@]}"
 ++ echo traffic_dump
 ++ for el in "${testsall[@]}"
 ++ echo traffic_dump_http3
 ++ for el in "${testsall[@]}"
-++ echo traffic_dump_response_body
+++ echo traffic_dump_ip_filter
 ++ for el in "${testsall[@]}"
-++ echo combo_handler
+++ echo prefetch_simple
+++ for el in "${testsall[@]}"
+++ echo slice_regex
+++ for el in "${testsall[@]}"
+++ echo slice_prefetch
+++ for el in "${testsall[@]}"
+++ echo slice_selfhealing
+++ for el in "${testsall[@]}"
+++ echo slice_rm_range
+++ for el in "${testsall[@]}"
+++ echo slice_error
+++ for el in "${testsall[@]}"
+++ echo slice
+++ for el in "${testsall[@]}"
+++ echo cert_update
 ++ for el in "${testsall[@]}"
 ++ echo certifier
 ++ for el in "${testsall[@]}"
-++ echo remap_stats_post
+++ echo client_context_dump
 ++ for el in "${testsall[@]}"
-++ echo remap_stats
+++ echo forward_proxy
 ++ for el in "${testsall[@]}"
-++ echo stats_over_http
+++ echo log-field-json
 ++ for el in "${testsall[@]}"
-++ echo multiplexer
+++ echo new_log_flds
 ++ for el in "${testsall[@]}"
-++ echo regex_revalidate_miss
+++ echo custom-log
 ++ for el in "${testsall[@]}"
-++ echo regex_revalidate_state
+++ echo sigusr2
 ++ for el in "${testsall[@]}"
-++ echo regex_revalidate
+++ echo log-field
 ++ for el in "${testsall[@]}"
-++ echo header_rewrite
+++ echo all_headers
 ++ for el in "${testsall[@]}"
-++ echo header_rewrite_url
+++ echo log-filenames
 ++ for el in "${testsall[@]}"
-++ echo header_rewrite_cond_cache
+++ echo log_pipe
 ++ for el in "${testsall[@]}"
-++ echo header_rewrite_cond_ssn_txn_count
+++ echo pqsi-pqsp
 ++ for el in "${testsall[@]}"
-++ echo header_rewrite_l_value
+++ echo log-filter
 ++ for el in "${testsall[@]}"
-++ echo http304_response
+++ echo log-debug-client-ip
 ++ for el in "${testsall[@]}"
-++ echo http_head_no_origin
+++ echo log_retention
 ++ for el in "${testsall[@]}"
-++ echo http204_response_plugin
+++ echo records_config_to_yaml
 ++ for el in "${testsall[@]}"
-++ echo http_with_origin
+++ echo records_yaml
 ++ for el in "${testsall[@]}"
-++ echo http204_response
+++ echo old_config_fail
+++ for el in "${testsall[@]}"
+++ echo uri
+++ for el in "${testsall[@]}"
+++ echo slow_post
+++ for el in "${testsall[@]}"
+++ echo quick_server
+++ for el in "${testsall[@]}"
+++ echo accept_webp
+++ for el in "${testsall[@]}"
+++ echo field_name_space
+++ for el in "${testsall[@]}"
+++ echo http408
+++ for el in "${testsall[@]}"
+++ echo good_request_after_bad
+++ for el in "${testsall[@]}"
+++ echo syntax
+++ for el in "${testsall[@]}"
+++ echo forwarded
+++ for el in "${testsall[@]}"
+++ echo range
 ++ for el in "${testsall[@]}"
 ++ echo cachedIMSRange
 ++ for el in "${testsall[@]}"
 ++ echo cache_and_req_body
 ++ for el in "${testsall[@]}"
-++ echo hsts
-++ for el in "${testsall[@]}"
-++ echo syntax
-++ for el in "${testsall[@]}"
-++ echo field_name_space
+++ echo via
 ++ for el in "${testsall[@]}"
 ++ echo domain-blacklist-30x
 ++ for el in "${testsall[@]}"
 ++ echo normalize_ae
 ++ for el in "${testsall[@]}"
-++ echo via
-++ for el in "${testsall[@]}"
-++ echo http408
-++ for el in "${testsall[@]}"
-++ echo range
-++ for el in "${testsall[@]}"
-++ echo accept_webp
-++ for el in "${testsall[@]}"
 ++ echo general-connection-failure-502
 ++ for el in "${testsall[@]}"
-++ echo forwarded
+++ echo hsts
 ++ for el in "${testsall[@]}"
-++ echo good_request_after_bad
+++ echo h2disable_no_accept_threads
 ++ for el in "${testsall[@]}"
-++ echo conf_remap_float
+++ echo h2enable_no_accept_threads
 ++ for el in "${testsall[@]}"
-++ echo remap_http
+++ echo http2
 ++ for el in "${testsall[@]}"
-++ echo remap_load_missing_success
+++ echo httpbin
 ++ for el in "${testsall[@]}"
-++ echo regex_map
+++ echo nghttp
 ++ for el in "${testsall[@]}"
-++ echo remap_reload
+++ echo http2_priority
 ++ for el in "${testsall[@]}"
-++ echo remap_load_empty_success
+++ echo h2disable
 ++ for el in "${testsall[@]}"
-++ echo remap_https
+++ echo http2_flow_control
 ++ for el in "${testsall[@]}"
-++ echo remap_load_missing_failure
+++ echo h2enable
 ++ for el in "${testsall[@]}"
-++ echo remap_load_empty_failure
+++ echo h2spec
 ++ for el in "${testsall[@]}"
-++ echo remap_ws
+++ echo ip_allow
 ++ for el in "${testsall[@]}"
-++ echo remap_ip_resolve
-++ for el in "${testsall[@]}"
-++ echo old_config_fail
-++ for el in "${testsall[@]}"
-++ echo records_yaml
-++ for el in "${testsall[@]}"
-++ echo records_config_to_yaml
-++ for el in "${testsall[@]}"
-++ echo post-early-return
-++ for el in "${testsall[@]}"
-++ echo post-continue
-++ for el in "${testsall[@]}"
-++ echo openclose_h2
+++ echo double
 ++ for el in "${testsall[@]}"
 ++ echo double_h2
 ++ for el in "${testsall[@]}"
 ++ echo session_id
 ++ for el in "${testsall[@]}"
+++ echo openclose_h2
+++ for el in "${testsall[@]}"
 ++ echo openclose
 ++ for el in "${testsall[@]}"
-++ echo double
+++ echo inactive_timeout
 ++ for el in "${testsall[@]}"
-++ echo bad_http_fmt
+++ echo conn_timeout
 ++ for el in "${testsall[@]}"
-++ echo strategies_ch
+++ echo tls_conn_timeout
 ++ for el in "${testsall[@]}"
-++ echo strategies_ch2
+++ echo active_timeout
 ++ for el in "${testsall[@]}"
-++ echo zzz_strategies_peer
+++ echo default_inactivity_timeout
 ++ for el in "${testsall[@]}"
-++ echo zzz_strategies_peer2
+++ echo accept_timeout
 ++ for el in "${testsall[@]}"
-++ echo runroot_use
+++ echo inactive_client_timeout
 ++ for el in "${testsall[@]}"
-++ echo runroot_verify
+++ echo tls_hooks3
 ++ for el in "${testsall[@]}"
-++ echo runroot_remove
-++ for el in "${testsall[@]}"
-++ echo runroot_init
-++ for el in "${testsall[@]}"
-++ echo runroot_error
-++ for el in "${testsall[@]}"
-++ echo bigobj
-++ for el in "${testsall[@]}"
-++ echo connect
-++ for el in "${testsall[@]}"
-++ echo copy_config
-++ for el in "${testsall[@]}"
-++ echo basic
-++ for el in "${testsall[@]}"
-++ echo copy_config2
-++ for el in "${testsall[@]}"
-++ echo deny0
-++ for el in "${testsall[@]}"
-++ echo config
-++ for el in "${testsall[@]}"
-++ echo tls_ocsp
-++ for el in "${testsall[@]}"
-++ echo tls_verify_override_sni
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert
-++ for el in "${testsall[@]}"
-++ echo tls_client_verify2
-++ for el in "${testsall[@]}"
-++ echo tls_client_alpn_configuration
-++ for el in "${testsall[@]}"
-++ echo tls_partial_blind_tunnel
-++ for el in "${testsall[@]}"
-++ echo tls_verify_base
-++ for el in "${testsall[@]}"
-++ echo tls_verify
-++ for el in "${testsall[@]}"
-++ echo tls_keepalive
-++ for el in "${testsall[@]}"
-++ echo tls_verify2
-++ for el in "${testsall[@]}"
-++ echo tls_check_dual_cert_selection_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert_override_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_engine
-++ for el in "${testsall[@]}"
-++ echo ssl_multicert_loader
-++ for el in "${testsall[@]}"
-++ echo tls_verify3
-++ for el in "${testsall[@]}"
-++ echo tls_0rtt_server
-++ for el in "${testsall[@]}"
-++ echo tls_check_dual_cert_selection2
-++ for el in "${testsall[@]}"
-++ echo tls_forward_nonhttp
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert_override
-++ for el in "${testsall[@]}"
-++ echo tls_verify_not_pristine
-++ for el in "${testsall[@]}"
-++ echo tls_client_verify3
-++ for el in "${testsall[@]}"
-++ echo tls_session_reuse
-++ for el in "${testsall[@]}"
-++ echo tls_origin_session_reuse
-++ for el in "${testsall[@]}"
-++ echo tls_check_cert_select_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_ticket
-++ for el in "${testsall[@]}"
-++ echo tls_sni_host_policy
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert2
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_verify_override
-++ for el in "${testsall[@]}"
-++ echo tls
-++ for el in "${testsall[@]}"
-++ echo tls_tunnel
-++ for el in "${testsall[@]}"
-++ echo tls_check_cert_selection
-++ for el in "${testsall[@]}"
-++ echo tls_verify_ca_override
-++ for el in "${testsall[@]}"
-++ echo tls_verify_override_base
-++ for el in "${testsall[@]}"
-++ echo tls_session_key_logging
-++ for el in "${testsall[@]}"
-++ echo tls_sni_yaml_reload
-++ for el in "${testsall[@]}"
-++ echo tls_hooks_verify
-++ for el in "${testsall[@]}"
-++ echo tls_client_versions
-++ for el in "${testsall[@]}"
-++ echo tls_client_cert2_plugin
-++ for el in "${testsall[@]}"
-++ echo tls_check_dual_cert_selection
-++ for el in "${testsall[@]}"
-++ echo tls_check_cert_selection_reload
-++ for el in "${testsall[@]}"
-++ echo tls_tunnel_forward
-++ for el in "${testsall[@]}"
-++ echo tls_bad_alpn
-++ for el in "${testsall[@]}"
-++ echo tls_hooks_client_verify
-++ for el in "${testsall[@]}"
-++ echo tls_client_verify
-++ for el in "${testsall[@]}"
-++ echo bad_chunked_encoding
-++ for el in "${testsall[@]}"
-++ echo chunked_encoding_disabled
-++ for el in "${testsall[@]}"
-++ echo chunked_encoding_h2
-++ for el in "${testsall[@]}"
-++ echo chunked_encoding
-++ for el in "${testsall[@]}"
-++ echo dns_down_nameserver
-++ for el in "${testsall[@]}"
-++ echo splitdns
-++ for el in "${testsall[@]}"
-++ echo dns_ttl
-++ for el in "${testsall[@]}"
-++ echo dns_host_down
-++ for el in "${testsall[@]}"
-++ echo basic_plugin_handler
-++ for el in "${testsall[@]}"
-++ echo jsonrpc_api_schema
-++ for el in "${testsall[@]}"
-++ echo null_transform
-++ for el in "${testsall[@]}"
-++ echo per_server_connection_max
-++ for el in "${testsall[@]}"
-++ echo tls_hooks9
-++ for el in "${testsall[@]}"
-++ echo tls_hooks
-++ for el in "${testsall[@]}"
-++ echo tls_hooks14
-++ for el in "${testsall[@]}"
-++ echo tls_hooks10
-++ for el in "${testsall[@]}"
-++ echo tls_hooks18
-++ for el in "${testsall[@]}"
-++ echo tls_hooks15
-++ for el in "${testsall[@]}"
-++ echo tls_hooks11
-++ for el in "${testsall[@]}"
-++ echo tls_hooks8
-++ for el in "${testsall[@]}"
-++ echo tls_hooks4
+++ echo tls_hooks7
 ++ for el in "${testsall[@]}"
 ++ echo tls_hooks17
 ++ for el in "${testsall[@]}"
 ++ echo tls_hooks13
 ++ for el in "${testsall[@]}"
-++ echo tls_hooks6
-++ for el in "${testsall[@]}"
-++ echo tls_hooks2
-++ for el in "${testsall[@]}"
-++ echo tls_hooks7
-++ for el in "${testsall[@]}"
-++ echo tls_hooks3
-++ for el in "${testsall[@]}"
 ++ echo tls_hooks16
 ++ for el in "${testsall[@]}"
 ++ echo tls_hooks12
 ++ for el in "${testsall[@]}"
-++ echo redirect_actions
+++ echo tls_hooks2
 ++ for el in "${testsall[@]}"
-++ echo redirect_post
+++ echo tls_hooks6
 ++ for el in "${testsall[@]}"
-++ echo redirect
+++ echo tls_hooks18
 ++ for el in "${testsall[@]}"
-++ echo redirect_stale
+++ echo tls_hooks14
 ++ for el in "${testsall[@]}"
-++ echo number_of_redirects
+++ echo tls_hooks10
 ++ for el in "${testsall[@]}"
-++ echo session_match
+++ echo tls_hooks
 ++ for el in "${testsall[@]}"
-++ echo fatal
+++ echo tls_hooks8
 ++ for el in "${testsall[@]}"
-++ echo emergency
+++ echo tls_hooks4
+++ for el in "${testsall[@]}"
+++ echo tls_hooks9
+++ for el in "${testsall[@]}"
+++ echo tls_hooks15
+++ for el in "${testsall[@]}"
+++ echo tls_hooks11
+++ for el in "${testsall[@]}"
+++ echo bigobj
+++ for el in "${testsall[@]}"
+++ echo cache-generation-disjoint
+++ for el in "${testsall[@]}"
+++ echo negative-revalidating
+++ for el in "${testsall[@]}"
+++ echo conditional-get-hit
+++ for el in "${testsall[@]}"
+++ echo vary-handling
+++ for el in "${testsall[@]}"
+++ echo cache-control
 ++ for el in "${testsall[@]}"
 ++ echo cache-request-method
+++ for el in "${testsall[@]}"
+++ echo cache-auth
+++ for el in "${testsall[@]}"
+++ echo disjoint-wait-for-cache
 ++ for el in "${testsall[@]}"
 ++ echo background_fill
 ++ for el in "${testsall[@]}"
 ++ echo negative-caching
 ++ for el in "${testsall[@]}"
-++ echo conditional-get-hit
-++ for el in "${testsall[@]}"
-++ echo cache-range-response
-++ for el in "${testsall[@]}"
 ++ echo cache-generation-clear
-++ for el in "${testsall[@]}"
-++ echo cache-auth
 ++ for el in "${testsall[@]}"
 ++ echo alternate-caching
 ++ for el in "${testsall[@]}"
-++ echo cache-generation-disjoint
-++ for el in "${testsall[@]}"
-++ echo cache-control
-++ for el in "${testsall[@]}"
-++ echo vary-handling
-++ for el in "${testsall[@]}"
-++ echo negative-revalidating
-++ for el in "${testsall[@]}"
-++ echo disjoint-wait-for-cache
+++ echo cache-range-response
 ++ for el in "${testsall[@]}"
 ++ echo cache-cookie
 ++ for el in "${testsall[@]}"
-++ echo forward_proxy
+++ echo bad_chunked_encoding
+++ for el in "${testsall[@]}"
+++ echo chunked_encoding_disabled
+++ for el in "${testsall[@]}"
+++ echo chunked_encoding
+++ for el in "${testsall[@]}"
+++ echo chunked_encoding_h2
+++ for el in "${testsall[@]}"
+++ echo connect
+++ for el in "${testsall[@]}"
+++ echo tls_check_cert_select_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_tunnel_forward
+++ for el in "${testsall[@]}"
+++ echo tls_check_dual_cert_selection
+++ for el in "${testsall[@]}"
+++ echo tls_verify_not_pristine
+++ for el in "${testsall[@]}"
+++ echo tls_origin_session_reuse
+++ for el in "${testsall[@]}"
+++ echo tls_tunnel
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert
+++ for el in "${testsall[@]}"
+++ echo tls_verify_base
+++ for el in "${testsall[@]}"
+++ echo tls_check_cert_selection_reload
+++ for el in "${testsall[@]}"
+++ echo tls_forward_nonhttp
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_override
+++ for el in "${testsall[@]}"
+++ echo tls_check_dual_cert_selection2
+++ for el in "${testsall[@]}"
+++ echo tls_verify3
+++ for el in "${testsall[@]}"
+++ echo tls_partial_blind_tunnel
+++ for el in "${testsall[@]}"
+++ echo tls_verify2
+++ for el in "${testsall[@]}"
+++ echo tls_verify_override_sni
+++ for el in "${testsall[@]}"
+++ echo ssl_multicert_loader
+++ for el in "${testsall[@]}"
+++ echo tls_session_reuse
+++ for el in "${testsall[@]}"
+++ echo tls_0rtt_server
+++ for el in "${testsall[@]}"
+++ echo tls_sni_yaml_reload
+++ for el in "${testsall[@]}"
+++ echo tls_bad_alpn
+++ for el in "${testsall[@]}"
+++ echo tls_session_key_logging
+++ for el in "${testsall[@]}"
+++ echo tls_verify
+++ for el in "${testsall[@]}"
+++ echo tls_ocsp
+++ for el in "${testsall[@]}"
+++ echo tls_client_versions
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_check_dual_cert_selection_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert2_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert2
+++ for el in "${testsall[@]}"
+++ echo tls_verify_override_base
+++ for el in "${testsall[@]}"
+++ echo tls_client_verify3
+++ for el in "${testsall[@]}"
+++ echo tls_keepalive
+++ for el in "${testsall[@]}"
+++ echo tls_engine
+++ for el in "${testsall[@]}"
+++ echo tls_hooks_client_verify
+++ for el in "${testsall[@]}"
+++ echo tls_verify_ca_override
+++ for el in "${testsall[@]}"
+++ echo tls_hooks_verify
+++ for el in "${testsall[@]}"
+++ echo tls_sni_host_policy
+++ for el in "${testsall[@]}"
+++ echo tls
+++ for el in "${testsall[@]}"
+++ echo tls_ticket
+++ for el in "${testsall[@]}"
+++ echo tls_client_cert_override_plugin
+++ for el in "${testsall[@]}"
+++ echo tls_check_cert_selection
+++ for el in "${testsall[@]}"
+++ echo tls_client_alpn_configuration
+++ for el in "${testsall[@]}"
+++ echo tls_client_verify
+++ for el in "${testsall[@]}"
+++ echo tls_verify_override
+++ for el in "${testsall[@]}"
+++ echo tls_client_verify2
+++ for el in "${testsall[@]}"
+++ echo runroot_remove
+++ for el in "${testsall[@]}"
+++ echo runroot_verify
+++ for el in "${testsall[@]}"
+++ echo runroot_init
+++ for el in "${testsall[@]}"
+++ echo runroot_error
+++ for el in "${testsall[@]}"
+++ echo runroot_use
+++ for el in "${testsall[@]}"
+++ echo fatal
+++ for el in "${testsall[@]}"
+++ echo emergency
+++ for el in "${testsall[@]}"
+++ echo proxy_protocol
+++ for el in "${testsall[@]}"
+++ echo proxy_serve_stale
+++ for el in "${testsall[@]}"
+++ echo proxy_serve_stale_dns_fail
+++ for el in "${testsall[@]}"
+++ echo redirect_post
+++ for el in "${testsall[@]}"
+++ echo number_of_redirects
+++ for el in "${testsall[@]}"
+++ echo redirect_actions
+++ for el in "${testsall[@]}"
+++ echo redirect
+++ for el in "${testsall[@]}"
+++ echo redirect_stale
+++ for el in "${testsall[@]}"
+++ echo post_slow_server
+++ for el in "${testsall[@]}"
+++ echo post_slow_server_max_requests_in
 ++ for el in "${testsall[@]}"
 ++ echo verify_remap_plugin
 ++ for el in "${testsall[@]}"
 ++ echo verify_global_plugin
 ++ for el in "${testsall[@]}"
-++ echo post_slow_server_max_requests_in
+++ echo thread_affinity
 ++ for el in "${testsall[@]}"
-++ echo post_slow_server
+++ echo schedule_on_pool
 ++ for el in "${testsall[@]}"
-++ echo quick_server
+++ echo schedule_on_thread
 ++ for el in "${testsall[@]}"
-++ echo slow_post
+++ echo thread_config
+++ for el in "${testsall[@]}"
+++ echo zzz_strategies_peer
+++ for el in "${testsall[@]}"
+++ echo strategies_ch
+++ for el in "${testsall[@]}"
+++ echo zzz_strategies_peer2
+++ for el in "${testsall[@]}"
+++ echo strategies_ch2
+++ for el in "${testsall[@]}"
+++ echo remap_ip_resolve
+++ for el in "${testsall[@]}"
+++ echo remap_load_missing_success
+++ for el in "${testsall[@]}"
+++ echo remap_load_empty_failure
+++ for el in "${testsall[@]}"
+++ echo remap_ws
+++ for el in "${testsall[@]}"
+++ echo regex_map
+++ for el in "${testsall[@]}"
+++ echo remap_reload
+++ for el in "${testsall[@]}"
+++ echo remap_load_missing_failure
+++ for el in "${testsall[@]}"
+++ echo remap_load_empty_success
+++ for el in "${testsall[@]}"
+++ echo conf_remap_float
+++ for el in "${testsall[@]}"
+++ echo remap_https
+++ for el in "${testsall[@]}"
+++ echo remap_http
+++ for el in "${testsall[@]}"
+++ echo dns_host_down
+++ for el in "${testsall[@]}"
+++ echo dns_down_nameserver
+++ for el in "${testsall[@]}"
+++ echo dns_ttl
+++ for el in "${testsall[@]}"
+++ echo splitdns
+++ for el in "${testsall[@]}"
+++ echo jsonrpc_api_schema
+++ for el in "${testsall[@]}"
+++ echo basic_plugin_handler
+++ for el in "${testsall[@]}"
+++ echo bad_http_fmt
 + ntests=279
 + shardsize=69
 + '[' 0 -ne 3 ']'
@@ -577,8 +577,8 @@
 + shardbeg=140
 + sliced='records_config_to_yaml records_yaml redirect redirect_actions redirect_post redirect_stale regex_map regex_remap regex_revalidate regex_revalidate_miss regex_revalidate_state regexcookie remap_http remap_https remap_inc remap_ip_resolve remap_load_empty_failure remap_load_empty_success remap_load_missing_failure remap_load_missing_success remap_reload remap_stats remap_stats_post remap_ws runroot_error runroot_init runroot_remove runroot_use runroot_verify s3_auth_config schedule_on_pool schedule_on_thread server_push_preload session_id session_match setstatus sigusr2 slice slice_error slice_prefetch slice_regex slice_rm_range slice_selfhealing slow_post splitdns ssl_multicert_loader sslheaders ssn_start_delay_hook stats_over_http stek_share strategies_ch strategies_ch2 subcookie substitute syntax test_hooks thread_affinity thread_config tls tls_0rtt_server tls_bad_alpn tls_check_cert_select_plugin tls_check_cert_selection tls_check_cert_selection_reload tls_check_dual_cert_selection tls_check_dual_cert_selection2 tls_check_dual_cert_selection_plugin tls_client_alpn_configuration tls_client_cert tls_client_cert2'
 + ./autest.sh --ats-bin /usr/bin/ --sandbox /tmp/sandbox -f records_config_to_yaml records_yaml redirect redirect_actions redirect_post redirect_stale regex_map regex_remap regex_revalidate regex_revalidate_miss regex_revalidate_state regexcookie remap_http remap_https remap_inc remap_ip_resolve remap_load_empty_failure remap_load_empty_success remap_load_missing_failure remap_load_missing_success remap_reload remap_stats remap_stats_post remap_ws runroot_error runroot_init runroot_remove runroot_use runroot_verify s3_auth_config schedule_on_pool schedule_on_thread server_push_preload session_id session_match setstatus sigusr2 slice slice_error slice_prefetch slice_regex slice_rm_range slice_selfhealing slow_post splitdns ssl_multicert_loader sslheaders ssn_start_delay_hook stats_over_http stek_share strategies_ch strategies_ch2 subcookie substitute syntax test_hooks thread_affinity thread_config tls tls_0rtt_server tls_bad_alpn tls_check_cert_select_plugin tls_check_cert_selection tls_check_cert_selection_reload tls_check_dual_cert_selection tls_check_dual_cert_selection2 tls_check_dual_cert_selection_plugin tls_client_alpn_configuration tls_client_cert tls_client_cert2
-#=#=#                                                                         ##O#-#                                                                        ##O=#  #                                                                      #=#=-#  #                                                                                                                                                0.1%                                                                           0.3%                                                                           0.7%#                                                                          1.6%##                                                                         3.3%###                                                                        5.3%#####                                                                      7.4%######                                                                     9.0%#############                                                             18.1%#############                                                             19.0%##############                                                            20.7%#################                                                         24.7%###################                                                       26.8%####################                                                      29.0%######################                                                    31.1%########################                                                  33.4%#########################                                                 35.7%###########################                                               37.9%#############################                                             40.3%##############################                                            42.6%################################                                          45.0%##################################                                        47.4%###################################                                       49.8%#####################################                                     52.3%#######################################                                   54.7%#########################################                                 57.2%##########################################                                59.6%############################################                              62.1%##############################################                            64.6%################################################                          67.1%##################################################                        69.7%###################################################                       72.2%#####################################################                     74.7%#######################################################                   77.4%#########################################################                 79.9%###########################################################               82.4%#############################################################             85.0%###############################################################           87.6%################################################################          90.2%##################################################################        92.7%####################################################################      95.4%######################################################################    97.9%######################################################################## 100.0%
-/src/trafficserver/tests/proxy-verifier/proxy-verifier-v2.6.0.tar.gz: OK
+#=#=#                                                                         ##O#-#                                                                        ##O=#  #                                                                      #=#=-#  #                                                                                                                                                0.1%                                                                           0.3%                                                                           0.6%                                                                           1.0%                                                                           1.3%#                                                                          1.6%#                                                                          1.9%#                                                                          2.1%#                                                                          2.3%#                                                                          2.6%##                                                                         2.9%##                                                                         3.1%##                                                                         3.4%##                                                                         3.6%##                                                                         3.9%###                                                                        4.2%###                                                                        4.5%###                                                                        4.7%###                                                                        5.0%###                                                                        5.3%####                                                                       5.6%####                                                                       5.9%####                                                                       6.2%####                                                                       6.5%####                                                                       6.8%#####                                                                      7.1%#####                                                                      7.4%#####                                                                      7.8%#####                                                                      8.1%######                                                                     8.5%######                                                                     8.7%######                                                                     9.1%######                                                                     9.4%#######                                                                    9.7%#######                                                                   10.2%#######                                                                   10.6%#######                                                                   11.0%########                                                                  11.3%########                                                                  11.7%########                                                                  12.1%########                                                                  12.5%#########                                                                 13.0%#########                                                                 13.4%#########                                                                 13.7%##########                                                                14.2%##########                                                                14.6%##########                                                                15.0%###########                                                               15.5%###########                                                               15.9%###########                                                               16.4%############                                                              16.9%############                                                              17.3%############                                                              17.8%#############                                                             18.1%#############                                                             18.6%#############                                                             19.0%#############                                                             19.4%##############                                                            19.9%##############                                                            20.4%###############                                                           21.5%###############                                                           21.8%###############                                                           22.2%################                                                          22.5%################                                                          23.1%################                                                          23.4%#################                                                         23.8%#################                                                         24.3%#################                                                         24.7%##################                                                        25.2%##################                                                        25.8%##################                                                        26.3%###################                                                       26.8%###################                                                       27.5%####################                                                      28.1%####################                                                      28.6%#####################                                                     29.2%#####################                                                     29.7%#####################                                                     30.4%######################                                                    31.5%#######################                                                   32.0%#######################                                                   32.4%#######################                                                   32.9%#######################                                                   33.3%########################                                                  33.8%########################                                                  34.3%#########################                                                 34.8%#########################                                                 35.3%#########################                                                 35.8%##########################                                                36.3%##########################                                                36.9%##########################                                                37.4%###########################                                               38.0%###########################                                               38.5%############################                                              39.2%############################                                              39.8%#############################                                             40.3%#############################                                             40.9%#############################                                             41.6%##############################                                            42.1%##############################                                            42.7%###############################                                           43.3%###############################                                           44.0%################################                                          44.5%################################                                          45.1%################################                                          45.7%#################################                                         46.4%#################################                                         47.0%##################################                                        47.5%##################################                                        48.1%###################################                                       48.8%###################################                                       49.4%####################################                                      50.0%####################################                                      50.5%####################################                                      51.1%#####################################                                     51.8%######################################                                    53.0%######################################                                    53.4%######################################                                    53.8%#######################################                                   54.3%#######################################                                   54.8%#######################################                                   55.3%########################################                                  55.8%########################################                                  56.3%########################################                                  56.8%#########################################                                 57.3%#########################################                                 57.9%##########################################                                58.5%##########################################                                59.1%##########################################                                59.2%###########################################                               60.1%###########################################                               60.3%###########################################                               61.0%############################################                              61.6%############################################                              61.7%############################################                              61.9%############################################                              62.1%############################################                              62.4%############################################                              62.5%#############################################                             62.7%#############################################                             63.0%#############################################                             63.2%#############################################                             63.5%#############################################                             63.7%##############################################                            64.0%##############################################                            64.4%##############################################                            64.6%##############################################                            64.9%##############################################                            65.1%###############################################                           65.4%###############################################                           65.6%###############################################                           66.0%###############################################                           66.3%###############################################                           66.6%################################################                          66.9%################################################                          67.3%################################################                          67.5%################################################                          67.9%#################################################                         68.2%#################################################                         68.5%#################################################                         68.9%#################################################                         69.2%##################################################                        69.5%##################################################                        69.9%##################################################                        70.3%##################################################                        70.7%###################################################                       71.1%###################################################                       71.4%###################################################                       71.8%###################################################                       72.2%####################################################                      72.6%####################################################                      73.1%####################################################                      73.4%#####################################################                     73.8%#####################################################                     74.2%#####################################################                     74.7%######################################################                    75.1%######################################################                    75.6%######################################################                    76.0%######################################################                    76.3%#######################################################                   76.8%#######################################################                   77.4%#######################################################                   77.7%########################################################                  78.2%########################################################                  78.7%#########################################################                 79.2%#########################################################                 79.9%#########################################################                 80.4%##########################################################                80.9%##########################################################                81.5%###########################################################               82.3%###########################################################               82.9%############################################################              83.6%############################################################              84.4%#############################################################             85.2%#############################################################             86.0%##############################################################            86.5%###############################################################           87.8%################################################################          88.9%################################################################          89.2%################################################################          89.3%################################################################          90.2%#################################################################         90.6%#################################################################         90.8%#################################################################         91.2%#################################################################         91.6%##################################################################        92.0%##################################################################        92.3%##################################################################        92.7%###################################################################       93.1%###################################################################       93.5%###################################################################       93.9%###################################################################       94.2%####################################################################      94.6%####################################################################      95.0%####################################################################      95.5%#####################################################################     95.9%#####################################################################     96.2%#####################################################################     96.6%#####################################################################     97.0%######################################################################    97.5%######################################################################    97.8%######################################################################    98.3%#######################################################################   98.6%#######################################################################   99.1%#######################################################################   99.5%######################################################################## 100.0%
+/home/trafficserver/trafficserver/tests/proxy-verifier/proxy-verifier-v2.6.0.tar.gz: OK
 Python 3.6 or newer detected!
 python3-dev/devel detected!
 pipenv detected!
@@ -595,7 +595,7 @@ Environment config finished. Running AuTest...
 [0m[1mRunning Test regex_remap:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test regex_revalidate:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test regex_revalidate_miss:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
-[0m[1mRunning Test regex_revalidate_state:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test regex_revalidate_state:[0m[1m.[0m[1mF[0m[1m [0m[31mFailed[0m[1m
 [0m[1mRunning Test regexcookie:[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test remap_http:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test remap_https:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
@@ -647,7 +647,7 @@ Environment config finished. Running AuTest...
 [0m[1mRunning Test test_hooks:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test thread_affinity:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test thread_config:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
-[0m[1mRunning Test tls:[0m[1m.[0m[1m [0m[32mPassed[0m[1m
+[0m[1mRunning Test tls:[0m[1m.[0m[1m [0m[31mFailed[0m[1m
 [0m[1mRunning Test tls_0rtt_server:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test tls_bad_alpn:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
 [0m[1mRunning Test tls_check_cert_select_plugin:[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m.[0m[1m [0m[32mPassed[0m[1m
@@ -665,12 +665,12 @@ Generating Report: --------------
 [0m[1m--------------------------------------------------------------------------------
 [0m[1m Test "stek_share" Skipped
     File: stek_share.test.py
-    Directory: /src/trafficserver/tests/gold_tests/pluginTest/stek_share
+    Directory: /home/trafficserver/trafficserver/tests/gold_tests/pluginTest/stek_share
 [0m[1m  Reason: /usr/libexec/trafficserver/stek_share.so not found.
 [0m[1m
 [0m[1m Test: remap_inc: [0m[31mFailed[0m[1m
     File: remap_inc.test.py
-    Directory: /src/trafficserver/tests/gold_tests/traffic_ctl/remap_inc
+    Directory: /home/trafficserver/trafficserver/tests/gold_tests/traffic_ctl/remap_inc
    Setting up : Copying 'wait_reload.sh' to 'None' - [0m[32mPassed[0m[1m
    Starting Test remap_inc : No issues found - [0m[32mPassed[0m[1m
       Reason: Started!
@@ -680,9 +680,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/remap_inc/ts/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/remap_inc/ts/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/remap_inc/ts/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/remap_inc/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/remap_inc/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/remap_inc/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/remap_inc/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/remap_inc/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/remap_inc/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/remap_inc/ts/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/remap_inc/ts/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/remap_inc/ts/plugin' - [0m[32mPassed[0m[1m
@@ -705,7 +705,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 3.4895689487457275 < 600.0
+        Reason: Returned value: 3.4921681880950928 < 600.0
      file /tmp/sandbox/remap_inc/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/remap_inc/ts/log/diags.log excludes expression
      file /tmp/sandbox/remap_inc/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -726,7 +726,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 4.9868574142456055 < 600.0
+        Reason: Returned value: 4.987207651138306 < 600.0
    Run: Start TS, then update test.inc: [0m[32mPassed[0m[1m
      Process: Default: [0m[32mPassed[0m[1m
        Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
@@ -740,7 +740,7 @@ Generating Report: --------------
        Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
           Reason: Returned Value: 0 == 0
        Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-          Reason: Returned value: 2.51279616355896 < 600.0
+          Reason: Returned value: 2.511794090270996 < 600.0
    Run: Get response from generator: [0m[31mFailed[0m[1m
      Test : Checking that True == _isRunningAfter - [0m[32mPassed[0m[1m
         Reason: Returned Value: True == _isRunningAfter
@@ -750,9 +750,132 @@ Generating Report: --------------
        Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
           Reason: Returned Value 2 != 0
 
+[0m[1m Test: regex_revalidate_state: [0m[31mFailed[0m[1m
+    File: regex_revalidate_state.test.py
+    Directory: /home/trafficserver/trafficserver/tests/gold_tests/pluginTest/regex_revalidate
+   Starting Test regex_revalidate_state : No issues found - [0m[32mPassed[0m[1m
+      Reason: Started!
+   Process: server: [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61072, queue size: 999 - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/regex_revalidate_state/server - [0m[32mPassed[0m[1m
+     Test : Checking that any test passes - [0m[32mPassed[0m[1m
+        Reason: One or more tests passed
+     
+       Test : Checking that ReturnCode == None - [0m[31mFailed[0m[1m
+          Reason: Returned Value 0 != None
+       
+     
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 2.2143871784210205 < 600.0
+   Process: ts: [0m[31mFailed[0m[1m
+      Reason: Traceback (most recent call last):
+         File "/home/trafficserver/.local/share/virtualenvs/tests-0HRr5rHp/lib/python3.10/site-packages/autest/testers/lambda_tester.py", line 113, in test
+           result, desc, message = self.Value(eventinfo, self)
+       TypeError: File.WriteCustomOn.<locals>.action() takes 1 positional argument but 2 were given
+       
+       During handling of the above exception, another exception occurred:
+       
+       Traceback (most recent call last):
+         File "/home/trafficserver/.local/share/virtualenvs/tests-0HRr5rHp/lib/python3.10/site-packages/autest/testers/lambda_tester.py", line 115, in test
+           result, desc, message = self.Value(eventinfo)
+         File "/home/trafficserver/.local/share/virtualenvs/tests-0HRr5rHp/lib/python3.10/site-packages/autest/testenities/file.py", line 265, in action
+           return func(self.Name)
+         File "/home/trafficserver/trafficserver/tests/gold_tests/autest-site/trafficserver.test.ext", line 477, in _do_write
+           with open(name, 'w') as f:
+       PermissionError: [Errno 13] Permission denied: '/usr/var/trafficserver/reval.state.good'
+   Run: Populate the regex_revalidate state file: [0m[32mPassed[0m[1m
+     Process: Default: [0m[1mSkipped[0m[1m
+        Reason: Was not started
+   Run: Initial load, state merged: [0m[31mFailed[0m[1m
+     Starting TestRun 1-tr : Waiting for Process "ts" to become ready - [0m[31mFailed[0m[1m
+        Reason: Process finished before it was ready
+     Process: Default: [0m[1mSkipped[0m[1m
+        Reason: Was not started
+
+[0m[1m Test: tls: [0m[31mFailed[0m[1m
+    File: tls.test.py
+    Directory: /home/trafficserver/trafficserver/tests/gold_tests/tls
+   Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/tls/ssl-post' to 'None' - [0m[32mPassed[0m[1m
+   Starting Test tls : No issues found - [0m[32mPassed[0m[1m
+      Reason: Started!
+   Process: ts: [0m[31mFailed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/tls/ts - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/bin' to '/tmp/sandbox/tls/ts/bin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/tls/ts/config - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/tls/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/tls/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/tls/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/tls/ts/config/body_factory' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/tls/ts/cache - [0m[32mPassed[0m[1m
+     Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/tls/ts/plugin' - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/tls/ts/log - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/log with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/log with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/tls/ts/runtime - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/runtime with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/runtime with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/tls/ts/ssl - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/ssl with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/ssl with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/tls/ts/storage - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/storage with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
+     Setting up : On /tmp/sandbox/tls/ts/storage with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61466, queue size: 968 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61467, queue size: 967 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61468, queue size: 966 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61469, queue size: 965 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61470, queue size: 964 - [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61471, queue size: 963 - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/../../tools/ssl/server.pem' to directory '/tmp/sandbox/tls/ts/ssl' as 'server.pem'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/../../tools/ssl/server.key' to directory '/tmp/sandbox/tls/ts/ssl' as 'server.key'' - [0m[32mPassed[0m[1m
+     Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
+        Reason: Returned Value -6 != 0
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 0.5077505111694336 < 600.0
+     file /tmp/sandbox/tls/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/tls/ts/log/diags.log excludes expression
+     file /tmp/sandbox/tls/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/tls/ts/log/diags.log excludes expression
+     file /tmp/sandbox/tls/ts/log/diags.log : Diags log file diags.log should not contain a warning about an unrecognized configuration - [0m[32mPassed[0m[1m
+        Reason: Contents of /tmp/sandbox/tls/ts/log/diags.log excludes expression
+     Appending File /tmp/sandbox/tls/ts/config/records.yaml : Writing config file records.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/tls/ts/config/runroot.yaml : Appended file /tmp/sandbox/tls/ts/config/runroot.yaml - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/tls/ts/config/remap.config : Appended file /tmp/sandbox/tls/ts/config/remap.config - [0m[32mPassed[0m[1m
+        Reason: Success
+     Appending File /tmp/sandbox/tls/ts/config/ssl_multicert.config : Appended file /tmp/sandbox/tls/ts/config/ssl_multicert.config - [0m[32mPassed[0m[1m
+        Reason: Success
+   Process: server: [0m[32mPassed[0m[1m
+     Setting up : recycling port: 61472, queue size: 962 - [0m[32mPassed[0m[1m
+     Setting up : Making Directory /tmp/sandbox/tls/server - [0m[32mPassed[0m[1m
+     Test : Checking that any test passes - [0m[32mPassed[0m[1m
+        Reason: One or more tests passed
+     
+       Test : Checking that ReturnCode == None - [0m[31mFailed[0m[1m
+          Reason: Returned Value 0 != None
+       
+     
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       
+     Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
+        Reason: Returned value: 2.730909824371338 < 600.0
+   Run: Run-Test: [0m[32mPassed[0m[1m
+     Process: Default: [0m[32mPassed[0m[1m
+       Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
+          Reason: Returned Value: 0 == 0
+       file /tmp/sandbox/tls/_output/0-tr-Default/stream.stdout.txt : Checking that /tmp/sandbox/tls/_output/0-tr-Default/stream.stdout.txt matches gold/ssl-post.gold - [0m[32mPassed[0m[1m
+          Reason: Values match
+
 [0m[1m Test: strategies_ch: [0m[31mFailed[0m[1m
     File: strategies_ch.test.py
-    Directory: /src/trafficserver/tests/gold_tests/next_hop/strategies_ch
+    Directory: /home/trafficserver/trafficserver/tests/gold_tests/next_hop/strategies_ch
    Starting Test strategies_ch : No issues found - [0m[32mPassed[0m[1m
       Reason: Started!
    Process: server: [0m[32mPassed[0m[1m
@@ -769,23 +892,23 @@ Generating Report: --------------
           Reason: Returned Value: 0 == 0
        
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 24.35086750984192 < 600.0
+        Reason: Returned value: 24.504287719726562 < 600.0
    Process: dns: [0m[32mPassed[0m[1m
      Setting up : recycling port: 61316, queue size: 967 - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/dns - [0m[32mPassed[0m[1m
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 25.29700994491577 < 600.0
+        Reason: Returned value: 25.44704270362854 < 600.0
    Process: ts_nh0: [0m[31mFailed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh0 - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/bin' to '/tmp/sandbox/strategies_ch/ts_nh0/bin' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh0/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh0/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh0/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh0/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh0/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh0/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh0/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh0/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh0/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch/ts_nh0/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh0/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch/ts_nh0/plugin' - [0m[32mPassed[0m[1m
@@ -808,7 +931,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
         Reason: Returned Value -2 != 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 24.457024097442627 < 600.0
+        Reason: Returned value: 24.452252864837646 < 600.0
      file /tmp/sandbox/strategies_ch/ts_nh0/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch/ts_nh0/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch/ts_nh0/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -827,9 +950,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh1/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh1/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh1/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh1/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh1/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh1/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh1/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh1/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh1/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch/ts_nh1/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh1/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch/ts_nh1/plugin' - [0m[32mPassed[0m[1m
@@ -852,7 +975,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
         Reason: Returned Value -2 != 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 24.350169897079468 < 600.0
+        Reason: Returned value: 24.200024366378784 < 600.0
      file /tmp/sandbox/strategies_ch/ts_nh1/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch/ts_nh1/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch/ts_nh1/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -871,9 +994,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh2/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh2/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh2/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh2/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh2/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh2/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh2/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh2/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh2/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch/ts_nh2/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh2/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch/ts_nh2/plugin' - [0m[32mPassed[0m[1m
@@ -896,7 +1019,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
         Reason: Returned Value -2 != 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 24.29007649421692 < 600.0
+        Reason: Returned value: 24.07101535797119 < 600.0
      file /tmp/sandbox/strategies_ch/ts_nh2/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch/ts_nh2/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch/ts_nh2/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -915,9 +1038,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh3/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh3/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh3/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh3/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh3/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh3/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh3/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh3/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh3/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch/ts_nh3/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh3/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch/ts_nh3/plugin' - [0m[32mPassed[0m[1m
@@ -940,7 +1063,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
         Reason: Returned Value -2 != 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 24.145903825759888 < 600.0
+        Reason: Returned value: 23.902679920196533 < 600.0
      file /tmp/sandbox/strategies_ch/ts_nh3/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch/ts_nh3/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch/ts_nh3/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -959,9 +1082,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh4/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh4/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh4/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh4/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh4/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh4/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh4/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh4/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh4/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch/ts_nh4/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh4/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch/ts_nh4/plugin' - [0m[32mPassed[0m[1m
@@ -984,7 +1107,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
         Reason: Returned Value -2 != 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 24.023863315582275 < 600.0
+        Reason: Returned value: 23.71724557876587 < 600.0
      file /tmp/sandbox/strategies_ch/ts_nh4/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch/ts_nh4/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch/ts_nh4/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1003,9 +1126,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh5/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh5/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh5/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh5/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh5/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh5/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh5/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh5/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh5/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch/ts_nh5/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh5/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch/ts_nh5/plugin' - [0m[32mPassed[0m[1m
@@ -1028,7 +1151,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
         Reason: Returned Value -2 != 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 23.9272620677948 < 600.0
+        Reason: Returned value: 23.563058376312256 < 600.0
      file /tmp/sandbox/strategies_ch/ts_nh5/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch/ts_nh5/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch/ts_nh5/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1047,9 +1170,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh6/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh6/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh6/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh6/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh6/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh6/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh6/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh6/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh6/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch/ts_nh6/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh6/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch/ts_nh6/plugin' - [0m[32mPassed[0m[1m
@@ -1072,7 +1195,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
         Reason: Returned Value -2 != 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 23.760650873184204 < 600.0
+        Reason: Returned value: 23.373846530914307 < 600.0
      file /tmp/sandbox/strategies_ch/ts_nh6/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch/ts_nh6/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch/ts_nh6/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1091,9 +1214,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh7/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh7/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts_nh7/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh7/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh7/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh7/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts_nh7/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts_nh7/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts_nh7/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch/ts_nh7/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts_nh7/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch/ts_nh7/plugin' - [0m[32mPassed[0m[1m
@@ -1116,7 +1239,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
         Reason: Returned Value -2 != 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 23.6136794090271 < 600.0
+        Reason: Returned value: 23.191590547561646 < 600.0
      file /tmp/sandbox/strategies_ch/ts_nh7/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch/ts_nh7/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch/ts_nh7/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1135,9 +1258,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch/ts/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch/ts/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch/ts/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch/ts/plugin' - [0m[32mPassed[0m[1m
@@ -1160,7 +1283,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 23.39604377746582 < 600.0
+        Reason: Returned value: 22.963677406311035 < 600.0
      file /tmp/sandbox/strategies_ch/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch/ts/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1380,7 +1503,7 @@ Generating Report: --------------
 
 [0m[1m Test: strategies_ch2: [0m[31mFailed[0m[1m
     File: strategies_ch2.test.py
-    Directory: /src/trafficserver/tests/gold_tests/next_hop/strategies_ch2
+    Directory: /home/trafficserver/trafficserver/tests/gold_tests/next_hop/strategies_ch2
    Starting Test strategies_ch2 : No issues found - [0m[32mPassed[0m[1m
       Reason: Started!
    Process: server: [0m[32mPassed[0m[1m
@@ -1397,23 +1520,23 @@ Generating Report: --------------
           Reason: Returned Value: 0 == 0
        
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 28.013686180114746 < 600.0
+        Reason: Returned value: 28.57479500770569 < 600.0
    Process: dns: [0m[32mPassed[0m[1m
      Setting up : recycling port: 61354, queue size: 967 - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/dns - [0m[32mPassed[0m[1m
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 28.954970121383667 < 600.0
+        Reason: Returned value: 29.44461178779602 < 600.0
    Process: ts_nh0: [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh0 - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/bin' to '/tmp/sandbox/strategies_ch2/ts_nh0/bin' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh0/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh0/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh0/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh0/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh0/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh0/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh0/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh0/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh0/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch2/ts_nh0/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh0/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch2/ts_nh0/plugin' - [0m[32mPassed[0m[1m
@@ -1436,7 +1559,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 28.06226944923401 < 600.0
+        Reason: Returned value: 28.448405981063843 < 600.0
      file /tmp/sandbox/strategies_ch2/ts_nh0/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch2/ts_nh0/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch2/ts_nh0/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1455,9 +1578,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh1/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh1/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh1/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh1/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh1/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh1/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh1/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh1/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh1/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch2/ts_nh1/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh1/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch2/ts_nh1/plugin' - [0m[32mPassed[0m[1m
@@ -1480,7 +1603,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 28.04424262046814 < 600.0
+        Reason: Returned value: 28.307966470718384 < 600.0
      file /tmp/sandbox/strategies_ch2/ts_nh1/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch2/ts_nh1/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch2/ts_nh1/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1499,9 +1622,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh2/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh2/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh2/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh2/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh2/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh2/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh2/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh2/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh2/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch2/ts_nh2/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh2/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch2/ts_nh2/plugin' - [0m[32mPassed[0m[1m
@@ -1524,7 +1647,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 27.89874243736267 < 600.0
+        Reason: Returned value: 28.126601934432983 < 600.0
      file /tmp/sandbox/strategies_ch2/ts_nh2/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch2/ts_nh2/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch2/ts_nh2/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1543,9 +1666,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh3/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh3/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh3/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh3/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh3/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh3/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh3/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh3/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh3/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch2/ts_nh3/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh3/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch2/ts_nh3/plugin' - [0m[32mPassed[0m[1m
@@ -1568,7 +1691,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 23.120599269866943 < 600.0
+        Reason: Returned value: 23.278090476989746 < 600.0
      file /tmp/sandbox/strategies_ch2/ts_nh3/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch2/ts_nh3/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch2/ts_nh3/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1587,9 +1710,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh4/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh4/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh4/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh4/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh4/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh4/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh4/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh4/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh4/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch2/ts_nh4/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh4/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch2/ts_nh4/plugin' - [0m[32mPassed[0m[1m
@@ -1612,7 +1735,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 27.731648206710815 < 600.0
+        Reason: Returned value: 27.959933757781982 < 600.0
      file /tmp/sandbox/strategies_ch2/ts_nh4/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch2/ts_nh4/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch2/ts_nh4/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1631,9 +1754,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh5/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh5/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh5/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh5/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh5/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh5/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh5/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh5/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh5/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch2/ts_nh5/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh5/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch2/ts_nh5/plugin' - [0m[32mPassed[0m[1m
@@ -1656,7 +1779,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 27.52860403060913 < 600.0
+        Reason: Returned value: 27.720906257629395 < 600.0
      file /tmp/sandbox/strategies_ch2/ts_nh5/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch2/ts_nh5/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch2/ts_nh5/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1675,9 +1798,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh6/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh6/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh6/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh6/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh6/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh6/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh6/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh6/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh6/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch2/ts_nh6/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh6/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch2/ts_nh6/plugin' - [0m[32mPassed[0m[1m
@@ -1700,7 +1823,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 23.09483551979065 < 600.0
+        Reason: Returned value: 23.137812614440918 < 600.0
      file /tmp/sandbox/strategies_ch2/ts_nh6/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch2/ts_nh6/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch2/ts_nh6/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1719,9 +1842,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh7/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh7/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts_nh7/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh7/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh7/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh7/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts_nh7/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts_nh7/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts_nh7/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch2/ts_nh7/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts_nh7/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch2/ts_nh7/plugin' - [0m[32mPassed[0m[1m
@@ -1744,7 +1867,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[32mPassed[0m[1m
         Reason: Returned Value: 0 == 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 27.35903763771057 < 600.0
+        Reason: Returned value: 27.518940925598145 < 600.0
      file /tmp/sandbox/strategies_ch2/ts_nh7/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch2/ts_nh7/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch2/ts_nh7/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -1763,9 +1886,9 @@ Generating Report: --------------
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts/config - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts/config with uid: nobody gid: nobody - [0m[32mPassed[0m[1m
      Setting up : On /tmp/sandbox/strategies_ch2/ts/config with uid: nobody gid: nogroup - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
-     Setting up : Copying '/src/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/storage.config' to directory '/tmp/sandbox/strategies_ch2/ts/config' as 'storage.config'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/ip_allow.yaml' to directory '/tmp/sandbox/strategies_ch2/ts/config' as 'ip_allow.yaml'' - [0m[32mPassed[0m[1m
+     Setting up : Copying '/home/trafficserver/trafficserver/tests/gold_tests/autest-site/min_cfg/readme.txt' to directory '/tmp/sandbox/strategies_ch2/ts/config' as 'readme.txt'' - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/etc/trafficserver/body_factory' to '/tmp/sandbox/strategies_ch2/ts/config/body_factory' - [0m[32mPassed[0m[1m
      Setting up : Making Directory /tmp/sandbox/strategies_ch2/ts/cache - [0m[32mPassed[0m[1m
      Setting up : Copying '/usr/libexec/trafficserver' to '/tmp/sandbox/strategies_ch2/ts/plugin' - [0m[32mPassed[0m[1m
@@ -1788,7 +1911,7 @@ Generating Report: --------------
      Test : Checking that ReturnCode == 0 - [0m[31mFailed[0m[1m
         Reason: Returned Value -2 != 0
      Time-Out : Process finishes within expected time - [0m[32mPassed[0m[1m
-        Reason: Returned value: 27.21649670600891 < 600.0
+        Reason: Returned value: 27.262433290481567 < 600.0
      file /tmp/sandbox/strategies_ch2/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
         Reason: Contents of /tmp/sandbox/strategies_ch2/ts/log/diags.log excludes expression
      file /tmp/sandbox/strategies_ch2/ts/log/diags.log : Diags log file diags.log should not contain errors - [0m[32mPassed[0m[1m
@@ -2205,17 +2328,20 @@ Generating Report: --------------
 [0m[1mTotal of 71 test
 [0m[1m  Unknown: 0
 [0m[1m  Exception: 0
-[0m[1m  Failed: 3
+[0m[1m  Failed: 5
 [0m[1m  Warning: 0
 [0m[1m  Skipped: 1
-[0m[1m  Passed: 67
+[0m[1m  Passed: 65
 [0m[0m+ true
 ++ ls -A /tmp/sandbox/
-+ '[' -n 'remap_inc
++ '[' -n 'regex_revalidate_state
+remap_inc
 strategies_ch
-strategies_ch2' ']'
-+ cp -rf /tmp/sandbox/ /src/trafficserver/output/adjust_autest_for_rockylinux8/
+strategies_ch2
+tls' ']'
++ cp -rf /tmp/sandbox/ /home/trafficserver/trafficserver/output/master/
+cp: cannot create directory '/home/trafficserver/trafficserver/output/master/': Permission denied
 + exit 1
 Command exited with non-zero status 1
-0.07user 0.09system 16:38.90elapsed 0%CPU (0avgtext+0avgdata 19108maxresident)k
-13311inputs+0outputs (2604major+9702minor)pagefaults 0swaps
+0.08user 0.07system 15:51.51elapsed 0%CPU (0avgtext+0avgdata 22340maxresident)k
+1119inputs+0outputs (30major+9937minor)pagefaults 0swaps

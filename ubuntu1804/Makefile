@@ -9,12 +9,12 @@ build:
 check:
 	mkdir -p ./log
 	time docker run --rm -it --init --cap-add=SYS_PTRACE \
-		--entrypoint=bash $(IMAGE) -c /src/check.sh 2>&1 | tee ./log/check.log
+		--entrypoint=bash $(IMAGE) -c check.sh 2>&1 | tee ./log/check.log
 
 test:
 	mkdir -p ./log ./data
 	time docker run --rm -it --init --cap-add=SYS_PTRACE \
-		-v $${PWD}/data:/src/trafficserver/output:rw \
+		-v $${PWD}/data:/home/trafficserver/trafficserver/output:rw \
 		$(IMAGE) 2>&1 | tee ./log/autest.log &
 
 test-shard:
@@ -25,14 +25,14 @@ test-shard:
 test-filter:
 	mkdir -p ./log ./data
 	time docker run --rm -it --init --cap-add=SYS_PTRACE \
-		-v $${PWD}/data:/src/trafficserver/output:rw \
+		-v $${PWD}/data:/home/trafficserver/trafficserver/output:rw \
 		$(IMAGE) -f $(test) 2>&1 \
 		| tee ./log/autest-$(test).log
 
 run:
 	mkdir -p ./log
 	docker run --rm -it --init --cap-add=SYS_PTRACE \
-		-v $${PWD}/data:/src/trafficserver/output:rw \
+		-v $${PWD}/data:/home/trafficserver/trafficserver/output:rw \
 		--entrypoint bash $(IMAGE)
 
 exec:
