@@ -5,10 +5,6 @@ sudo update-crypto-policies --set LEGACY
 # The HTTP/3 AuTests depend upon this, so update the PATH accordingly.
 export PATH=/opt/bin:${PATH}
 
-# Change permissions so that all files are readable
-# (default user umask may change and make these unreadable)
-sudo chmod -R o+r .
 autoreconf -fiv
 ./configure --enable-experimental-plugins --enable-example-plugins --prefix=${ATS_PREFIX:-/tmp/ats} --enable-werror --enable-debug --enable-wccp --enable-luajit
-make -j4 V=1
-make install
+make -j V=1

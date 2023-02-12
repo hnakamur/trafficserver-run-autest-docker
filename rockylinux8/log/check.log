@@ -1209,5 +1209,5 @@ make[3]: Entering directory '/src/trafficserver'
 make[3]: Leaving directory '/src/trafficserver'
 make[2]: Leaving directory '/src/trafficserver'
 make[1]: Leaving directory '/src/trafficserver'
-0.07user 0.07system 15:22.63elapsed 0%CPU (0avgtext+0avgdata 22996maxresident)k
-15inputs+0outputs (11major+9920minor)pagefaults 0swaps
+0.08user 0.06system 13:50.31elapsed 0%CPU (0avgtext+0avgdata 22676maxresident)k
+15inputs+0outputs (10major+9576minor)pagefaults 0swaps
